@@ -218,7 +218,10 @@ function Frame11() {
 
 export default function SecondHero() {
   return (
-    <div className="bg-[#300067] content-stretch flex flex-col items-start px-[80px] py-[120px] relative size-full" data-name="Second-hero">
+    <div className="bg-[#4e0276] content-stretch flex flex-col gap-[64px] items-start px-[80px] py-[84px] relative size-full" data-name="Second-hero">
+      <p className="font-['Saans:Regular',sans-serif] leading-[32px] not-italic relative shrink-0 text-[#f5f5f5] text-[28px] w-full">
+        {`Hear How We Help Our Clients, `}<br aria-hidden="true" />In Their Own Words
+      </p>
       <Frame11 />
     </div>
   );

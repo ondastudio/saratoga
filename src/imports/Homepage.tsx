@@ -1564,7 +1564,7 @@ function Header1() {
 function Frame29() {
   return (
     <div className="content-stretch flex items-center justify-center relative shrink-0">
-      <p className="font-['Saans:Medium',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] whitespace-nowrap text-[24px]">Strealine Operations</p>
+      <p className="font-['Saans:Medium',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] whitespace-nowrap text-[24px]">Streamline Operations</p>
     </div>
   );
 }
@@ -1573,7 +1573,7 @@ function Content() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0" data-name="Content">
       <Frame29 />
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[18px] w-[503.5px]">{`Leverage our robust panel of integrations to make producer / agent onboarding and management a breeze, directly from the systems you use most. `}</p>
+      <p className="font-['Saans:Regular',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#f5f5f5] text-[18px] tracking-[0.18px] w-[503.5px]">{`Leverage our robust panel of integrations to make producer / agent onboarding and management a breeze, directly from the systems you use most. `}</p>
     </div>
   );
 }
@@ -1686,7 +1686,7 @@ function Content1() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0" data-name="Content">
       <Frame30 />
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[18px] w-[503.5px]">{`Get rid of paperwork, rejected filings, eliminate tracking spreadsheets, stop late fees and leverage automation to offload compliance and license management to a trusted partner. `}</p>
+      <p className="font-['Saans:Regular',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#f5f5f5] text-[18px] tracking-[0.18px] w-[503.5px]">{`Get rid of paperwork, rejected filings, eliminate tracking spreadsheets, stop late fees and leverage automation to offload compliance and license management to a trusted partner. `}</p>
     </div>
   );
 }
@@ -1770,7 +1770,7 @@ function Content2() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0" data-name="Content">
       <Frame37 />
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#110846] text-[18px] w-[503.5px]">Leverage intelligence tooling to gain visibility into your producer network, while modernizing your contracting process.</p>
+      <p className="font-['Saans:Regular',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#110846] text-[18px] tracking-[0.18px] w-[503.5px]">Leverage intelligence tooling to gain visibility into your producer network, while modernizing your contracting process.</p>
     </div>
   );
 }
@@ -1845,7 +1845,7 @@ function Content3() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0" data-name="Content">
       <Frame38 />
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#110846] text-[18px] w-[503.5px]">Eliminate infractions, reduce compliance risks and get a handle on your required reporting and producer compliance risks.</p>
+      <p className="font-['Saans:Regular',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#110846] text-[18px] tracking-[0.18px] w-[503.5px]">Eliminate infractions, reduce compliance risks and get a handle on your required reporting and producer compliance risks.</p>
     </div>
   );
 }
@@ -2042,7 +2042,7 @@ function List2() {
     <div className="content-stretch flex flex-col font-['Saans:Regular',sans-serif] gap-[8px] items-start relative shrink-0 text-[#f5f5f5] text-[16px] w-full" data-name="List">
       <p className="relative shrink-0">Launch an Agency</p>
       <p className="relative shrink-0">Mitigate Risk</p>
-      <p className="relative shrink-0">Strealine Operations</p>
+      <p className="relative shrink-0">Streamline Operations</p>
       <p className="relative shrink-0">Boost Profitability</p>
       <p className="relative shrink-0">Improve Distribution</p>
     </div>

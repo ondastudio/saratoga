@@ -2,6 +2,37 @@
 
 :root {
   --font-size: 16px;
+
+  /* Typography - Font Families */
+  --font-saans: 'Saans:Regular', sans-serif;
+  --font-saans-medium: 'Saans:Medium', sans-serif;
+  --font-grotesk: 'Px_Grotesk:Regular', sans-serif;
+
+  /* Typography - Heading Sizes */
+  --heading-h1: 3rem;       /* 48px */
+  --heading-h2: 2.5rem;     /* 40px */
+  --heading-h3: 2.25rem;    /* 36px */
+  --heading-h4: 1.75rem;    /* 28px */
+  --heading-h5: 1.5rem;     /* 24px */
+  --heading-h6: 1.25rem;    /* 20px */
+
+  /* Typography - Body Sizes */
+  --body-lg: 1.25rem;       /* 20px */
+  --body-md: 1rem;          /* 16px */
+  --body-sm: 0.875rem;      /* 14px */
+
+  /* Typography - Line Heights */
+  --lh-tight: 1.1;          /* 110% - h1, h2, h3 */
+  --lh-normal: 1.2;         /* 120% - h4, h5, body-sm */
+  --lh-relaxed: 1.25;       /* 125% - h6, body-lg, body-md */
+
+  /* Typography - Letter Spacing */
+  --ls-none: 0;             /* 0% */
+  --ls-wide: 0.01em;        /* 1% */
+
+  /* Mobile breakpoint */
+  --mobile-breakpoint: 768px;
+
   --background: #ffffff;
   --foreground: oklch(0.145 0 0);
   --card: #ffffff;
@@ -137,47 +168,209 @@
     font-size: var(--font-size);
   }
 
+  body {
+    font-family: var(--font-saans);
+    font-size: var(--body-md);
+    line-height: var(--lh-relaxed);
+    letter-spacing: var(--ls-wide);
+  }
+
+  /* Headings - Saans font */
   h1 {
-    font-size: var(--text-2xl);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
+    font-family: var(--font-saans);
+    font-size: var(--heading-h1);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--ls-none);
   }
 
   h2 {
-    font-size: var(--text-xl);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
+    font-family: var(--font-saans);
+    font-size: var(--heading-h2);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--ls-none);
   }
 
   h3 {
-    font-size: var(--text-lg);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
+    font-family: var(--font-saans);
+    font-size: var(--heading-h3);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--ls-none);
   }
 
   h4 {
-    font-size: var(--text-base);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
+    font-family: var(--font-saans);
+    font-size: var(--heading-h4);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--lh-normal);
+    letter-spacing: var(--ls-none);
+  }
+
+  h5 {
+    font-family: var(--font-saans);
+    font-size: var(--heading-h5);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--lh-normal);
+    letter-spacing: var(--ls-none);
+  }
+
+  h6 {
+    font-family: var(--font-saans);
+    font-size: var(--heading-h6);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--lh-relaxed);
+    letter-spacing: var(--ls-wide);
+  }
+
+  /* Body text defaults */
+  p {
+    font-family: var(--font-saans);
+    line-height: var(--lh-relaxed);
+    letter-spacing: var(--ls-wide);
   }
 
   label {
-    font-size: var(--text-base);
+    font-family: var(--font-saans);
+    font-size: var(--body-md);
     font-weight: var(--font-weight-medium);
-    line-height: 1.5;
+    line-height: var(--lh-relaxed);
+    letter-spacing: var(--ls-wide);
   }
 
   button {
-    font-size: var(--text-base);
+    font-family: var(--font-saans);
+    font-size: var(--body-md);
     font-weight: var(--font-weight-medium);
-    line-height: 1.5;
+    line-height: var(--lh-relaxed);
+    letter-spacing: var(--ls-wide);
   }
 
   input {
-    font-size: var(--text-base);
+    font-family: var(--font-saans);
+    font-size: var(--body-md);
     font-weight: var(--font-weight-normal);
-    line-height: 1.5;
+    line-height: var(--lh-relaxed);
+    letter-spacing: var(--ls-wide);
   }
+}
+
+/* ==========================================
+   Mobile Typography Overrides (<768px)
+   Tablet (768px+) keeps desktop sizes
+   ========================================== */
+
+@media (max-width: 767px) {
+  :root {
+    /* Mobile Heading Sizes */
+    --heading-h1: 2.5rem;     /* 40px (desktop: 48px) */
+    --heading-h2: 2.25rem;    /* 36px (desktop: 40px) */
+    --heading-h3: 1.75rem;    /* 28px (desktop: 36px) */
+    --heading-h4: 1.5rem;     /* 24px (desktop: 28px) */
+    --heading-h5: 1.25rem;    /* 20px (desktop: 24px) */
+    --heading-h6: 1.25rem;    /* 20px (desktop: 20px) */
+  }
+
+  /* Mobile: h3 moves from 110% to 120% line-height */
+  h3 {
+    line-height: var(--lh-normal);
+  }
+
+  /* Mobile: h6 changes to 120% line-height, 0% letter-spacing */
+  h6 {
+    line-height: var(--lh-normal);
+    letter-spacing: var(--ls-none);
+  }
+
+  /* Mobile: body-sm gets 1% letter-spacing */
+  .text-body-sm {
+    letter-spacing: var(--ls-wide);
+  }
+}
+
+/* ==========================================
+   Typography Utility Classes
+   Based on Figma Design System
+   ========================================== */
+
+/* Font Family Utilities */
+.font-saans {
+  font-family: var(--font-saans);
+}
+
+.font-saans-medium {
+  font-family: var(--font-saans-medium);
+}
+
+.font-grotesk {
+  font-family: var(--font-grotesk);
+}
+
+/* Heading Size Utilities */
+.text-h1 {
+  font-family: var(--font-saans);
+  font-size: var(--heading-h1);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-none);
+}
+
+.text-h2 {
+  font-family: var(--font-saans);
+  font-size: var(--heading-h2);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-none);
+}
+
+.text-h3 {
+  font-family: var(--font-saans);
+  font-size: var(--heading-h3);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-none);
+}
+
+.text-h4 {
+  font-family: var(--font-saans);
+  font-size: var(--heading-h4);
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-none);
+}
+
+.text-h5 {
+  font-family: var(--font-saans);
+  font-size: var(--heading-h5);
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-none);
+}
+
+.text-h6 {
+  font-family: var(--font-saans);
+  font-size: var(--heading-h6);
+  line-height: var(--lh-relaxed);
+  letter-spacing: var(--ls-wide);
+}
+
+/* Body Size Utilities */
+.text-body-lg {
+  font-family: var(--font-saans);
+  font-size: var(--body-lg);
+  line-height: var(--lh-relaxed);
+  letter-spacing: var(--ls-wide);
+}
+
+.text-body-md {
+  font-family: var(--font-saans);
+  font-size: var(--body-md);
+  line-height: var(--lh-relaxed);
+  letter-spacing: var(--ls-wide);
+}
+
+.text-body-sm {
+  font-family: var(--font-grotesk);
+  font-size: var(--body-sm);
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-none);
+  text-transform: uppercase;
 }
 
 /* Why Saratoga card transitions - smooth and elegant */

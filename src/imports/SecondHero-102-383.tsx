@@ -13,9 +13,8 @@ const marqueeStyles = `
 
 function Frame4() {
   return (
-    <div className="content-stretch flex items-start pb-[40px] relative shrink-0 w-full">
-      <div aria-hidden="true" className="absolute border-[#af63ff] border-b border-solid inset-0 pointer-events-none" />
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#af63ff] text-[14px] uppercase w-[350px]">{`Trusted By The Most Innovative & Efficient Insurance Agents, Carriers & MGAs`}</p>
+    <div className="border-[#af63ff] border-b border-solid content-stretch flex items-start justify-center pb-[32px] relative shrink-0 w-full">
+      <p className="flex-[1_0_0] font-['Px_Grotesk:Regular',sans-serif] leading-[16px] not-italic relative text-[#f5f5f5] text-[14px] text-center uppercase">{`Trusted By The Most Innovative & Efficient Insurance Agents, Carriers & MGAs`}</p>
     </div>
   );
 }

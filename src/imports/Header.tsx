@@ -5,7 +5,7 @@ function Frame3() {
   return (
     <div className="content-stretch flex flex-col font-['Saans:Regular',sans-serif] gap-[16px] items-start not-italic relative shrink-0 text-[#f5f5f5] w-full">
       <p className="leading-[1.1] relative shrink-0 text-[40px] tracking-[-0.4px] w-[656px]">We handle compliance, license operations and surplus lines filings – so you can focus on selling insurance.</p>
-      <p className="leading-[1.35] relative shrink-0 text-[20px] w-[632px]">Saratoga is the leading, all-in-one compliance platform for the insurance industry. We combine industry leading software, AI-enabled managed services and dedicated insurance regulatory experts to deliver an efficient solution that removes barriers to your success.</p>
+      <p className="leading-[1.35] relative shrink-0 text-[20px] w-[632px] tracking-[0.2px]">Saratoga is the leading, all-in-one compliance platform for the insurance industry. We combine industry leading software, AI-enabled compliance managed services and dedicated insurance regulatory experts to deliver an efficient solution that removes barriers to your success.</p>
     </div>
   );
 }
@@ -28,7 +28,7 @@ function Icon() {
 
 function HeroLink() {
   return (
-    <div className="bg-[#af63ff] content-stretch flex gap-[16px] h-[40px] items-center pl-[24px] pr-[4px] relative rounded-[8px] shrink-0 cursor-pointer" data-name="Link">
+    <div className="bg-[#af63ff] content-stretch flex gap-[16px] h-[40px] items-center pl-[24px] pr-[4px] relative rounded-[4px] shrink-0 cursor-pointer" data-name="Link">
       <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[14px] uppercase whitespace-nowrap">Request a Demo</p>
       <Icon />
     </div>
@@ -53,8 +53,8 @@ function Icon1() {
 
 function HeroLink1() {
   return (
-    <div className="content-stretch flex gap-[16px] h-[40px] items-center pl-[25px] pr-[5px] py-px relative rounded-[8px] shrink-0 cursor-pointer" data-name="Link">
-      <div aria-hidden="true" className="absolute border border-[#af63ff] border-solid inset-0 pointer-events-none rounded-[8px]" />
+    <div className="content-stretch flex gap-[16px] h-[40px] items-center pl-[25px] pr-[5px] py-px relative rounded-[4px] shrink-0 cursor-pointer" data-name="Link">
+      <div aria-hidden="true" className="absolute border border-[#af63ff] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[14px] uppercase whitespace-nowrap">Why saratoga</p>
       <Icon1 />
     </div>
@@ -110,8 +110,8 @@ function Container2() {
 
 function Container({ animStyle }: { animStyle?: React.CSSProperties }) {
   return (
-    <div className="bg-[#110846] flex-[1_0_0] h-[141px] min-h-px min-w-px relative rounded-[4px] transition-all duration-1000 ease-out" data-name="Container" style={animStyle}>
-      <div className="content-stretch flex flex-col items-start justify-between pb-[24px] pt-[16px] px-[24px] relative size-full">
+    <div className="bg-[#110846] flex-[1_0_0] h-[317px] min-h-px min-w-px relative rounded-[4px] transition-all duration-1000 ease-out" data-name="Container" style={animStyle}>
+      <div className="content-stretch flex flex-col items-start justify-between p-[24px] relative size-full">
         <Container1 />
         <Container2 />
       </div>
@@ -151,8 +151,8 @@ function Container5() {
 
 function Container3({ animStyle }: { animStyle?: React.CSSProperties }) {
   return (
-    <div className="bg-[#8740ff] flex-[1_0_0] h-[141px] min-h-px min-w-px relative rounded-[4px] transition-all duration-1000 ease-out" data-name="Container" style={animStyle}>
-      <div className="content-stretch flex flex-col items-start justify-between pb-[24px] pt-[16px] px-[24px] relative size-full">
+    <div className="bg-[#8740ff] flex-[1_0_0] h-[317px] min-h-px min-w-px relative rounded-[4px] transition-all duration-1000 ease-out" data-name="Container" style={animStyle}>
+      <div className="content-stretch flex flex-col items-start justify-between p-[24px] relative size-full">
         <Container4 />
         <Container5 />
       </div>
@@ -191,8 +191,8 @@ function Container8() {
 
 function Container6({ animStyle }: { animStyle?: React.CSSProperties }) {
   return (
-    <div className="bg-[#af63ff] flex-[1_0_0] h-[141px] min-h-px min-w-px relative rounded-[4px] transition-all duration-1000 ease-out" data-name="Container" style={animStyle}>
-      <div className="content-stretch flex flex-col items-start justify-between pb-[24px] pt-[16px] px-[24px] relative size-full">
+    <div className="bg-[#af63ff] flex-[1_0_0] h-[317px] min-h-px min-w-px relative rounded-[4px] transition-all duration-1000 ease-out" data-name="Container" style={animStyle}>
+      <div className="content-stretch flex flex-col items-start justify-between p-[24px] relative size-full">
         <Container7 />
         <Container8 />
       </div>
@@ -231,8 +231,8 @@ function Container11() {
 
 function Container9({ animStyle }: { animStyle?: React.CSSProperties }) {
   return (
-    <div className="bg-[#bcbcbc] flex-[1_0_0] h-[141px] min-h-px min-w-px relative rounded-[4px] transition-all duration-1000 ease-out" data-name="Container" style={animStyle}>
-      <div className="content-stretch flex flex-col items-start justify-between pb-[24px] pt-[16px] px-[24px] relative size-full">
+    <div className="bg-[#bcbcbc] flex-[1_0_0] h-[317px] min-h-px min-w-px relative rounded-[4px] transition-all duration-1000 ease-out" data-name="Container" style={animStyle}>
+      <div className="content-stretch flex flex-col items-start justify-between p-[24px] relative size-full">
         <Container10 />
         <Container11 />
       </div>
@@ -667,12 +667,49 @@ function NavFrame() {
   );
 }
 
+function MaskedImagery() {
+  const crossPath = "M405.335,164.999L405.335,245L240.335,245L240.335,410L164.999,410L164.999,245L0,245L0,164.999L164.999,164.999L164.999,0L240.335,0L240.335,164.999L405.335,164.999Z";
+  return (
+    <div className="absolute right-[56px] top-[148px] w-[630px] h-[630px] pointer-events-none" data-name="Mask group">
+      {/* Background shape */}
+      <div
+        className="absolute inset-0 bg-[#110846]"
+        style={{
+          clipPath: `path('${crossPath}')`,
+          transform: "translate(54px, 52px) scale(0.81)",
+        }}
+      />
+      {/* Video/image with luminosity blend */}
+      <div
+        className="absolute inset-0 mix-blend-luminosity"
+        style={{
+          clipPath: `path('${crossPath}')`,
+          transform: "translate(54px, 52px) scale(0.81)",
+          overflow: "hidden",
+        }}
+      >
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute w-full h-full object-cover"
+          style={{ filter: "grayscale(30%) contrast(1.1)" }}
+        >
+          <source src="https://videos.pexels.com/video-files/3129957/3129957-uhd_2560_1440_30fps.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  );
+}
+
 export default function Header() {
   return (
-    <div className="bg-[#300067] relative shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] size-full" data-name="Header">
+    <div className="bg-[#300067] relative shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] size-full overflow-hidden" data-name="Header">
       <Frame4 />
       <Frame2 />
       <Group1 />
+      <MaskedImagery />
       <div className="-translate-x-1/2 absolute content-stretch flex flex-col items-end left-1/2 pt-[16px] px-[80px] top-0 w-[1440px]" data-name="Navigation">
         <Container12 />
         <NavFrame />

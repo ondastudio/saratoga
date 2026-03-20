@@ -123,14 +123,14 @@ export function AnimatedDiscoverSection() {
 
   return (
     <div
-      className="bg-[#300067] h-[1127px] overflow-clip relative shrink-0 w-[1440px]"
+      className="bg-[#110846] h-[1297px] overflow-clip relative shrink-0 w-[1440px]"
       data-name="Discover"
     >
       {/* Inject keyframe animation once */}
       <style>{TIMELINE_STYLE}</style>
 
       {/* Inner dark background container */}
-      <div className="absolute h-[1127px] left-0 overflow-clip rounded-[4px] top-0 w-[1440px] bg-[#300067]">
+      <div className="absolute h-[1297px] left-0 overflow-clip rounded-[4px] top-0 w-[1440px] bg-[#110846]">
 
         {/* Decorative background shapes */}
         {activeStep === 0 ? (
@@ -241,7 +241,7 @@ export function AnimatedDiscoverSection() {
         </div>
 
         {/* Why Saratoga? CTA button */}
-        <div className="absolute left-[1157px] top-[967px] w-fit cursor-pointer">
+        <div className="absolute left-[1180px] top-[1139px] w-fit cursor-pointer">
           <LinkButton />
         </div>
       </div>
