@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Saratoga – Monitor Icon Animated</title>
+<script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{
+    width:1440px; height:900px;
+    background:transparent;
+    display:flex; align-items:center; justify-content:center;
+    overflow:hidden;
+  }
+
+  /*
+    MONITORING STORY (7s loop):
+    1. Screen outline draws in
+    2. Neck + base draw in
+    3. Scan line reveals, begins sweeping top → bottom → top
+    4. Focus circle pulses on the scan line
+    5. Bright dot races left→right along the scan line
+    6. Screen glows subtly — it's always watching
+    7. Fade → loop
+  */
+
+  @keyframes reveal{
+    0%,5%   {opacity:0;}
+    17%     {opacity:1;}
+    78%     {opacity:1;}
+    95%,100%{opacity:0;}
+  }
+  /* screen perimeter: 2*(330+200)=1060 */
+  @keyframes screenDraw{
+    0%,5%   {opacity:0; stroke-dashoffset:1065;}
+    17%     {opacity:1; stroke-dashoffset:0;}
+    78%     {opacity:1; stroke-dashoffset:0;}
+    95%,100%{opacity:0; stroke-dashoffset:0;}
+  }
+  @keyframes neckDraw{
+    0%,5%   {opacity:0; stroke-dashoffset:42;}
+    17%     {opacity:1; stroke-dashoffset:0;}
+    78%     {opacity:1; stroke-dashoffset:0;}
+    95%,100%{opacity:0; stroke-dashoffset:0;}
+  }
+  @keyframes baseDraw{
+    0%,5%   {opacity:0; stroke-dashoffset:140;}
+    17%     {opacity:1; stroke-dashoffset:0;}
+    78%     {opacity:1; stroke-dashoffset:0;}
+    95%,100%{opacity:0; stroke-dashoffset:0;}
+  }
+  /* scan line sweeps top→bottom→top: ±70px from centre */
+  @keyframes scanSweep{
+    0%   { transform: translateY(-70px); }
+    50%  { transform: translateY(70px);  }
+    100% { transform: translateY(-70px); }
+  }
+  /* bright dot races across scan line left→right */
+  @keyframes dotRace{
+    0%   { transform: translateX(0);     opacity:1; }
+    85%  { transform: translateX(330px); opacity:1; }
+    100% { transform: translateX(330px); opacity:0; }
+  }
+  /* focus circle heartbeat pulse */
+  @keyframes focusPulse{
+    0%,100%{ transform:scale(1);    opacity:1;   }
+    50%    { transform:scale(1.22); opacity:0.72; }
+  }
+  /* expanding ripple ring from focus */
+  @keyframes ripple{
+    0%  { transform:scale(1);   opacity:0.5; }
+    100%{ transform:scale(2.6); opacity:0;   }
+  }
+  /* screen glow — it's always watching */
+  @keyframes screenGlow{
+    0%  {stroke-opacity:1;}   20%{stroke-opacity:.76;}
+    47% {stroke-opacity:.96;} 63%{stroke-opacity:.7;}
+    82% {stroke-opacity:.9;}  100%{stroke-opacity:1;}
+  }
+
+  /* ── assignments ── */
+
+  .screen{
+    stroke-dasharray:1065;
+    animation: screenDraw 7s linear 0s infinite,
+               screenGlow 3s ease-in-out 2.2s infinite;
+  }
+  .neck{
+    stroke-dasharray:42;
+    animation: neckDraw 7s linear 0.22s infinite;
+  }
+  .base{
+    stroke-dasharray:140;
+    animation: baseDraw 7s linear 0.38s infinite;
+  }
+  /* opacity reveal for entire scan group */
+  .g-scan-reveal{
+    animation: reveal 7s linear 0.58s infinite;
+  }
+  /* continuous vertical sweep inside reveal */
+  .g-scan-move{
+    animation: scanSweep 2.6s ease-in-out 1s infinite;
+  }
+  /* focus circle */
+  .focus-circle{
+    transform-box:fill-box; transform-origin:center;
+    animation: focusPulse 2.6s ease-in-out 1s infinite;
+  }
+  /* ripple ring */
+  .ripple{
+    transform-box:fill-box; transform-origin:center;
+    animation: ripple 2.6s ease-out 1.2s infinite;
+  }
+</style>
+</head>
+<body>
+<!--
+  Geometry (viewBox 0 0 360 300):
+  Screen : rect x=15 y=15 w=330 h=200  (perimeter=1060)
+  Neck   : M180,215 → M180,252         (37px)
+  Base   : M112,252 → M248,252         (136px)
+  Scan   : line across screen at y=115 (centre), sweeps ±70px
+  Focus  : cx=180 cy=115 r=22
+-->
+<svg width="360" height="300" viewBox="0 0 360 300" fill="none">
+
+  <!-- screen outline -->
+  <rect class="screen"
+        x="15" y="15" width="330" height="200" rx="2"
+        stroke="#8740FF" stroke-width="3" fill="none"/>
+
+  <!-- neck -->
+  <line class="neck"
+        x1="180" y1="215" x2="180" y2="252"
+        stroke="#8740FF" stroke-width="3"/>
+
+  <!-- base -->
+  <line class="base"
+        x1="112" y1="252" x2="248" y2="252"
+        stroke="#8740FF" stroke-width="3"/>
+
+  <!-- scan group: fades in, then sweeps vertically -->
+  <g class="g-scan-reveal">
+    <g class="g-scan-move">
+
+      <!-- scan line -->
+      <line x1="15" y1="115" x2="345" y2="115"
+            stroke="#8740FF" stroke-width="3" stroke-opacity=".65"/>
+
+      <!-- ripple ring expands from focus -->
+      <circle class="ripple"
+              cx="180" cy="115" r="22"
+              stroke="#AF63FF" stroke-width="3" fill="none"/>
+
+      <!-- focus circle -->
+      <circle class="focus-circle"
+              cx="180" cy="115" r="22"
+              stroke="#AF63FF" stroke-width="3" fill="none"/>
+
+
+    </g>
+  </g>
+
+</svg>
+</body>
+</html>

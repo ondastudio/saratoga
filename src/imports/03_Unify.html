@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Saratoga – Unify Icon Animated</title>
+<script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{
+    width:1440px; height:900px;
+    background:transparent;
+    display:flex; align-items:center; justify-content:center;
+    overflow:hidden;
+  }
+
+  /*
+    UNIFY STORY (7s loop):
+    1. 8 nodes appear at the perimeter — separate, unconnected
+    2. Spokes draw inward node→center — converging toward one point
+    3. Hub rings assemble — the unified core forms
+    4. Orbital arc + scan tick — it's alive, always connected
+    5. Nodes pulse in sync — one unified heartbeat
+    6. Fade → loop
+  */
+
+  @keyframes reveal{
+    0%  {opacity:0;} 5%  {opacity:0;}
+    17% {opacity:1;} 78% {opacity:1;}
+    95% {opacity:0;} 100%{opacity:0;}
+  }
+
+  /* spoke draws from node→center (line defined node→center so dashoffset draws inward) */
+  @keyframes spokeDraw{
+    0%  {opacity:0; stroke-dashoffset:145;}
+    5%  {opacity:0; stroke-dashoffset:145;}
+    17% {opacity:1; stroke-dashoffset:0;}
+    78% {opacity:1; stroke-dashoffset:0;}
+    95% {opacity:0; stroke-dashoffset:0;}
+    100%{opacity:0; stroke-dashoffset:145;}
+  }
+
+  /* hub outer ring: C≈345 */
+  @keyframes hubOuterDraw{
+    0%  {opacity:0; stroke-dashoffset:350;}
+    5%  {opacity:0; stroke-dashoffset:350;}
+    17% {opacity:1; stroke-dashoffset:0;}
+    78% {opacity:1; stroke-dashoffset:0;}
+    95% {opacity:0; stroke-dashoffset:0;}
+    100%{opacity:0; stroke-dashoffset:350;}
+  }
+  /* hub middle ring: C≈251 */
+  @keyframes hubMidDraw{
+    0%  {opacity:0; stroke-dashoffset:255;}
+    5%  {opacity:0; stroke-dashoffset:255;}
+    17% {opacity:1; stroke-dashoffset:0;}
+    78% {opacity:1; stroke-dashoffset:0;}
+    95% {opacity:0; stroke-dashoffset:0;}
+    100%{opacity:0; stroke-dashoffset:255;}
+  }
+  /* hub inner ring: C≈126 */
+  @keyframes hubInnerDraw{
+    0%  {opacity:0; stroke-dashoffset:130;}
+    5%  {opacity:0; stroke-dashoffset:130;}
+    17% {opacity:1; stroke-dashoffset:0;}
+    78% {opacity:1; stroke-dashoffset:0;}
+    95% {opacity:0; stroke-dashoffset:0;}
+    100%{opacity:0; stroke-dashoffset:130;}
+  }
+
+  @keyframes dotBlink{
+    0%,100%{opacity:1;   transform:scale(1);}
+    50%    {opacity:.12; transform:scale(.2);}
+  }
+  @keyframes ripple{
+    0%  {transform:scale(1);   opacity:.6;}
+    100%{transform:scale(3.4); opacity:0;}
+  }
+  @keyframes orbital        { to{transform:rotate(360deg);} }
+  @keyframes counterOrbital { to{transform:rotate(-360deg);} }
+  @keyframes scanTick       { to{stroke-dashoffset:-350;} }
+  @keyframes hubGlow{
+    0%  {stroke-opacity:1;}  20%{stroke-opacity:.8;}
+    47% {stroke-opacity:.97;} 61%{stroke-opacity:.78;}
+    80% {stroke-opacity:.9;} 100%{stroke-opacity:1;}
+  }
+
+  /* ── assignments ── */
+
+  /* nodes appear first — they exist separately */
+  .g-node-1 { animation: reveal 7s linear 0.15s infinite; }
+  .g-node-2 { animation: reveal 7s linear 0.22s infinite; }
+  .g-node-3 { animation: reveal 7s linear 0.29s infinite; }
+  .g-node-4 { animation: reveal 7s linear 0.36s infinite; }
+  .g-node-5 { animation: reveal 7s linear 0.43s infinite; }
+  .g-node-6 { animation: reveal 7s linear 0.50s infinite; }
+  .g-node-7 { animation: reveal 7s linear 0.57s infinite; }
+  .g-node-8 { animation: reveal 7s linear 0.64s infinite; }
+
+  /* node dots blink in sync — one heartbeat */
+  .dot  { transform-box:fill-box; transform-origin:center; }
+  .dot-1{ animation: dotBlink 2.2s ease-in-out 2.4s  infinite; }
+  .dot-2{ animation: dotBlink 2.2s ease-in-out 2.4s  infinite; }
+  .dot-3{ animation: dotBlink 2.2s ease-in-out 2.4s  infinite; }
+  .dot-4{ animation: dotBlink 2.2s ease-in-out 2.4s  infinite; }
+  .dot-5{ animation: dotBlink 2.2s ease-in-out 2.4s  infinite; }
+  .dot-6{ animation: dotBlink 2.2s ease-in-out 2.4s  infinite; }
+  .dot-7{ animation: dotBlink 2.2s ease-in-out 2.4s  infinite; }
+  .dot-8{ animation: dotBlink 2.2s ease-in-out 2.4s  infinite; }
+
+  /* node ripples */
+  .rip  { transform-box:fill-box; transform-origin:center; }
+  .rip-1{ animation: ripple 2.2s ease-out 2.4s  infinite; }
+  .rip-2{ animation: ripple 2.2s ease-out 2.67s infinite; }
+  .rip-3{ animation: ripple 2.2s ease-out 2.94s infinite; }
+  .rip-4{ animation: ripple 2.2s ease-out 3.21s infinite; }
+  .rip-5{ animation: ripple 2.2s ease-out 3.48s infinite; }
+  .rip-6{ animation: ripple 2.2s ease-out 3.75s infinite; }
+  .rip-7{ animation: ripple 2.2s ease-out 4.02s infinite; }
+  .rip-8{ animation: ripple 2.2s ease-out 4.29s infinite; }
+
+  /* spokes draw inward after nodes */
+  .spoke-1{stroke-dasharray:145; animation: spokeDraw 7s linear 0.38s infinite;}
+  .spoke-2{stroke-dasharray:145; animation: spokeDraw 7s linear 0.47s infinite;}
+  .spoke-3{stroke-dasharray:145; animation: spokeDraw 7s linear 0.56s infinite;}
+  .spoke-4{stroke-dasharray:145; animation: spokeDraw 7s linear 0.65s infinite;}
+  .spoke-5{stroke-dasharray:145; animation: spokeDraw 7s linear 0.74s infinite;}
+  .spoke-6{stroke-dasharray:145; animation: spokeDraw 7s linear 0.83s infinite;}
+  .spoke-7{stroke-dasharray:145; animation: spokeDraw 7s linear 0.92s infinite;}
+  .spoke-8{stroke-dasharray:145; animation: spokeDraw 7s linear 1.01s infinite;}
+
+  /* hub assembles last — the unified core */
+  .r-hub-outer{
+    stroke-dasharray:350;
+    animation: hubOuterDraw 7s linear 1.10s infinite, hubGlow 4s ease-in-out 2.5s infinite;
+  }
+  .r-hub-mid{
+    stroke-dasharray:255;
+    animation: hubMidDraw 7s linear 1.20s infinite;
+  }
+  .w-inner { transform-origin:200px 200px; animation: counterOrbital 20s linear 0s infinite; }
+  .r-inner {
+    stroke-dasharray:130;
+    animation: hubInnerDraw 7s linear 1.30s infinite;
+  }
+
+  /* orbital arc on outer hub ring */
+  .w-arc { transform-origin:200px 200px; animation: orbital 12s linear 0s infinite; }
+  .r-arc { animation: reveal 7s linear 1.40s infinite; }
+
+  /* scan tick lapping outer ring */
+  .w-scan { transform-origin:200px 200px; animation: scanTick 1.8s linear 0s infinite; }
+  .r-scan { animation: reveal 7s linear 1.48s infinite; stroke-dasharray:22 328; }
+
+  /* center dot */
+  .center-dot { animation: reveal 7s linear 1.30s infinite; }
+</style>
+</head>
+<body>
+<!--
+  Geometry (viewBox 0 0 400 400), center (200,200):
+  Hub outer : r=55   (C≈345)
+  Hub mid   : r=40   (C≈251)
+  Hub inner : r=20   (C≈126)
+  Spoke len : 142px  (node at r=142 from center)
+  Nodes at  : E(342,200) SE(301,301) S(200,342) SW(99,301)
+              W(58,200) NW(99,99) N(200,58) NE(301,99)
+  Lines defined node→center so dashoffset draws inward
+-->
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none">
+
+  <!-- dim reference rings (always on) -->
+  <circle cx="200" cy="200" r="55" stroke="#8740FF" stroke-width=".6" stroke-opacity=".15" fill="none"/>
+  <circle cx="200" cy="200" r="40" stroke="#8740FF" stroke-width=".6" stroke-opacity=".15" fill="none"/>
+  <circle cx="200" cy="200" r="20" stroke="#8740FF" stroke-width=".6" stroke-opacity=".15" fill="none"/>
+
+  <!-- 8 spokes: defined node→center so they draw inward -->
+  <line class="spoke-1" x1="342" y1="200" x2="200" y2="200" stroke="#8740FF" stroke-width="3"/><!-- E  -->
+  <line class="spoke-2" x1="301" y1="301" x2="200" y2="200" stroke="#8740FF" stroke-width="3"/><!-- SE -->
+  <line class="spoke-3" x1="200" y1="342" x2="200" y2="200" stroke="#8740FF" stroke-width="3"/><!-- S  -->
+  <line class="spoke-4" x1="99"  y1="301" x2="200" y2="200" stroke="#8740FF" stroke-width="3"/><!-- SW -->
+  <line class="spoke-5" x1="58"  y1="200" x2="200" y2="200" stroke="#8740FF" stroke-width="3"/><!-- W  -->
+  <line class="spoke-6" x1="99"  y1="99"  x2="200" y2="200" stroke="#8740FF" stroke-width="3"/><!-- NW -->
+  <line class="spoke-7" x1="200" y1="58"  x2="200" y2="200" stroke="#8740FF" stroke-width="3"/><!-- N  -->
+  <line class="spoke-8" x1="301" y1="99"  x2="200" y2="200" stroke="#8740FF" stroke-width="3"/><!-- NE -->
+
+  <!-- hub outer ring -->
+  <circle class="r-hub-outer" cx="200" cy="200" r="55"
+          stroke="#8740FF" stroke-width="3" fill="none"/>
+
+  <!-- C-arc 300° orbiting -->
+  <g class="w-arc">
+    <circle class="r-arc" cx="200" cy="200" r="55"
+            stroke="#AF63FF" stroke-width="3" fill="none"
+            stroke-dasharray="288 57"/>
+  </g>
+
+  <!-- scan tick -->
+  <g class="w-scan">
+    <circle class="r-scan" cx="200" cy="200" r="55"
+            stroke="#C694FE" stroke-width="2.5" fill="none"
+            stroke-linecap="round"/>
+  </g>
+
+  <!-- hub middle ring -->
+  <circle class="r-hub-mid" cx="200" cy="200" r="40"
+          stroke="#8740FF" stroke-width="3" fill="none"/>
+
+  <!-- hub inner ring — counter-spin -->
+  <g class="w-inner">
+    <circle class="r-inner" cx="200" cy="200" r="20"
+            stroke="#C694FE" stroke-width="3" fill="none"/>
+  </g>
+
+  <!-- center dot -->
+  <circle class="center-dot" cx="200" cy="200" r="4" fill="#AF63FF"/>
+
+  <!-- 8 nodes: ring + ripple + dot -->
+  <!-- E (342,200) -->
+  <g class="g-node-1">
+    <circle class="rip rip-1" cx="342" cy="200" r="10" stroke="#8740FF" stroke-width="1.5" fill="none"/>
+    <circle cx="342" cy="200" r="10" stroke="#8740FF" stroke-width="3" fill="none"/>
+    <circle class="dot dot-1" cx="342" cy="200" r="4" fill="#AF63FF"/>
+  </g>
+  <!-- SE (301,301) -->
+  <g class="g-node-2">
+    <circle class="rip rip-2" cx="301" cy="301" r="10" stroke="#8740FF" stroke-width="1.5" fill="none"/>
+    <circle cx="301" cy="301" r="10" stroke="#8740FF" stroke-width="3" fill="none"/>
+    <circle class="dot dot-2" cx="301" cy="301" r="4" fill="#AF63FF"/>
+  </g>
+  <!-- S (200,342) -->
+  <g class="g-node-3">
+    <circle class="rip rip-3" cx="200" cy="342" r="10" stroke="#8740FF" stroke-width="1.5" fill="none"/>
+    <circle cx="200" cy="342" r="10" stroke="#8740FF" stroke-width="3" fill="none"/>
+    <circle class="dot dot-3" cx="200" cy="342" r="4" fill="#AF63FF"/>
+  </g>
+  <!-- SW (99,301) -->
+  <g class="g-node-4">
+    <circle class="rip rip-4" cx="99" cy="301" r="10" stroke="#8740FF" stroke-width="1.5" fill="none"/>
+    <circle cx="99" cy="301" r="10" stroke="#8740FF" stroke-width="3" fill="none"/>
+    <circle class="dot dot-4" cx="99" cy="301" r="4" fill="#AF63FF"/>
+  </g>
+  <!-- W (58,200) -->
+  <g class="g-node-5">
+    <circle class="rip rip-5" cx="58" cy="200" r="10" stroke="#8740FF" stroke-width="1.5" fill="none"/>
+    <circle cx="58" cy="200" r="10" stroke="#8740FF" stroke-width="3" fill="none"/>
+    <circle class="dot dot-5" cx="58" cy="200" r="4" fill="#AF63FF"/>
+  </g>
+  <!-- NW (99,99) -->
+  <g class="g-node-6">
+    <circle class="rip rip-6" cx="99" cy="99" r="10" stroke="#8740FF" stroke-width="1.5" fill="none"/>
+    <circle cx="99" cy="99" r="10" stroke="#8740FF" stroke-width="3" fill="none"/>
+    <circle class="dot dot-6" cx="99" cy="99" r="4" fill="#AF63FF"/>
+  </g>
+  <!-- N (200,58) -->
+  <g class="g-node-7">
+    <circle class="rip rip-7" cx="200" cy="58" r="10" stroke="#8740FF" stroke-width="1.5" fill="none"/>
+    <circle cx="200" cy="58" r="10" stroke="#8740FF" stroke-width="3" fill="none"/>
+    <circle class="dot dot-7" cx="200" cy="58" r="4" fill="#AF63FF"/>
+  </g>
+  <!-- NE (301,99) -->
+  <g class="g-node-8">
+    <circle class="rip rip-8" cx="301" cy="99" r="10" stroke="#8740FF" stroke-width="1.5" fill="none"/>
+    <circle cx="301" cy="99" r="10" stroke="#8740FF" stroke-width="3" fill="none"/>
+    <circle class="dot dot-8" cx="301" cy="99" r="4" fill="#AF63FF"/>
+  </g>
+
+</svg>
+</body>
+</html>

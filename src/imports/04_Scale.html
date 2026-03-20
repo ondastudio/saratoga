@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Saratoga – Scalable Icon Animated</title>
+<script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{
+    width:1440px; height:900px;
+    background:transparent;
+    display:flex; align-items:center; justify-content:center;
+    overflow:visible;
+  }
+
+  /*
+    EXPANSION STORY (7s loop):
+    1. Small rect draws in     — the origin
+    2. Arrow shoots upper-right — the direction of growth
+    3. Large rect draws in     — the expanded state
+    4. Pulse rings radiate out — infinite scalability
+    5. Fade → loop
+  */
+
+  @keyframes reveal{
+    0%,5%   {opacity:0;}
+    17%     {opacity:1;}
+    78%     {opacity:1;}
+    95%,100%{opacity:0;}
+  }
+
+  /* small rect perimeter=466, path starts mid-left so all corners are interior */
+  @keyframes smallDraw{
+    0%,5%   {opacity:0; stroke-dashoffset:476;}
+    17%     {opacity:1; stroke-dashoffset:0;}
+    78%     {opacity:1; stroke-dashoffset:0;}
+    95%,100%{opacity:0; stroke-dashoffset:0;}
+  }
+
+  /* arrow diagonal: length≈348 */
+  @keyframes arrowDraw{
+    0%,5%   {opacity:0; stroke-dashoffset:352;}
+    17%     {opacity:1; stroke-dashoffset:0;}
+    78%     {opacity:1; stroke-dashoffset:0;}
+    95%,100%{opacity:0; stroke-dashoffset:0;}
+  }
+
+  /* large rect perimeter=1132, path starts mid-left so all corners are interior */
+  @keyframes bigDraw{
+    0%,5%   {opacity:0; stroke-dashoffset:1142;}
+    17%     {opacity:1; stroke-dashoffset:0;}
+    78%     {opacity:1; stroke-dashoffset:0;}
+    95%,100%{opacity:0; stroke-dashoffset:0;}
+  }
+
+  /* pulse ring: radiates well beyond outer rect */
+  @keyframes pulseRing{
+    0%   {transform:scale(1);   opacity:0.6;}
+    100% {transform:scale(1.7); opacity:0;}
+  }
+
+  /* ── assignments ── */
+
+  .small-rect{
+    stroke-dasharray:476;
+    animation: smallDraw 7s linear 0.15s infinite;
+  }
+  .arrow-line{
+    stroke-dasharray:352;
+    animation: arrowDraw 7s linear 0.48s infinite;
+  }
+  .arrow-head{
+    animation: reveal 7s linear 0.75s infinite;
+  }
+  .big-rect{
+    stroke-dasharray:1142;
+    animation: bigDraw 7s linear 0.88s infinite;
+  }
+
+  .pulse-ring-1{
+    transform-box:fill-box; transform-origin:center;
+    animation: reveal 7s linear 1.6s infinite, pulseRing 1.9s ease-out 2.4s infinite;
+  }
+  .pulse-ring-2{
+    transform-box:fill-box; transform-origin:center;
+    animation: reveal 7s linear 1.6s infinite, pulseRing 1.9s ease-out 3.1s infinite;
+  }
+  .pulse-ring-3{
+    transform-box:fill-box; transform-origin:center;
+    animation: reveal 7s linear 1.6s infinite, pulseRing 1.9s ease-out 3.8s infinite;
+  }
+</style>
+</head>
+<body>
+<!--
+  Geometry (viewBox 0 0 400 400):
+  Large rect : x=95  y=18  w=280 h=286  TL(95,18) TR(375,18) BR(375,304) BL(95,304)
+  Small rect : x=15  y=263 w=115 h=118  TL(15,263) TR(130,263) BL(15,381) BR(130,381)
+  Arrow      : (130,263)→(375,18)  length≈348
+  Arrowhead  : L-bracket at TR of large rect
+-->
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" overflow="visible">
+
+  <!-- dim reference shapes (spatial anchors) -->
+  <rect x="95" y="18" width="280" height="286"
+        stroke="#8740FF" stroke-width=".6" stroke-opacity=".12" fill="none"/>
+  <rect x="15" y="263" width="115" height="118"
+        stroke="#8740FF" stroke-width=".6" stroke-opacity=".12" fill="none"/>
+
+  <!-- pulse rings anchored to large rect -->
+  <rect class="pulse-ring-1" x="95" y="18" width="280" height="286"
+        stroke="#8740FF" stroke-width="1.5" fill="none"/>
+  <rect class="pulse-ring-2" x="95" y="18" width="280" height="286"
+        stroke="#8740FF" stroke-width="1.5" fill="none"/>
+  <rect class="pulse-ring-3" x="95" y="18" width="280" height="286"
+        stroke="#8740FF" stroke-width="1.5" fill="none"/>
+
+  <!-- small rect: path starts at mid-left (15,322) so all 4 corners are interior -->
+  <path class="small-rect"
+        d="M15,322 L15,263 L130,263 L130,381 L15,381 Z"
+        stroke="#8740FF" stroke-width="3" fill="none"/>
+
+  <!-- arrow: from TR of small rect to TR of large rect -->
+  <line class="arrow-line"
+        x1="130" y1="263" x2="375" y2="18"
+        stroke="#AF63FF" stroke-width="3"/>
+
+  <!-- arrowhead: L-bracket at TR of large rect -->
+  <path class="arrow-head"
+        d="M348,18 L375,18 L375,45"
+        stroke="#C694FE" stroke-width="3" fill="none" stroke-linecap="square"/>
+
+  <!-- large rect: path starts at mid-left (95,161) so all 4 corners are interior -->
+  <path class="big-rect"
+        d="M95,161 L95,18 L375,18 L375,304 L95,304 Z"
+        stroke="#8740FF" stroke-width="3" fill="none"/>
+
+</svg>
+</body>
+</html>

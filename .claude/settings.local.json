@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm -rf /Users/ray/.npm/_cacache)",
+      "Bash(mkdir -p /Users/ray/.npm/_cacache)",
+      "Bash(find /Users/ray/.npm/_cacache -user root -exec rm -rf {} +)",
+      "Bash(npm config:*)",
+      "Bash(npm cache:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Read(//Users/ray/Downloads/**)",
+      "Bash(unzip -o \"Saragota Prototype.zip\" -d /tmp/saratoga-prototype)",
+      "Bash(npm install:*)",
+      "Bash(gh auth:*)",
+      "Bash(brew list:*)",
+      "Bash(export PATH=/opt/homebrew/bin:/usr/local/bin:$PATH)",
+      "Read(//usr/**)",
+      "Bash(echo $PATH)",
+      "Bash(npx -y @github-cli/gh auth status)"
+    ]
+  }
+}

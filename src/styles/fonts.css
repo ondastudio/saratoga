@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Px_Grotesk:Regular';
+  src: url('https://raw.githubusercontent.com/ondastudio/saratoga/84bc8113c13848c7fef97c1180b0840cf17ef392/Px-Grotesk-Regular.woff2') format('woff2'),
+       url('https://raw.githubusercontent.com/ondastudio/saratoga/84bc8113c13848c7fef97c1180b0840cf17ef392/Px-Grotesk-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Saans:Regular';
+  src: url('https://raw.githubusercontent.com/ondastudio/saratoga/84bc8113c13848c7fef97c1180b0840cf17ef392/Saans-Regular.woff2') format('woff2'),
+       url('https://raw.githubusercontent.com/ondastudio/saratoga/84bc8113c13848c7fef97c1180b0840cf17ef392/Saans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Saans:Medium';
+  src: url('https://raw.githubusercontent.com/ondastudio/saratoga/84bc8113c13848c7fef97c1180b0840cf17ef392/Saans-Medium.woff2') format('woff2'),
+       url('https://raw.githubusercontent.com/ondastudio/saratoga/84bc8113c13848c7fef97c1180b0840cf17ef392/Saans-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Saratoga – Filling Icon Animated</title>
+<script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{
+    width:1440px; height:900px;
+    background:transparent;
+    display:flex; align-items:center; justify-content:center;
+    overflow:hidden;
+  }
+
+  /*
+    LOOP — 7s total cycle
+    0–5%    invisible reset
+    5–17%   staggered entry (doc draws in, then lines type in)
+    17–78%  hold (cursor blinks)
+    78–95%  fade out
+    95–100% invisible reset
+  */
+
+  @keyframes reveal{
+    0%  {opacity:0;} 5%  {opacity:0;}
+    17% {opacity:1;} 78% {opacity:1;}
+    95% {opacity:0;} 100%{opacity:0;}
+  }
+
+  /*
+    Document outline: path starts at mid-bottom (182,438) so ALL corners
+    (TL, fold, TR, BR, BL) are interior miter joins — never open.
+    Perimeter ≈ 1369, +6 overshoot = 1375
+  */
+  @keyframes docDraw{
+    0%  {opacity:0; stroke-dashoffset:1375;}
+    5%  {opacity:0; stroke-dashoffset:1375;}
+    17% {opacity:1; stroke-dashoffset:0;}
+    78% {opacity:1; stroke-dashoffset:0;}
+    95% {opacity:0; stroke-dashoffset:0;}
+    100%{opacity:0; stroke-dashoffset:1375;}
+  }
+
+  /* fold draw-in: length ≈ 97 */
+  @keyframes foldDraw{
+    0%  {opacity:0; stroke-dashoffset:100;}
+    5%  {opacity:0; stroke-dashoffset:100;}
+    17% {opacity:1; stroke-dashoffset:0;}
+    78% {opacity:1; stroke-dashoffset:0;}
+    95% {opacity:0; stroke-dashoffset:0;}
+    100%{opacity:0; stroke-dashoffset:100;}
+  }
+
+  /* full line draw-in: length = 200 */
+  @keyframes lineDraw{
+    0%  {opacity:0; stroke-dashoffset:205;}
+    5%  {opacity:0; stroke-dashoffset:205;}
+    17% {opacity:1; stroke-dashoffset:0;}
+    78% {opacity:1; stroke-dashoffset:0;}
+    95% {opacity:0; stroke-dashoffset:0;}
+    100%{opacity:0; stroke-dashoffset:205;}
+  }
+
+  /* partial line draw-in: length = 100 */
+  @keyframes partialDraw{
+    0%  {opacity:0; stroke-dashoffset:105;}
+    5%  {opacity:0; stroke-dashoffset:105;}
+    17% {opacity:1; stroke-dashoffset:0;}
+    78% {opacity:1; stroke-dashoffset:0;}
+    95% {opacity:0; stroke-dashoffset:0;}
+    100%{opacity:0; stroke-dashoffset:105;}
+  }
+
+  /* cursor blink */
+  @keyframes cursorBlink{
+    0%,100%{opacity:1;   transform:scaleY(1);}
+    50%    {opacity:.12; transform:scaleY(.2);}
+  }
+
+  /* cursor ripple */
+  @keyframes ripple{
+    0%  {transform:scale(1);   opacity:.6;}
+    100%{transform:scale(3.4); opacity:0;}
+  }
+
+  /* doc glow during hold */
+  @keyframes docGlow{
+    0%  {stroke-opacity:1;}  20%{stroke-opacity:.8;}
+    47% {stroke-opacity:.97;} 61%{stroke-opacity:.78;}
+    80% {stroke-opacity:.9;} 100%{stroke-opacity:1;}
+  }
+
+  /* ── assignments ── */
+
+  .doc-outline{
+    stroke-dasharray:1375;
+    animation: docDraw 7s linear 0s infinite, docGlow 4s ease-in-out 2.5s infinite;
+  }
+  .fold{
+    stroke-dasharray:100;
+    animation: foldDraw 7s linear 0.18s infinite;
+  }
+
+  .line-1{ stroke-dasharray:205; animation: lineDraw 7s linear 0.42s infinite; }
+  .line-2{ stroke-dasharray:205; animation: lineDraw 7s linear 0.62s infinite; }
+  .line-3{ stroke-dasharray:205; animation: lineDraw 7s linear 0.82s infinite; }
+
+  .partial{
+    stroke-dasharray:105;
+    animation: partialDraw 7s linear 1.02s infinite;
+  }
+  .line-4{ stroke-dasharray:205; animation: lineDraw 7s linear 1.22s infinite; }
+
+  /* cursor: appears then blinks */
+  .g-cursor { animation: reveal 7s linear 1.42s infinite; }
+  .cursor{
+    transform-box:fill-box; transform-origin:center;
+    animation: cursorBlink 0.7s ease-in-out 2.2s infinite;
+  }
+
+  /* ripple at cursor tip */
+  .rip{
+    transform-box:fill-box; transform-origin:center;
+    animation: reveal 7s linear 1.42s infinite, ripple 2.2s ease-out 2.4s infinite;
+  }
+</style>
+</head>
+<body>
+<!--
+  Geometry (viewBox 0 0 380 460):
+  Document : starts at mid-bottom (182,438), goes left→up→across top→fold→down→back
+             M182,438 L42,438 L42,22 L282,22 L322,62 L322,438 Z  (perimeter≈1369)
+  Fold     : M282,22 L282,62 L322,62
+  Lines 1–3: x1=82 x2=282  y=152, 212, 272
+  Partial  : x1=82 x2=182  y=332
+  Cursor   : x=182, y1=322 y2=342
+  Line 4   : x1=82 x2=282  y=392
+-->
+<svg width="380" height="460" viewBox="0 0 380 460" fill="none">
+
+  <!-- dim reference shapes (always on, spatial anchors) -->
+  <path d="M42,22 L282,22 L322,62 L322,438 L42,438 Z"
+        stroke="#8740FF" stroke-width=".6" stroke-opacity=".15" fill="none"/>
+  <line x1="82" y1="152" x2="282" y2="152" stroke="#8740FF" stroke-width=".6" stroke-opacity=".15"/>
+  <line x1="82" y1="212" x2="282" y2="212" stroke="#8740FF" stroke-width=".6" stroke-opacity=".15"/>
+  <line x1="82" y1="272" x2="282" y2="272" stroke="#8740FF" stroke-width=".6" stroke-opacity=".15"/>
+  <line x1="82" y1="332" x2="182" y2="332" stroke="#8740FF" stroke-width=".6" stroke-opacity=".15"/>
+  <line x1="82" y1="392" x2="282" y2="392" stroke="#8740FF" stroke-width=".6" stroke-opacity=".15"/>
+
+  <!-- document outline: starts mid-bottom so all corners are interior -->
+  <path class="doc-outline"
+        d="M182,438 L42,438 L42,22 L282,22 L322,62 L322,438 Z"
+        stroke="#8740FF" stroke-width="1.8" fill="none"/>
+
+  <!-- fold corner -->
+  <path class="fold"
+        d="M282,22 L282,62 L322,62"
+        stroke="#AF63FF" stroke-width="1.8" fill="none"/>
+
+  <!-- filled lines type in, staggered -->
+  <line class="line-1" x1="82" y1="152" x2="282" y2="152"
+        stroke="#8740FF" stroke-width="1.8"/>
+  <line class="line-2" x1="82" y1="212" x2="282" y2="212"
+        stroke="#8740FF" stroke-width="1.8"/>
+  <line class="line-3" x1="82" y1="272" x2="282" y2="272"
+        stroke="#8740FF" stroke-width="1.8"/>
+
+  <!-- partial line being typed -->
+  <line class="partial" x1="82" y1="332" x2="182" y2="332"
+        stroke="#AF63FF" stroke-width="1.8"/>
+
+  <!-- cursor + ripple at tip -->
+  <g class="g-cursor">
+    <circle class="rip" cx="182" cy="332" r="6"
+            stroke="#AF63FF" stroke-width="1.8" fill="none"/>
+    <line class="cursor" x1="182" y1="322" x2="182" y2="342"
+          stroke="#C694FE" stroke-width="1.8"/>
+  </g>
+
+  <!-- bottom line — equidistant, same stroke -->
+  <line class="line-4" x1="82" y1="392" x2="282" y2="392"
+        stroke="#8740FF" stroke-width="1.8"/>
+
+</svg>
+</body>
+</html>

@@ -1,0 +1,494 @@
+import svgPaths from "./svg-iwv5ze4nyz";
+
+function Frame4() {
+  return (
+    <div className="content-stretch flex items-start pb-[40px] relative shrink-0 w-full">
+      <div aria-hidden="true" className="absolute border-[#8740ff] border-b border-solid inset-0 pointer-events-none" />
+      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#af63ff] text-[14px] uppercase w-[350px]">{`Trusted By `}</p>
+    </div>
+  );
+}
+
+function Group() {
+  return (
+    <div className="h-[41.239px] relative shrink-0 w-[155px]">
+      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 155 41.239">
+        <g id="Group 15438">
+          <path d={svgPaths.p2bfe3a80} fill="var(--fill-0, #110846)" id="Vector" />
+          <path d={svgPaths.pbee2d00} fill="var(--fill-0, #110846)" id="Vector_2" />
+          <path d={svgPaths.p33f87f00} fill="var(--fill-0, #110846)" id="Vector_3" />
+          <path d={svgPaths.p1f644c00} fill="var(--fill-0, #110846)" id="Vector_4" />
+          <path d={svgPaths.p3810b800} fill="var(--fill-0, #110846)" id="Vector_5" />
+          <path d={svgPaths.p1dcd0780} fill="var(--fill-0, #110846)" id="Vector_6" />
+          <path d={svgPaths.p249be680} fill="var(--fill-0, #110846)" id="Vector_7" />
+          <path d={svgPaths.p8ebc680} fill="var(--fill-0, #110846)" id="Vector_8" />
+          <path d={svgPaths.p289da200} fill="var(--fill-0, #110846)" id="Vector_9" />
+          <path d={svgPaths.p323d7c80} fill="var(--fill-0, #110846)" id="Vector_10" />
+          <path d={svgPaths.pcb8b900} fill="var(--fill-0, #110846)" id="Vector_11" />
+          <path d={svgPaths.p8711b00} fill="var(--fill-0, #110846)" id="Vector_12" />
+          <path d={svgPaths.p5ba000} fill="var(--fill-0, #110846)" id="Vector_13" />
+          <path d={svgPaths.pca5b600} fill="var(--fill-0, #110846)" id="Vector_14" />
+          <path d={svgPaths.p1a0ac500} fill="var(--fill-0, #110846)" id="Vector_15" />
+          <path d={svgPaths.p2636b00} fill="var(--fill-0, #110846)" id="Vector_16" />
+          <path d={svgPaths.pa6ccf40} fill="var(--fill-0, #110846)" id="Vector_17" />
+          <path d={svgPaths.p26605f00} fill="var(--fill-0, #110846)" id="Vector_18" />
+          <path d={svgPaths.p135c9700} fill="var(--fill-0, #110846)" id="Vector_19" />
+          <path d={svgPaths.p246aa880} fill="var(--fill-0, #110846)" id="Vector_20" />
+          <path d={svgPaths.p3a58e810} fill="var(--fill-0, #110846)" id="Vector_21" />
+          <path d={svgPaths.p24848980} fill="var(--fill-0, #110846)" id="Vector_22" />
+          <path d={svgPaths.p8a26ef2} fill="var(--fill-0, #110846)" id="Vector_23" />
+          <path d={svgPaths.p12f5a300} fill="var(--fill-0, #110846)" id="Vector_24" />
+          <path d={svgPaths.p36ed7120} fill="var(--fill-0, #110846)" id="Vector_25" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Group1() {
+  return (
+    <div className="h-[41.239px] relative shrink-0 w-[155px]">
+      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 155 41.239">
+        <g id="Group 15438">
+          <path d={svgPaths.p2bfe3a80} fill="var(--fill-0, #110846)" id="Vector" />
+          <path d={svgPaths.pbee2d00} fill="var(--fill-0, #110846)" id="Vector_2" />
+          <path d={svgPaths.p33f87f00} fill="var(--fill-0, #110846)" id="Vector_3" />
+          <path d={svgPaths.p1f644c00} fill="var(--fill-0, #110846)" id="Vector_4" />
+          <path d={svgPaths.p3810b800} fill="var(--fill-0, #110846)" id="Vector_5" />
+          <path d={svgPaths.p1dcd0780} fill="var(--fill-0, #110846)" id="Vector_6" />
+          <path d={svgPaths.p249be680} fill="var(--fill-0, #110846)" id="Vector_7" />
+          <path d={svgPaths.p8ebc680} fill="var(--fill-0, #110846)" id="Vector_8" />
+          <path d={svgPaths.p289da200} fill="var(--fill-0, #110846)" id="Vector_9" />
+          <path d={svgPaths.p323d7c80} fill="var(--fill-0, #110846)" id="Vector_10" />
+          <path d={svgPaths.pcb8b900} fill="var(--fill-0, #110846)" id="Vector_11" />
+          <path d={svgPaths.p8711b00} fill="var(--fill-0, #110846)" id="Vector_12" />
+          <path d={svgPaths.p5ba000} fill="var(--fill-0, #110846)" id="Vector_13" />
+          <path d={svgPaths.pca5b600} fill="var(--fill-0, #110846)" id="Vector_14" />
+          <path d={svgPaths.p1a0ac500} fill="var(--fill-0, #110846)" id="Vector_15" />
+          <path d={svgPaths.p2636b00} fill="var(--fill-0, #110846)" id="Vector_16" />
+          <path d={svgPaths.pa6ccf40} fill="var(--fill-0, #110846)" id="Vector_17" />
+          <path d={svgPaths.p26605f00} fill="var(--fill-0, #110846)" id="Vector_18" />
+          <path d={svgPaths.p135c9700} fill="var(--fill-0, #110846)" id="Vector_19" />
+          <path d={svgPaths.p246aa880} fill="var(--fill-0, #110846)" id="Vector_20" />
+          <path d={svgPaths.p3a58e810} fill="var(--fill-0, #110846)" id="Vector_21" />
+          <path d={svgPaths.p24848980} fill="var(--fill-0, #110846)" id="Vector_22" />
+          <path d={svgPaths.p8a26ef2} fill="var(--fill-0, #110846)" id="Vector_23" />
+          <path d={svgPaths.p12f5a300} fill="var(--fill-0, #110846)" id="Vector_24" />
+          <path d={svgPaths.p36ed7120} fill="var(--fill-0, #110846)" id="Vector_25" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Group2() {
+  return (
+    <div className="h-[41.239px] relative shrink-0 w-[155px]">
+      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 155 41.239">
+        <g id="Group 15438">
+          <path d={svgPaths.p2bfe3a80} fill="var(--fill-0, #110846)" id="Vector" />
+          <path d={svgPaths.pbee2d00} fill="var(--fill-0, #110846)" id="Vector_2" />
+          <path d={svgPaths.p296810c0} fill="var(--fill-0, #110846)" id="Vector_3" />
+          <path d={svgPaths.p1f644c00} fill="var(--fill-0, #110846)" id="Vector_4" />
+          <path d={svgPaths.p3810b800} fill="var(--fill-0, #110846)" id="Vector_5" />
+          <path d={svgPaths.p1dcd0780} fill="var(--fill-0, #110846)" id="Vector_6" />
+          <path d={svgPaths.p249be680} fill="var(--fill-0, #110846)" id="Vector_7" />
+          <path d={svgPaths.p8ebc680} fill="var(--fill-0, #110846)" id="Vector_8" />
+          <path d={svgPaths.p289da200} fill="var(--fill-0, #110846)" id="Vector_9" />
+          <path d={svgPaths.p323d7c80} fill="var(--fill-0, #110846)" id="Vector_10" />
+          <path d={svgPaths.p24dfbeb0} fill="var(--fill-0, #110846)" id="Vector_11" />
+          <path d={svgPaths.p8711b00} fill="var(--fill-0, #110846)" id="Vector_12" />
+          <path d={svgPaths.p5ba000} fill="var(--fill-0, #110846)" id="Vector_13" />
+          <path d={svgPaths.pca5b600} fill="var(--fill-0, #110846)" id="Vector_14" />
+          <path d={svgPaths.p1a0ac500} fill="var(--fill-0, #110846)" id="Vector_15" />
+          <path d={svgPaths.p32363640} fill="var(--fill-0, #110846)" id="Vector_16" />
+          <path d={svgPaths.pa6ccf40} fill="var(--fill-0, #110846)" id="Vector_17" />
+          <path d={svgPaths.p26605f00} fill="var(--fill-0, #110846)" id="Vector_18" />
+          <path d={svgPaths.p309bf680} fill="var(--fill-0, #110846)" id="Vector_19" />
+          <path d={svgPaths.p246aa880} fill="var(--fill-0, #110846)" id="Vector_20" />
+          <path d={svgPaths.p3a58e810} fill="var(--fill-0, #110846)" id="Vector_21" />
+          <path d={svgPaths.p24848980} fill="var(--fill-0, #110846)" id="Vector_22" />
+          <path d={svgPaths.p8a26ef2} fill="var(--fill-0, #110846)" id="Vector_23" />
+          <path d={svgPaths.p12f5a300} fill="var(--fill-0, #110846)" id="Vector_24" />
+          <path d={svgPaths.p36ed7120} fill="var(--fill-0, #110846)" id="Vector_25" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Group3() {
+  return (
+    <div className="h-[41.239px] relative shrink-0 w-[155px]">
+      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 155 41.239">
+        <g id="Group 15438">
+          <path d={svgPaths.p2bfe3a80} fill="var(--fill-0, #110846)" id="Vector" />
+          <path d={svgPaths.pbee2d00} fill="var(--fill-0, #110846)" id="Vector_2" />
+          <path d={svgPaths.p296810c0} fill="var(--fill-0, #110846)" id="Vector_3" />
+          <path d={svgPaths.p1f644c00} fill="var(--fill-0, #110846)" id="Vector_4" />
+          <path d={svgPaths.p3810b800} fill="var(--fill-0, #110846)" id="Vector_5" />
+          <path d={svgPaths.p1dcd0780} fill="var(--fill-0, #110846)" id="Vector_6" />
+          <path d={svgPaths.p249be680} fill="var(--fill-0, #110846)" id="Vector_7" />
+          <path d={svgPaths.p8ebc680} fill="var(--fill-0, #110846)" id="Vector_8" />
+          <path d={svgPaths.p289da200} fill="var(--fill-0, #110846)" id="Vector_9" />
+          <path d={svgPaths.p323d7c80} fill="var(--fill-0, #110846)" id="Vector_10" />
+          <path d={svgPaths.p24dfbeb0} fill="var(--fill-0, #110846)" id="Vector_11" />
+          <path d={svgPaths.p8711b00} fill="var(--fill-0, #110846)" id="Vector_12" />
+          <path d={svgPaths.p5ba000} fill="var(--fill-0, #110846)" id="Vector_13" />
+          <path d={svgPaths.pca5b600} fill="var(--fill-0, #110846)" id="Vector_14" />
+          <path d={svgPaths.p1a0ac500} fill="var(--fill-0, #110846)" id="Vector_15" />
+          <path d={svgPaths.p32363640} fill="var(--fill-0, #110846)" id="Vector_16" />
+          <path d={svgPaths.pa6ccf40} fill="var(--fill-0, #110846)" id="Vector_17" />
+          <path d={svgPaths.p26605f00} fill="var(--fill-0, #110846)" id="Vector_18" />
+          <path d={svgPaths.p309bf680} fill="var(--fill-0, #110846)" id="Vector_19" />
+          <path d={svgPaths.p246aa880} fill="var(--fill-0, #110846)" id="Vector_20" />
+          <path d={svgPaths.p3a58e810} fill="var(--fill-0, #110846)" id="Vector_21" />
+          <path d={svgPaths.p24848980} fill="var(--fill-0, #110846)" id="Vector_22" />
+          <path d={svgPaths.p8a26ef2} fill="var(--fill-0, #110846)" id="Vector_23" />
+          <path d={svgPaths.p12f5a300} fill="var(--fill-0, #110846)" id="Vector_24" />
+          <path d={svgPaths.p36ed7120} fill="var(--fill-0, #110846)" id="Vector_25" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Group4() {
+  return (
+    <div className="h-[41.239px] relative shrink-0 w-[155px]">
+      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 155 41.239">
+        <g id="Group 15438">
+          <path d={svgPaths.p2bfe3a80} fill="var(--fill-0, #110846)" id="Vector" />
+          <path d={svgPaths.pbee2d00} fill="var(--fill-0, #110846)" id="Vector_2" />
+          <path d={svgPaths.p296810c0} fill="var(--fill-0, #110846)" id="Vector_3" />
+          <path d={svgPaths.p1f644c00} fill="var(--fill-0, #110846)" id="Vector_4" />
+          <path d={svgPaths.p3810b800} fill="var(--fill-0, #110846)" id="Vector_5" />
+          <path d={svgPaths.p1dcd0780} fill="var(--fill-0, #110846)" id="Vector_6" />
+          <path d={svgPaths.p249be680} fill="var(--fill-0, #110846)" id="Vector_7" />
+          <path d={svgPaths.p8ebc680} fill="var(--fill-0, #110846)" id="Vector_8" />
+          <path d={svgPaths.p289da200} fill="var(--fill-0, #110846)" id="Vector_9" />
+          <path d={svgPaths.p323d7c80} fill="var(--fill-0, #110846)" id="Vector_10" />
+          <path d={svgPaths.p24dfbeb0} fill="var(--fill-0, #110846)" id="Vector_11" />
+          <path d={svgPaths.p8711b00} fill="var(--fill-0, #110846)" id="Vector_12" />
+          <path d={svgPaths.p5ba000} fill="var(--fill-0, #110846)" id="Vector_13" />
+          <path d={svgPaths.pca5b600} fill="var(--fill-0, #110846)" id="Vector_14" />
+          <path d={svgPaths.p1a0ac500} fill="var(--fill-0, #110846)" id="Vector_15" />
+          <path d={svgPaths.p32363640} fill="var(--fill-0, #110846)" id="Vector_16" />
+          <path d={svgPaths.pa6ccf40} fill="var(--fill-0, #110846)" id="Vector_17" />
+          <path d={svgPaths.p26605f00} fill="var(--fill-0, #110846)" id="Vector_18" />
+          <path d={svgPaths.p309bf680} fill="var(--fill-0, #110846)" id="Vector_19" />
+          <path d={svgPaths.p246aa880} fill="var(--fill-0, #110846)" id="Vector_20" />
+          <path d={svgPaths.p3a58e810} fill="var(--fill-0, #110846)" id="Vector_21" />
+          <path d={svgPaths.p24848980} fill="var(--fill-0, #110846)" id="Vector_22" />
+          <path d={svgPaths.p8a26ef2} fill="var(--fill-0, #110846)" id="Vector_23" />
+          <path d={svgPaths.p12f5a300} fill="var(--fill-0, #110846)" id="Vector_24" />
+          <path d={svgPaths.p36ed7120} fill="var(--fill-0, #110846)" id="Vector_25" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Group5() {
+  return (
+    <div className="h-[41.239px] relative shrink-0 w-[155px]">
+      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 155 41.239">
+        <g id="Group 15438">
+          <path d={svgPaths.p2bfe3a80} fill="var(--fill-0, #110846)" id="Vector" />
+          <path d={svgPaths.pbee2d00} fill="var(--fill-0, #110846)" id="Vector_2" />
+          <path d={svgPaths.p296810c0} fill="var(--fill-0, #110846)" id="Vector_3" />
+          <path d={svgPaths.p1f644c00} fill="var(--fill-0, #110846)" id="Vector_4" />
+          <path d={svgPaths.p3810b800} fill="var(--fill-0, #110846)" id="Vector_5" />
+          <path d={svgPaths.p1dcd0780} fill="var(--fill-0, #110846)" id="Vector_6" />
+          <path d={svgPaths.p249be680} fill="var(--fill-0, #110846)" id="Vector_7" />
+          <path d={svgPaths.p8ebc680} fill="var(--fill-0, #110846)" id="Vector_8" />
+          <path d={svgPaths.p289da200} fill="var(--fill-0, #110846)" id="Vector_9" />
+          <path d={svgPaths.p323d7c80} fill="var(--fill-0, #110846)" id="Vector_10" />
+          <path d={svgPaths.p24dfbeb0} fill="var(--fill-0, #110846)" id="Vector_11" />
+          <path d={svgPaths.p8711b00} fill="var(--fill-0, #110846)" id="Vector_12" />
+          <path d={svgPaths.p5ba000} fill="var(--fill-0, #110846)" id="Vector_13" />
+          <path d={svgPaths.pca5b600} fill="var(--fill-0, #110846)" id="Vector_14" />
+          <path d={svgPaths.p1a0ac500} fill="var(--fill-0, #110846)" id="Vector_15" />
+          <path d={svgPaths.p32363640} fill="var(--fill-0, #110846)" id="Vector_16" />
+          <path d={svgPaths.pa6ccf40} fill="var(--fill-0, #110846)" id="Vector_17" />
+          <path d={svgPaths.p26605f00} fill="var(--fill-0, #110846)" id="Vector_18" />
+          <path d={svgPaths.p309bf680} fill="var(--fill-0, #110846)" id="Vector_19" />
+          <path d={svgPaths.p246aa880} fill="var(--fill-0, #110846)" id="Vector_20" />
+          <path d={svgPaths.p3a58e810} fill="var(--fill-0, #110846)" id="Vector_21" />
+          <path d={svgPaths.p24848980} fill="var(--fill-0, #110846)" id="Vector_22" />
+          <path d={svgPaths.p8a26ef2} fill="var(--fill-0, #110846)" id="Vector_23" />
+          <path d={svgPaths.p12f5a300} fill="var(--fill-0, #110846)" id="Vector_24" />
+          <path d={svgPaths.p36ed7120} fill="var(--fill-0, #110846)" id="Vector_25" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Frame() {
+  return (
+    <div className="content-stretch flex gap-[84px] items-start overflow-clip relative shrink-0 w-full">
+      <Group />
+      <Group1 />
+      <Group2 />
+      <Group3 />
+      <Group4 />
+      <Group5 />
+    </div>
+  );
+}
+
+function Group6() {
+  return (
+    <div className="h-[41.239px] relative shrink-0 w-[155px]">
+      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 155 41.239">
+        <g id="Group 15438">
+          <path d={svgPaths.p2bfe3a80} fill="var(--fill-0, #110846)" id="Vector" />
+          <path d={svgPaths.pbee2d00} fill="var(--fill-0, #110846)" id="Vector_2" />
+          <path d={svgPaths.p33f87f00} fill="var(--fill-0, #110846)" id="Vector_3" />
+          <path d={svgPaths.p1f644c00} fill="var(--fill-0, #110846)" id="Vector_4" />
+          <path d={svgPaths.p3810b800} fill="var(--fill-0, #110846)" id="Vector_5" />
+          <path d={svgPaths.p1dcd0780} fill="var(--fill-0, #110846)" id="Vector_6" />
+          <path d={svgPaths.p249be680} fill="var(--fill-0, #110846)" id="Vector_7" />
+          <path d={svgPaths.p8ebc680} fill="var(--fill-0, #110846)" id="Vector_8" />
+          <path d={svgPaths.p289da200} fill="var(--fill-0, #110846)" id="Vector_9" />
+          <path d={svgPaths.p323d7c80} fill="var(--fill-0, #110846)" id="Vector_10" />
+          <path d={svgPaths.pcb8b900} fill="var(--fill-0, #110846)" id="Vector_11" />
+          <path d={svgPaths.p8711b00} fill="var(--fill-0, #110846)" id="Vector_12" />
+          <path d={svgPaths.p5ba000} fill="var(--fill-0, #110846)" id="Vector_13" />
+          <path d={svgPaths.pca5b600} fill="var(--fill-0, #110846)" id="Vector_14" />
+          <path d={svgPaths.p1a0ac500} fill="var(--fill-0, #110846)" id="Vector_15" />
+          <path d={svgPaths.p2636b00} fill="var(--fill-0, #110846)" id="Vector_16" />
+          <path d={svgPaths.pa6ccf40} fill="var(--fill-0, #110846)" id="Vector_17" />
+          <path d={svgPaths.p26605f00} fill="var(--fill-0, #110846)" id="Vector_18" />
+          <path d={svgPaths.p135c9700} fill="var(--fill-0, #110846)" id="Vector_19" />
+          <path d={svgPaths.p246aa880} fill="var(--fill-0, #110846)" id="Vector_20" />
+          <path d={svgPaths.p3a58e810} fill="var(--fill-0, #110846)" id="Vector_21" />
+          <path d={svgPaths.p24848980} fill="var(--fill-0, #110846)" id="Vector_22" />
+          <path d={svgPaths.p8a26ef2} fill="var(--fill-0, #110846)" id="Vector_23" />
+          <path d={svgPaths.p12f5a300} fill="var(--fill-0, #110846)" id="Vector_24" />
+          <path d={svgPaths.p36ed7120} fill="var(--fill-0, #110846)" id="Vector_25" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Group7() {
+  return (
+    <div className="h-[41.239px] relative shrink-0 w-[155px]">
+      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 155 41.239">
+        <g id="Group 15438">
+          <path d={svgPaths.p2bfe3a80} fill="var(--fill-0, #110846)" id="Vector" />
+          <path d={svgPaths.pbee2d00} fill="var(--fill-0, #110846)" id="Vector_2" />
+          <path d={svgPaths.p33f87f00} fill="var(--fill-0, #110846)" id="Vector_3" />
+          <path d={svgPaths.p1f644c00} fill="var(--fill-0, #110846)" id="Vector_4" />
+          <path d={svgPaths.p3810b800} fill="var(--fill-0, #110846)" id="Vector_5" />
+          <path d={svgPaths.p1dcd0780} fill="var(--fill-0, #110846)" id="Vector_6" />
+          <path d={svgPaths.p249be680} fill="var(--fill-0, #110846)" id="Vector_7" />
+          <path d={svgPaths.p8ebc680} fill="var(--fill-0, #110846)" id="Vector_8" />
+          <path d={svgPaths.p289da200} fill="var(--fill-0, #110846)" id="Vector_9" />
+          <path d={svgPaths.p323d7c80} fill="var(--fill-0, #110846)" id="Vector_10" />
+          <path d={svgPaths.pcb8b900} fill="var(--fill-0, #110846)" id="Vector_11" />
+          <path d={svgPaths.p8711b00} fill="var(--fill-0, #110846)" id="Vector_12" />
+          <path d={svgPaths.p5ba000} fill="var(--fill-0, #110846)" id="Vector_13" />
+          <path d={svgPaths.pca5b600} fill="var(--fill-0, #110846)" id="Vector_14" />
+          <path d={svgPaths.p1a0ac500} fill="var(--fill-0, #110846)" id="Vector_15" />
+          <path d={svgPaths.p2636b00} fill="var(--fill-0, #110846)" id="Vector_16" />
+          <path d={svgPaths.pa6ccf40} fill="var(--fill-0, #110846)" id="Vector_17" />
+          <path d={svgPaths.p26605f00} fill="var(--fill-0, #110846)" id="Vector_18" />
+          <path d={svgPaths.p135c9700} fill="var(--fill-0, #110846)" id="Vector_19" />
+          <path d={svgPaths.p246aa880} fill="var(--fill-0, #110846)" id="Vector_20" />
+          <path d={svgPaths.p3a58e810} fill="var(--fill-0, #110846)" id="Vector_21" />
+          <path d={svgPaths.p24848980} fill="var(--fill-0, #110846)" id="Vector_22" />
+          <path d={svgPaths.p8a26ef2} fill="var(--fill-0, #110846)" id="Vector_23" />
+          <path d={svgPaths.p12f5a300} fill="var(--fill-0, #110846)" id="Vector_24" />
+          <path d={svgPaths.p36ed7120} fill="var(--fill-0, #110846)" id="Vector_25" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Group8() {
+  return (
+    <div className="h-[41.239px] relative shrink-0 w-[155px]">
+      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 155 41.239">
+        <g id="Group 15438">
+          <path d={svgPaths.p2bfe3a80} fill="var(--fill-0, #110846)" id="Vector" />
+          <path d={svgPaths.pbee2d00} fill="var(--fill-0, #110846)" id="Vector_2" />
+          <path d={svgPaths.p296810c0} fill="var(--fill-0, #110846)" id="Vector_3" />
+          <path d={svgPaths.p1f644c00} fill="var(--fill-0, #110846)" id="Vector_4" />
+          <path d={svgPaths.p3810b800} fill="var(--fill-0, #110846)" id="Vector_5" />
+          <path d={svgPaths.p1dcd0780} fill="var(--fill-0, #110846)" id="Vector_6" />
+          <path d={svgPaths.p249be680} fill="var(--fill-0, #110846)" id="Vector_7" />
+          <path d={svgPaths.p8ebc680} fill="var(--fill-0, #110846)" id="Vector_8" />
+          <path d={svgPaths.p289da200} fill="var(--fill-0, #110846)" id="Vector_9" />
+          <path d={svgPaths.p323d7c80} fill="var(--fill-0, #110846)" id="Vector_10" />
+          <path d={svgPaths.p24dfbeb0} fill="var(--fill-0, #110846)" id="Vector_11" />
+          <path d={svgPaths.p8711b00} fill="var(--fill-0, #110846)" id="Vector_12" />
+          <path d={svgPaths.p5ba000} fill="var(--fill-0, #110846)" id="Vector_13" />
+          <path d={svgPaths.pca5b600} fill="var(--fill-0, #110846)" id="Vector_14" />
+          <path d={svgPaths.p1a0ac500} fill="var(--fill-0, #110846)" id="Vector_15" />
+          <path d={svgPaths.p32363640} fill="var(--fill-0, #110846)" id="Vector_16" />
+          <path d={svgPaths.pa6ccf40} fill="var(--fill-0, #110846)" id="Vector_17" />
+          <path d={svgPaths.p26605f00} fill="var(--fill-0, #110846)" id="Vector_18" />
+          <path d={svgPaths.p309bf680} fill="var(--fill-0, #110846)" id="Vector_19" />
+          <path d={svgPaths.p246aa880} fill="var(--fill-0, #110846)" id="Vector_20" />
+          <path d={svgPaths.p3a58e810} fill="var(--fill-0, #110846)" id="Vector_21" />
+          <path d={svgPaths.p24848980} fill="var(--fill-0, #110846)" id="Vector_22" />
+          <path d={svgPaths.p8a26ef2} fill="var(--fill-0, #110846)" id="Vector_23" />
+          <path d={svgPaths.p12f5a300} fill="var(--fill-0, #110846)" id="Vector_24" />
+          <path d={svgPaths.p36ed7120} fill="var(--fill-0, #110846)" id="Vector_25" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Group9() {
+  return (
+    <div className="h-[41.239px] relative shrink-0 w-[155px]">
+      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 155 41.239">
+        <g id="Group 15438">
+          <path d={svgPaths.p2bfe3a80} fill="var(--fill-0, #110846)" id="Vector" />
+          <path d={svgPaths.pbee2d00} fill="var(--fill-0, #110846)" id="Vector_2" />
+          <path d={svgPaths.p296810c0} fill="var(--fill-0, #110846)" id="Vector_3" />
+          <path d={svgPaths.p1f644c00} fill="var(--fill-0, #110846)" id="Vector_4" />
+          <path d={svgPaths.p3810b800} fill="var(--fill-0, #110846)" id="Vector_5" />
+          <path d={svgPaths.p1dcd0780} fill="var(--fill-0, #110846)" id="Vector_6" />
+          <path d={svgPaths.p249be680} fill="var(--fill-0, #110846)" id="Vector_7" />
+          <path d={svgPaths.p8ebc680} fill="var(--fill-0, #110846)" id="Vector_8" />
+          <path d={svgPaths.p289da200} fill="var(--fill-0, #110846)" id="Vector_9" />
+          <path d={svgPaths.p323d7c80} fill="var(--fill-0, #110846)" id="Vector_10" />
+          <path d={svgPaths.p24dfbeb0} fill="var(--fill-0, #110846)" id="Vector_11" />
+          <path d={svgPaths.p8711b00} fill="var(--fill-0, #110846)" id="Vector_12" />
+          <path d={svgPaths.p5ba000} fill="var(--fill-0, #110846)" id="Vector_13" />
+          <path d={svgPaths.pca5b600} fill="var(--fill-0, #110846)" id="Vector_14" />
+          <path d={svgPaths.p1a0ac500} fill="var(--fill-0, #110846)" id="Vector_15" />
+          <path d={svgPaths.p32363640} fill="var(--fill-0, #110846)" id="Vector_16" />
+          <path d={svgPaths.pa6ccf40} fill="var(--fill-0, #110846)" id="Vector_17" />
+          <path d={svgPaths.p26605f00} fill="var(--fill-0, #110846)" id="Vector_18" />
+          <path d={svgPaths.p309bf680} fill="var(--fill-0, #110846)" id="Vector_19" />
+          <path d={svgPaths.p246aa880} fill="var(--fill-0, #110846)" id="Vector_20" />
+          <path d={svgPaths.p3a58e810} fill="var(--fill-0, #110846)" id="Vector_21" />
+          <path d={svgPaths.p24848980} fill="var(--fill-0, #110846)" id="Vector_22" />
+          <path d={svgPaths.p8a26ef2} fill="var(--fill-0, #110846)" id="Vector_23" />
+          <path d={svgPaths.p12f5a300} fill="var(--fill-0, #110846)" id="Vector_24" />
+          <path d={svgPaths.p36ed7120} fill="var(--fill-0, #110846)" id="Vector_25" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Group10() {
+  return (
+    <div className="h-[41.239px] relative shrink-0 w-[155px]">
+      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 155 41.239">
+        <g id="Group 15438">
+          <path d={svgPaths.p2bfe3a80} fill="var(--fill-0, #110846)" id="Vector" />
+          <path d={svgPaths.pbee2d00} fill="var(--fill-0, #110846)" id="Vector_2" />
+          <path d={svgPaths.p296810c0} fill="var(--fill-0, #110846)" id="Vector_3" />
+          <path d={svgPaths.p1f644c00} fill="var(--fill-0, #110846)" id="Vector_4" />
+          <path d={svgPaths.p3810b800} fill="var(--fill-0, #110846)" id="Vector_5" />
+          <path d={svgPaths.p1dcd0780} fill="var(--fill-0, #110846)" id="Vector_6" />
+          <path d={svgPaths.p249be680} fill="var(--fill-0, #110846)" id="Vector_7" />
+          <path d={svgPaths.p8ebc680} fill="var(--fill-0, #110846)" id="Vector_8" />
+          <path d={svgPaths.p289da200} fill="var(--fill-0, #110846)" id="Vector_9" />
+          <path d={svgPaths.p323d7c80} fill="var(--fill-0, #110846)" id="Vector_10" />
+          <path d={svgPaths.p24dfbeb0} fill="var(--fill-0, #110846)" id="Vector_11" />
+          <path d={svgPaths.p8711b00} fill="var(--fill-0, #110846)" id="Vector_12" />
+          <path d={svgPaths.p5ba000} fill="var(--fill-0, #110846)" id="Vector_13" />
+          <path d={svgPaths.pca5b600} fill="var(--fill-0, #110846)" id="Vector_14" />
+          <path d={svgPaths.p1a0ac500} fill="var(--fill-0, #110846)" id="Vector_15" />
+          <path d={svgPaths.p32363640} fill="var(--fill-0, #110846)" id="Vector_16" />
+          <path d={svgPaths.pa6ccf40} fill="var(--fill-0, #110846)" id="Vector_17" />
+          <path d={svgPaths.p26605f00} fill="var(--fill-0, #110846)" id="Vector_18" />
+          <path d={svgPaths.p309bf680} fill="var(--fill-0, #110846)" id="Vector_19" />
+          <path d={svgPaths.p246aa880} fill="var(--fill-0, #110846)" id="Vector_20" />
+          <path d={svgPaths.p3a58e810} fill="var(--fill-0, #110846)" id="Vector_21" />
+          <path d={svgPaths.p24848980} fill="var(--fill-0, #110846)" id="Vector_22" />
+          <path d={svgPaths.p8a26ef2} fill="var(--fill-0, #110846)" id="Vector_23" />
+          <path d={svgPaths.p12f5a300} fill="var(--fill-0, #110846)" id="Vector_24" />
+          <path d={svgPaths.p36ed7120} fill="var(--fill-0, #110846)" id="Vector_25" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Group11() {
+  return (
+    <div className="h-[41.239px] relative shrink-0 w-[155px]">
+      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 155 41.239">
+        <g id="Group 15438">
+          <path d={svgPaths.p2bfe3a80} fill="var(--fill-0, #110846)" id="Vector" />
+          <path d={svgPaths.pbee2d00} fill="var(--fill-0, #110846)" id="Vector_2" />
+          <path d={svgPaths.p296810c0} fill="var(--fill-0, #110846)" id="Vector_3" />
+          <path d={svgPaths.p1f644c00} fill="var(--fill-0, #110846)" id="Vector_4" />
+          <path d={svgPaths.p3810b800} fill="var(--fill-0, #110846)" id="Vector_5" />
+          <path d={svgPaths.p1dcd0780} fill="var(--fill-0, #110846)" id="Vector_6" />
+          <path d={svgPaths.p249be680} fill="var(--fill-0, #110846)" id="Vector_7" />
+          <path d={svgPaths.p8ebc680} fill="var(--fill-0, #110846)" id="Vector_8" />
+          <path d={svgPaths.p289da200} fill="var(--fill-0, #110846)" id="Vector_9" />
+          <path d={svgPaths.p323d7c80} fill="var(--fill-0, #110846)" id="Vector_10" />
+          <path d={svgPaths.p24dfbeb0} fill="var(--fill-0, #110846)" id="Vector_11" />
+          <path d={svgPaths.p8711b00} fill="var(--fill-0, #110846)" id="Vector_12" />
+          <path d={svgPaths.p5ba000} fill="var(--fill-0, #110846)" id="Vector_13" />
+          <path d={svgPaths.pca5b600} fill="var(--fill-0, #110846)" id="Vector_14" />
+          <path d={svgPaths.p1a0ac500} fill="var(--fill-0, #110846)" id="Vector_15" />
+          <path d={svgPaths.p32363640} fill="var(--fill-0, #110846)" id="Vector_16" />
+          <path d={svgPaths.pa6ccf40} fill="var(--fill-0, #110846)" id="Vector_17" />
+          <path d={svgPaths.p26605f00} fill="var(--fill-0, #110846)" id="Vector_18" />
+          <path d={svgPaths.p309bf680} fill="var(--fill-0, #110846)" id="Vector_19" />
+          <path d={svgPaths.p246aa880} fill="var(--fill-0, #110846)" id="Vector_20" />
+          <path d={svgPaths.p3a58e810} fill="var(--fill-0, #110846)" id="Vector_21" />
+          <path d={svgPaths.p24848980} fill="var(--fill-0, #110846)" id="Vector_22" />
+          <path d={svgPaths.p8a26ef2} fill="var(--fill-0, #110846)" id="Vector_23" />
+          <path d={svgPaths.p12f5a300} fill="var(--fill-0, #110846)" id="Vector_24" />
+          <path d={svgPaths.p36ed7120} fill="var(--fill-0, #110846)" id="Vector_25" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Frame1() {
+  return (
+    <div className="content-stretch flex gap-[84px] items-center justify-end overflow-clip relative shrink-0 w-full">
+      <Group6 />
+      <Group7 />
+      <Group8 />
+      <Group9 />
+      <Group10 />
+      <Group11 />
+    </div>
+  );
+}
+
+function Frame2() {
+  return (
+    <div className="content-stretch flex flex-col gap-[64px] items-start justify-center opacity-75 relative shrink-0 w-full">
+      <Frame />
+      <Frame1 />
+    </div>
+  );
+}
+
+function Frame3() {
+  return (
+    <div className="content-stretch flex flex-col gap-[64px] items-center relative shrink-0 w-[1280px]">
+      <Frame4 />
+      <Frame2 />
+    </div>
+  );
+}
+
+export default function SecondHero() {
+  return (
+    <div className="bg-[#ededed] content-stretch flex flex-col items-start pb-[120px] pt-[64px] px-[80px] relative size-full" data-name="Second-hero">
+      <Frame3 />
+    </div>
+  );
+}
