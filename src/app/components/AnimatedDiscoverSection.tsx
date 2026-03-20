@@ -54,10 +54,10 @@ const STEPS: DiscoverStep[] = [
 
 // Each step has a fixed chip position — used when that step is NOT active
 const FIXED_CHIP_POSITIONS: { left: number; top: number }[] = [
-  { left: 483, top: 517 },  // Step 01 chip position when inactive
-  { left: 632, top: 791 },  // Step 02 chip position when inactive
-  { left: 166, top: 869 },  // Step 03 chip position when inactive
-  { left: 339, top: 644 },  // Step 04 chip position when inactive
+  { left: 487, top: 544 },  // Step 01 chip position when inactive
+  { left: 642, top: 893 },  // Step 02 chip position when inactive
+  { left: 229, top: 993 },  // Step 03 chip position when inactive
+  { left: 341, top: 644 },  // Step 04 chip position when inactive
 ];
 
 // CSS keyframe injected once for the timeline progress animation
@@ -134,19 +134,19 @@ export function AnimatedDiscoverSection() {
 
         {/* Decorative background shapes */}
         {activeStep === 0 ? (
-          <div className="absolute inset-[39.84%_30.4%_10.66%_30.42%]">
+          <div className="absolute inset-0">
             <Group2099 />
           </div>
         ) : activeStep === 1 ? (
-          <div className="absolute inset-[39.84%_30.4%_10.66%_30.42%]">
+          <div className="absolute inset-0">
             <Group2103 />
           </div>
         ) : activeStep === 2 ? (
-          <div className="absolute inset-[39.84%_30.4%_10.66%_30.42%]">
+          <div className="absolute inset-0">
             <Group2107 />
           </div>
         ) : (
-          <div className="absolute inset-[39.84%_30.4%_10.66%_30.42%]">
+          <div className="absolute inset-0">
             <Group2111 />
           </div>
         )}
@@ -264,9 +264,8 @@ export function AnimatedDiscoverSection() {
             onClick={() => goToStep(stepIdx, activeStep)}
           >
             <div className="content-stretch flex font-['Px_Grotesk:Regular',sans-serif] gap-[8px] items-center not-italic relative shrink-0 text-[#f5f5f5] text-[14px] whitespace-nowrap">
-              <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[0] relative shrink-0 text-[14px]">
-                <span className="leading-[1.2]">{chipStep.id}.</span>
-                <span className="leading-[1.2]"> </span>
+              <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[16px] relative shrink-0 text-[14px] uppercase whitespace-nowrap">
+                {chipStep.id}
               </p>
               <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] relative shrink-0 uppercase">{chipStep.shortLabel}</p>
             </div>

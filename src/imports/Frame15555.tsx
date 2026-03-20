@@ -3,7 +3,7 @@ import svgPaths from "./svg-0ws1xy5g1y";
 function Frame14() {
   return (
     <div className="content-stretch flex items-center relative shrink-0">
-      <p className="font-['Px_Grotesk:Regular',sans-serif] font-['Saans:Medium',sans-serif] leading-[0] not-italic relative shrink-0 text-[#f5f5f5] text-[0px] text-[14px] whitespace-nowrap">
+      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#f5f5f5] text-[14px] whitespace-nowrap">
         <span className="leading-[1.2]">01</span>
         <span className="leading-[1.2]">{` `}</span>
       </p>

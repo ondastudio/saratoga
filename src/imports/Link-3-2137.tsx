@@ -1,18 +1,8 @@
-import svgPaths from "./svg-hx3gj2bgkk";
+import { IconButton } from "../app/components/IconButton";
 
 function Icon() {
   return (
-    <div className="bg-[#f5f5f5] relative rounded-[4px] shrink-0 size-[32px]" data-name="Icon">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center relative size-full">
-        <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Arrow--right">
-          <div className="absolute inset-[18.75%_12.5%]" data-name="Vector">
-            <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 12.5">
-              <path d={svgPaths.p3be57f00} fill="var(--fill-0, #202020)" id="Vector" />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
+    <IconButton size={32} variant="filled-white" />
   );
 }
 

@@ -1,6 +1,8 @@
 import { Link } from "react-router";
 import svgPaths from "./svg-zs9ybbwn1o";
 import { useEffect, useState } from "react";
+import { SaratogaButton } from "../app/components/SaratogaButton";
+import { NavLink } from "../app/components/NavLink";
 
 const HEADER_HEIGHT = 900;
 
@@ -9,32 +11,32 @@ function Logo() {
     <div className="h-[32px] relative shrink-0 w-[120.276px]">
       <Link to="/" aria-label="Go to homepage" className="absolute block size-full">
         <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 120.276 32">
-          <g id="Group 15438">
-            <path d={svgPaths.p39277c00} fill="var(--fill-0, #110846)" id="Vector" />
-            <path d={svgPaths.p4ba9900} fill="var(--fill-0, #110846)" id="Vector_2" />
-            <path d={svgPaths.pf83fc00} fill="var(--fill-0, #110846)" id="Vector_3" />
-            <path d={svgPaths.pe86b800} fill="var(--fill-0, #110846)" id="Vector_4" />
-            <path d={svgPaths.p18516400} fill="var(--fill-0, #110846)" id="Vector_5" />
-            <path d={svgPaths.p25d10b00} fill="var(--fill-0, #110846)" id="Vector_6" />
-            <path d={svgPaths.p374d0480} fill="var(--fill-0, #110846)" id="Vector_7" />
-            <path d={svgPaths.pfd1f800} fill="var(--fill-0, #110846)" id="Vector_8" />
-            <path d={svgPaths.p33f1c500} fill="var(--fill-0, #110846)" id="Vector_9" />
-            <path d={svgPaths.p2e2d2590} fill="var(--fill-0, #110846)" id="Vector_10" />
-            <path d={svgPaths.p22ee2c00} fill="var(--fill-0, #110846)" id="Vector_11" />
-            <path d={svgPaths.p1b61de00} fill="var(--fill-0, #110846)" id="Vector_12" />
-            <path d={svgPaths.p1d6b7b00} fill="var(--fill-0, #110846)" id="Vector_13" />
-            <path d={svgPaths.p3db88b80} fill="var(--fill-0, #110846)" id="Vector_14" />
-            <path d={svgPaths.p16e67100} fill="var(--fill-0, #110846)" id="Vector_15" />
-            <path d={svgPaths.p128a7f00} fill="var(--fill-0, #110846)" id="Vector_16" />
-            <path d={svgPaths.pbdd2b80} fill="var(--fill-0, #110846)" id="Vector_17" />
-            <path d={svgPaths.p2c57ef00} fill="var(--fill-0, #110846)" id="Vector_18" />
-            <path d={svgPaths.p6983e80} fill="var(--fill-0, #110846)" id="Vector_19" />
-            <path d={svgPaths.pc622bf0} fill="var(--fill-0, #110846)" id="Vector_20" />
-            <path d={svgPaths.p29944600} fill="var(--fill-0, #110846)" id="Vector_21" />
-            <path d={svgPaths.p3f1f9e00} fill="var(--fill-0, #110846)" id="Vector_22" />
-            <path d={svgPaths.p12d5bd00} fill="var(--fill-0, #110846)" id="Vector_23" />
-            <path d={svgPaths.pc8d4500} fill="var(--fill-0, #110846)" id="Vector_24" />
-            <path d={svgPaths.p23fb1600} fill="var(--fill-0, #110846)" id="Vector_25" />
+          <g id="Group 15440">
+            <path d={svgPaths.p39277c00} fill="#110846" id="Vector" />
+            <path d={svgPaths.p4ba9900} fill="#8740FF" id="Vector_2" />
+            <path d={svgPaths.pf83fc00} fill="#8740FF" id="Vector_3" />
+            <path d={svgPaths.pe86b800} fill="#8740FF" id="Vector_4" />
+            <path d={svgPaths.p18516400} fill="#8740FF" id="Vector_5" />
+            <path d={svgPaths.p25d10b00} fill="#8740FF" id="Vector_6" />
+            <path d={svgPaths.p374d0480} fill="#8740FF" id="Vector_7" />
+            <path d={svgPaths.pfd1f800} fill="#110846" id="Vector_8" />
+            <path d={svgPaths.p33f1c500} fill="#110846" id="Vector_9" />
+            <path d={svgPaths.p2e2d2590} fill="#110846" id="Vector_10" />
+            <path d={svgPaths.p22ee2c00} fill="#110846" id="Vector_11" />
+            <path d={svgPaths.p1b61de00} fill="#110846" id="Vector_12" />
+            <path d={svgPaths.p1d6b7b00} fill="#110846" id="Vector_13" />
+            <path d={svgPaths.p3db88b80} fill="#110846" id="Vector_14" />
+            <path d={svgPaths.p16e67100} fill="#110846" id="Vector_15" />
+            <path d={svgPaths.p128a7f00} fill="#110846" id="Vector_16" />
+            <path d={svgPaths.pbdd2b80} fill="#110846" id="Vector_17" />
+            <path d={svgPaths.p2c57ef00} fill="#110846" id="Vector_18" />
+            <path d={svgPaths.p6983e80} fill="#8740FF" id="Vector_19" />
+            <path d={svgPaths.pc622bf0} fill="#8740FF" id="Vector_20" />
+            <path d={svgPaths.p29944600} fill="#8740FF" id="Vector_21" />
+            <path d={svgPaths.p3f1f9e00} fill="#8740FF" id="Vector_22" />
+            <path d={svgPaths.p12d5bd00} fill="#8740FF" id="Vector_23" />
+            <path d={svgPaths.pc8d4500} fill="#8740FF" id="Vector_24" />
+            <path d={svgPaths.p23fb1600} fill="#110846" id="Vector_25" />
           </g>
         </svg>
       </Link>
@@ -42,79 +44,24 @@ function Logo() {
   );
 }
 
-function ChevronDown() {
-  return (
-    <div className="overflow-clip relative shrink-0 size-[16px]" data-name="Chevron--down">
-      <div className="absolute inset-[33.13%_18.75%_31.25%_18.75%]" data-name="Vector">
-        <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 10 5.7">
-          <path d={svgPaths.p32d32200} fill="var(--fill-0, #300067)" id="Vector" />
-        </svg>
-      </div>
-    </div>
-  );
-}
-
-function NavItem({ label, hasChevron }: { label: string; hasChevron?: boolean }) {
-  return (
-    <div className="h-[40px] relative shrink-0 cursor-pointer group">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex h-full items-center gap-[2px] px-[16px] relative">
-        <p
-          className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#110846] text-[14px] uppercase whitespace-nowrap"
-          style={{
-            backgroundImage: "linear-gradient(#110846, #110846)",
-            backgroundSize: "0% 1px",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "left bottom",
-            transition: "background-size 0.3s ease",
-          }}
-          onMouseEnter={e => (e.currentTarget.style.backgroundSize = "100% 1px")}
-          onMouseLeave={e => (e.currentTarget.style.backgroundSize = "0% 1px")}
-        >
-          {label}
-        </p>
-        {hasChevron && <ChevronDown />}
-      </div>
-    </div>
-  );
-}
-
 function NavLinks() {
   return (
     <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Container">
-      <NavItem label="Products" hasChevron />
-      <NavItem label="Why Saratoga?" />
-      <NavItem label="Solutions" hasChevron />
-      <NavItem label="Resources" hasChevron />
-      <NavItem label="Partners" hasChevron />
-      <NavItem label="Company" hasChevron />
+      <NavLink color="dark" variant="chevron">Products</NavLink>
+      <NavLink color="dark">Why Saratoga?</NavLink>
+      <NavLink color="dark" variant="chevron">Solutions</NavLink>
+      <NavLink color="dark" variant="chevron">Resources</NavLink>
+      <NavLink color="dark" variant="chevron">Partners</NavLink>
+      <NavLink color="dark" variant="chevron">Company</NavLink>
     </div>
   );
 }
 
 function Actions() {
   return (
-    <div className="content-stretch flex gap-[32px] items-center relative shrink-0" data-name="Action">
-      <div className="content-stretch flex gap-[16px] h-[40px] items-center justify-center relative rounded-[8px] shrink-0 cursor-pointer group">
-        <p
-          className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#110846] text-[14px] uppercase whitespace-nowrap"
-          style={{
-            backgroundImage: "linear-gradient(#110846, #110846)",
-            backgroundSize: "0% 1px",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "left bottom",
-            transition: "background-size 0.3s ease",
-          }}
-          onMouseEnter={e => (e.currentTarget.style.backgroundSize = "100% 1px")}
-          onMouseLeave={e => (e.currentTarget.style.backgroundSize = "0% 1px")}
-        >
-          Login
-        </p>
-      </div>
-      <div className="bg-[#c694fe] hover:bg-[#AF63FF] content-stretch flex h-[40px] items-center justify-center px-[24px] relative rounded-[4px] shrink-0 cursor-pointer transition-colors">
-        <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#110846] text-[14px] uppercase whitespace-nowrap">
-          Request a Demo
-        </p>
-      </div>
+    <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-name="Action">
+      <SaratogaButton variant="ghost">Login</SaratogaButton>
+      <SaratogaButton variant="primary" color="gradient">Request a Demo</SaratogaButton>
     </div>
   );
 }
@@ -141,7 +88,7 @@ export default function Navigation({ headerHeight = HEADER_HEIGHT }: { headerHei
         pointerEvents: visible ? "auto" : "none",
       }}
     >
-      <div className="bg-[#dfdfdf] w-full rounded-[8px]">
+      <div className="bg-[#d8c1fe] w-full rounded-[4px]">
         <div className="content-stretch flex items-center justify-between pl-[24px] pr-[8px] py-[8px] w-full">
           <Logo />
           <NavLinks />

@@ -8,11 +8,16 @@ import imgVector2 from "../assets/c476fea3063f2461c80bf7ea9d9df4b773aa1d8b.png";
 import imgVector3 from "../assets/5b7ee08eb14c2ab7994beb2d305024b166c40147.png";
 import { AnimatedDiscoverSection } from "../app/components/AnimatedDiscoverSection";
 import { useState, useEffect, useRef } from "react";
-import NewHeader from "./Header";
+import NewHeader, { StatCards } from "./Header";
 import CustomersCTA from "./Customers";
 import StickyNav from "./Navigation";
 import NewSecondHero from "./SecondHero";
 import HomepageLogoMarquee from "./SecondHero-102-383";
+import { SaratogaButton } from "../app/components/SaratogaButton";
+import { NavLink } from "../app/components/NavLink";
+import { IconButton } from "../app/components/IconButton";
+import { ArrowIcon } from "../app/components/ArrowIcon";
+import { VideoPlayer } from "../app/components/VideoPlayer";
 
 function Group() {
   return (
@@ -199,7 +204,7 @@ function Container1() {
 function Container2() {
   return (
     <div className="content-stretch flex items-center relative shrink-0 w-full" data-name="Container">
-      <p className="font-['Saans:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#f5f5f5] text-[48px] tracking-[0.3955px] whitespace-nowrap">
+      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#f5f5f5] text-[48px] tracking-[0.3955px] whitespace-nowrap">
         <span className="leading-none">330</span>
         <span className="leading-none text-[30.96px]">+</span>
       </p>
@@ -240,7 +245,7 @@ function Container4() {
 function Container5() {
   return (
     <div className="content-stretch flex items-center relative shrink-0 w-full" data-name="Container">
-      <p className="font-['Saans:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#f5f5f5] text-[48px] tracking-[0.3955px] whitespace-nowrap">
+      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#f5f5f5] text-[48px] tracking-[0.3955px] whitespace-nowrap">
         <span className="leading-none">40K</span>
         <span className="leading-none text-[30.96px]">+</span>
       </p>
@@ -280,7 +285,7 @@ function Container7() {
 function Container8() {
   return (
     <div className="content-stretch flex items-center relative shrink-0 w-full" data-name="Container">
-      <p className="font-['Saans:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#f5f5f5] text-[48px] tracking-[0.3955px] whitespace-nowrap">
+      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#f5f5f5] text-[48px] tracking-[0.3955px] whitespace-nowrap">
         <span className="leading-none">$30B</span>
         <span className="leading-none text-[30.96px]">+</span>
       </p>
@@ -320,7 +325,7 @@ function Container10() {
 function Container11() {
   return (
     <div className="content-stretch flex items-center relative shrink-0 w-full" data-name="Container">
-      <p className="font-['Saans:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#110846] text-[48px] tracking-[0.3955px] whitespace-nowrap">
+      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#110846] text-[48px] tracking-[0.3955px] whitespace-nowrap">
         <span className="leading-none">1M</span>
         <span className="leading-none text-[30.96px]">+</span>
       </p>
@@ -433,7 +438,7 @@ function Container12() {
 
 function Group2() {
   return (
-    <div className="h-[32px] relative shrink-0 w-[120.276px]">
+    <RouterLink to="/" aria-label="Go to homepage" className="h-[32px] relative shrink-0 w-[120.276px] block">
       <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 120.276 32">
         <g id="Group 15438">
           <path d={svgPaths.p39277c00} fill="var(--fill-0, #110846)" id="Vector" />
@@ -463,7 +468,7 @@ function Group2() {
           <path d={svgPaths.p23fb1600} fill="var(--fill-0, #110846)" id="Vector_25" />
         </g>
       </svg>
-    </div>
+    </RouterLink>
   );
 }
 
@@ -491,23 +496,11 @@ function Link7() {
 }
 
 function Frame22() {
-  return (
-    <div className="h-[40px] relative shrink-0 w-[123px]">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center justify-center px-[16px] relative size-full">
-        <Link7 />
-      </div>
-    </div>
-  );
+  return <NavLink variant="chevron">Products</NavLink>;
 }
 
 function Link9() {
-  return (
-    <div className="h-[40px] relative rounded-[4px] shrink-0" data-name="Link">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex h-full items-center justify-center px-[16px] relative">
-        <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#110846] text-[14px] uppercase whitespace-nowrap">Why Saratoga?</p>
-      </div>
-    </div>
-  );
+  return <NavLink>Why Saratoga?</NavLink>;
 }
 
 function Link11() {
@@ -519,20 +512,7 @@ function Link11() {
 }
 
 function Link10() {
-  return (
-    <div className="h-[40px] relative shrink-0" data-name="Link">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex h-full items-center px-[16px] relative">
-        <Link11 />
-        <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Chevron--down">
-          <div className="absolute inset-[33.13%_18.75%_31.25%_18.75%]" data-name="Vector">
-            <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.5 7.125">
-              <path d={svgPaths.p23048b80} fill="var(--fill-0, #AF63FF)" id="Vector" />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  return <NavLink variant="chevron">Solutions</NavLink>;
 }
 
 function Link13() {
@@ -546,22 +526,7 @@ function Link13() {
 }
 
 function Link12() {
-  return (
-    <div className="h-[40px] relative shrink-0" data-name="Link">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex h-full items-center px-[16px] relative">
-        <Link13 />
-        <div className="relative shrink-0 size-[20px]" data-name="Chevron--down">
-          <div className="bg-clip-padding border-0 border-[transparent] border-solid overflow-clip relative rounded-[inherit] size-full">
-            <div className="absolute inset-[33.13%_18.75%_31.25%_18.75%]" data-name="Vector">
-              <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.5 7.125">
-                <path d={svgPaths.p23048b80} fill="var(--fill-0, #AF63FF)" id="Vector" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  return <NavLink variant="chevron">Resources</NavLink>;
 }
 
 function Link15() {
@@ -573,20 +538,7 @@ function Link15() {
 }
 
 function Link14() {
-  return (
-    <div className="h-[40px] relative shrink-0" data-name="Link">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex h-full items-center px-[16px] relative">
-        <Link15 />
-        <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Chevron--down">
-          <div className="absolute inset-[33.13%_18.75%_31.25%_18.75%]" data-name="Vector">
-            <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.5 7.125">
-              <path d={svgPaths.p23048b80} fill="var(--fill-0, #AF63FF)" id="Vector" />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  return <NavLink variant="chevron">Partners</NavLink>;
 }
 
 function Link17() {
@@ -598,20 +550,7 @@ function Link17() {
 }
 
 function Link16() {
-  return (
-    <div className="h-[40px] relative shrink-0" data-name="Link">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex h-full items-center px-[16px] relative">
-        <Link17 />
-        <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Chevron--down">
-          <div className="absolute inset-[33.13%_18.75%_31.25%_18.75%]" data-name="Vector">
-            <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.5 7.125">
-              <path d={svgPaths.p23048b80} fill="var(--fill-0, #AF63FF)" id="Vector" />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  return <NavLink variant="chevron">Company</NavLink>;
 }
 
 function Container13() {
@@ -628,12 +567,7 @@ function Container13() {
 }
 
 function Link18() {
-  return (
-    <div className="content-stretch flex gap-[16px] h-[40px] items-center justify-center px-[17px] py-px relative rounded-[4px] shrink-0" data-name="Link">
-      <div aria-hidden="true" className="absolute border border-[#af63ff] border-solid inset-0 pointer-events-none rounded-[4px]" />
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#110846] text-[14px] uppercase whitespace-nowrap">Login</p>
-    </div>
-  );
+  return <SaratogaButton variant="ghost" color="white">Login</SaratogaButton>;
 }
 
 function Link19() {
@@ -679,31 +613,15 @@ function Navigation() {
 
 function Header() {
   return (
-    <div className="h-[900px] shrink-0 w-[1440px]">
+    <div className="h-[90vh] shrink-0 w-[1440px]">
       <NewHeader />
-    </div>
-  );
-}
-
-function Icon() {
-  return (
-    <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#f5f5f5] content-stretch flex items-center justify-center left-[calc(50%+0.5px)] rounded-[4px] size-[40px] top-[calc(50%+0.41px)]" data-name="Icon">
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Play--filled--alt">
-        <div className="absolute inset-[12.5%_12.5%_12.5%_18.75%]" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.75 15">
-            <path d={svgPaths.p345ecd80} fill="var(--fill-0, #202020)" id="Vector" />
-          </svg>
-        </div>
-      </div>
     </div>
   );
 }
 
 function Frame45() {
   return (
-    <div className="aspect-[1920/1080] bg-[rgba(255,255,255,0.5)] flex-[1_0_0] min-h-px min-w-px overflow-clip relative rounded-[4px]">
-      <Icon />
-    </div>
+    <VideoPlayer className="aspect-[1920/1080] flex-[1_0_0] min-h-px min-w-px" />
   );
 }
 
@@ -791,25 +709,9 @@ function Frame10() {
   );
 }
 
-function Icon1() {
-  return (
-    <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#f5f5f5] content-stretch flex items-center justify-center left-1/2 rounded-[4px] size-[40px] top-[calc(50%-0.19px)]" data-name="Icon">
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Play--filled--alt">
-        <div className="absolute inset-[12.5%_12.5%_12.5%_18.75%]" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.75 15">
-            <path d={svgPaths.p345ecd80} fill="var(--fill-0, #202020)" id="Vector" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function Frame46() {
   return (
-    <div className="bg-[rgba(255,255,255,0.5)] h-[160px] overflow-clip relative rounded-[4px] shrink-0 w-[284px]">
-      <Icon1 />
-    </div>
+    <VideoPlayer className="h-[160px] shrink-0 w-[284px]" />
   );
 }
 
@@ -825,7 +727,7 @@ function Frame49() {
 function Frame47() {
   return (
     <div className="content-stretch flex flex-col items-end relative shrink-0 w-[23px]">
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#af63ff] text-[16px] text-right w-full">02.</p>
+      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#af63ff] text-[16px] text-right w-full">02.</p>
     </div>
   );
 }
@@ -869,7 +771,7 @@ function Frame33() {
 function Frame53() {
   return (
     <div className="content-stretch flex flex-col items-end relative shrink-0 w-[19px]">
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[16px] text-right w-full">01.</p>
+      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[16px] text-right w-full">01.</p>
     </div>
   );
 }
@@ -1210,7 +1112,7 @@ function Group9() {
 function Frame58() {
   return (
     <div className="content-stretch flex items-center relative shrink-0">
-      <p className="font-['Px_Grotesk:Regular',sans-serif] font-['Saans:Medium',sans-serif] leading-[0] not-italic relative shrink-0 text-[#f5f5f5] text-[0px] text-[14px] whitespace-nowrap">
+      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#f5f5f5] text-[14px] whitespace-nowrap">
         <span className="leading-[1.2]">01.</span>
         <span className="leading-[1.2]">{` `}</span>
       </p>
@@ -1374,7 +1276,7 @@ function Frame56() {
 function Frame62() {
   return (
     <div className="content-stretch flex font-['Px_Grotesk:Regular',sans-serif] gap-[8px] items-center not-italic relative shrink-0 text-[#f5f5f5] text-[14px] whitespace-nowrap">
-      <p className="font-['Saans:Medium',sans-serif] leading-[0] relative shrink-0 text-[0px]">
+      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[0] relative shrink-0 text-[0px]">
         <span className="leading-[1.2]">02.</span>
         <span className="leading-[1.2]">{` `}</span>
       </p>
@@ -1407,25 +1309,11 @@ function Frame61() {
 }
 
 function Link20() {
-  return (
-    <div className="bg-[#c694fe] content-stretch flex h-[40px] items-center justify-center px-[24px] relative rounded-[20px] shrink-0" data-name="Link">
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#202020] text-[14px] uppercase whitespace-nowrap">Why saratoga?</p>
-    </div>
-  );
+  return <SaratogaButton variant="primary" color="lilac">Why Saratoga?</SaratogaButton>;
 }
 
 function Icon2() {
-  return (
-    <div className="bg-[#f5f5f5] content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[40px]" data-name="Icon">
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Arrow--right">
-        <div className="absolute inset-[18.75%_12.5%]" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 12.5">
-            <path d={svgPaths.p3be57f00} fill="var(--fill-0, #202020)" id="Vector" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  );
+  return <IconButton size={40} variant="filled-white" />;
 }
 
 function Button() {
@@ -1453,7 +1341,7 @@ function Frame44() {
 function Frame63() {
   return (
     <div className="content-stretch flex font-['Px_Grotesk:Regular',sans-serif] gap-[8px] items-center not-italic relative shrink-0 text-[#f5f5f5] text-[14px] whitespace-nowrap">
-      <p className="font-['Saans:Medium',sans-serif] leading-[0] relative shrink-0 text-[0px]">
+      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[0] relative shrink-0 text-[0px]">
         <span className="leading-[1.2]">04.</span>
         <span className="leading-[1.2]">{` `}</span>
       </p>
@@ -1488,7 +1376,7 @@ function Frame54() {
 function Frame65() {
   return (
     <div className="content-stretch flex font-['Px_Grotesk:Regular',sans-serif] gap-[8px] items-center not-italic relative shrink-0 text-[#f5f5f5] text-[14px] whitespace-nowrap">
-      <p className="font-['Saans:Medium',sans-serif] leading-[0] relative shrink-0 text-[0px]">
+      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[0] relative shrink-0 text-[0px]">
         <span className="leading-[1.2]">03.</span>
         <span className="leading-[1.2]">{` `}</span>
       </p>
@@ -1922,35 +1810,8 @@ function Frame21() {
   );
 }
 
-function Link21() {
-  return (
-    <div className="bg-[#f5f5f5] content-stretch flex h-[40px] items-center justify-center px-[24px] relative rounded-[20px] shrink-0" data-name="Link">
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#202020] text-[14px] uppercase whitespace-nowrap">CONTACT US</p>
-    </div>
-  );
-}
-
-function Icon4() {
-  return (
-    <div className="bg-[#f5f5f5] content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[40px]" data-name="Icon">
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Arrow--right">
-        <div className="absolute inset-[18.75%_12.5%]" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 12.5">
-            <path d={svgPaths.p3be57f00} fill="var(--fill-0, #202020)" id="Vector" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function Button1() {
-  return (
-    <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Button">
-      <Link21 />
-      <Icon4 />
-    </div>
-  );
+  return <SaratogaButton variant="primary" color="white" showArrow>Contact us</SaratogaButton>;
 }
 
 function Frame20() {
@@ -2060,7 +1921,7 @@ function Container16() {
 
 function Group7() {
   return (
-    <div className="h-[60px] relative shrink-0 w-[225.518px]">
+    <RouterLink to="/" aria-label="Go to homepage" className="h-[60px] relative shrink-0 w-[225.518px] block">
       <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 225.518 60">
         <g id="Group 15440">
           <path d={svgPaths.p3e219680} fill="var(--fill-0, #F5F5F5)" id="Vector" />
@@ -2090,7 +1951,7 @@ function Group7() {
           <path d={svgPaths.p143b9500} fill="var(--fill-0, #F5F5F5)" id="Vector_25" />
         </g>
       </svg>
-    </div>
+    </RouterLink>
   );
 }
 
@@ -2128,25 +1989,15 @@ function Frame11() {
 }
 
 function Icon5() {
-  return (
-    <div className="content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[32px]" data-name="Icon">
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Arrow--right">
-        <div className="absolute inset-[18.75%_12.5%]" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 12.5">
-            <path d={svgPaths.p3be57f00} fill="var(--fill-0, #6A6B9E)" id="Vector" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  );
+  return <ArrowIcon color="#AF63FF" />;
 }
 
 function List3() {
   return (
     <div className="content-stretch flex items-center justify-between pl-[16px] pr-[8px] py-[8px] relative rounded-[8px] shrink-0 w-[277px]" data-name="List">
       <div aria-hidden="true" className="absolute border border-[#f5f5f5] border-solid inset-0 pointer-events-none rounded-[8px]" />
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#9f68ff] text-[16px] whitespace-nowrap">Enter your email</p>
-      <Icon5 />
+      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic opacity-50 relative shrink-0 text-[#9293ba] text-[16px] whitespace-nowrap">Enter your email</p>
+      <div className="opacity-50"><Icon5 /></div>
     </div>
   );
 }
@@ -2320,8 +2171,9 @@ export default function Homepage() {
       <div className="sticky top-0 z-50 w-full h-0 overflow-visible">
         <StickyNav />
       </div>
-      <SecondHero />
+      <StatCards />
       <SecondHero1 />
+      <SecondHero />
       <AnimatedDiscoverSection />
       <Customers />
       <CustomersCTA />

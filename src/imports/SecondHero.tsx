@@ -1,31 +1,16 @@
 import svgPaths from "./svg-e3zj2joxg9";
-
-function Icon() {
-  return (
-    <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#f5f5f5] content-stretch flex items-center justify-center left-[calc(50%+0.5px)] rounded-[4px] size-[40px] top-[calc(50%+0.41px)]" data-name="Icon">
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Play--filled--alt">
-        <div className="absolute inset-[12.5%_12.5%_12.5%_18.75%]" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.75 15">
-            <path d={svgPaths.p345ecd80} fill="var(--fill-0, #202020)" id="Vector" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  );
-}
+import { VideoPlayer } from "../app/components/VideoPlayer";
 
 function Frame5() {
   return (
-    <div className="aspect-[1920/1080] bg-[rgba(255,255,255,0.5)] flex-[1_0_0] min-h-px min-w-px overflow-clip relative rounded-[4px]">
-      <Icon />
-    </div>
+    <VideoPlayer className="aspect-[1920/1080] flex-[1_0_0] min-h-px min-w-px" />
   );
 }
 
 function Point() {
   return (
-    <div className="content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[40px]" data-name="Point">
-      <div aria-hidden="true" className="absolute border border-[#6a6b9e] border-solid inset-0 pointer-events-none rounded-[4px]" />
+    <div className="content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[40px] opacity-50" data-name="Point">
+      <div aria-hidden="true" className="absolute border border-[#9293ba] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Arrow--left">
         <div className="absolute inset-[18.75%_12.5%]" data-name="Vector">
           <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 12.5">
@@ -84,7 +69,7 @@ function Frame1() {
 function Point5() {
   return (
     <div className="content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[40px]" data-name="Point">
-      <div aria-hidden="true" className="absolute border border-[#8740ff] border-solid inset-0 pointer-events-none rounded-[4px]" />
+      <div aria-hidden="true" className="absolute border border-[#f5f5f5] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Arrow--right">
         <div className="absolute inset-[18.75%_12.5%]" data-name="Vector">
           <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 12.5">
@@ -106,25 +91,9 @@ function Frame() {
   );
 }
 
-function Icon1() {
-  return (
-    <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#f5f5f5] content-stretch flex items-center justify-center left-1/2 rounded-[4px] size-[40px] top-[calc(50%-0.19px)]" data-name="Icon">
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Play--filled--alt">
-        <div className="absolute inset-[12.5%_12.5%_12.5%_18.75%]" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.75 15">
-            <path d={svgPaths.p345ecd80} fill="var(--fill-0, #202020)" id="Vector" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function Frame6() {
   return (
-    <div className="bg-[rgba(255,255,255,0.5)] h-[160px] overflow-clip relative rounded-[4px] shrink-0 w-[284px]">
-      <Icon1 />
-    </div>
+    <VideoPlayer className="h-[160px] shrink-0 w-[284px]" />
   );
 }
 
@@ -140,14 +109,14 @@ function Frame9() {
 function Frame7() {
   return (
     <div className="content-stretch flex flex-col items-end relative shrink-0 w-[23px]">
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#af63ff] text-[16px] text-right w-full">02.</p>
+      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[16px] not-italic relative shrink-0 text-[#f5f5f5] text-[14px] uppercase whitespace-nowrap">02</p>
     </div>
   );
 }
 
 function Frame2() {
   return (
-    <div className="content-stretch flex flex-col gap-[8px] items-end leading-[1.2] not-italic relative shrink-0 text-[#af63ff] whitespace-nowrap">
+    <div className="content-stretch flex flex-col gap-[8px] items-end leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] whitespace-nowrap">
       <p className="font-['Saans:Medium',sans-serif] relative shrink-0 text-[20px]">Name Surname</p>
       <p className="font-['Px_Grotesk:Regular',sans-serif] relative shrink-0 text-[14px] uppercase">Company title</p>
     </div>
@@ -184,7 +153,7 @@ function Frame4() {
 function Frame13() {
   return (
     <div className="content-stretch flex flex-col items-end relative shrink-0 w-[19px]">
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[16px] text-right w-full">01.</p>
+      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[16px] not-italic relative shrink-0 text-[#f5f5f5] text-[14px] uppercase whitespace-nowrap">01</p>
     </div>
   );
 }
@@ -218,7 +187,7 @@ function Frame11() {
 
 export default function SecondHero() {
   return (
-    <div className="bg-[#4e0276] content-stretch flex flex-col gap-[64px] items-start px-[80px] py-[84px] relative size-full" data-name="Second-hero">
+    <div className="bg-[#4e0276] content-stretch flex flex-col gap-[64px] items-start justify-center px-[80px] py-[120px] relative size-full min-h-screen" data-name="Second-hero">
       <p className="font-['Saans:Regular',sans-serif] leading-[32px] not-italic relative shrink-0 text-[#f5f5f5] text-[28px] w-full">
         {`Hear How We Help Our Clients, `}<br aria-hidden="true" />In Their Own Words
       </p>

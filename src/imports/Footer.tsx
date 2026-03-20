@@ -70,7 +70,7 @@ function Container2() {
 
 function Group() {
   return (
-    <div className="h-[60px] relative shrink-0 w-[225.518px]">
+    <RouterLink to="/" aria-label="Go to homepage" className="h-[60px] relative shrink-0 w-[225.518px] block">
       <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 225.518 60">
         <g id="Group 15440">
           <path d={svgPaths.p3e219680} fill="var(--fill-0, #F5F5F5)" id="Vector" />
@@ -100,7 +100,7 @@ function Group() {
           <path d={svgPaths.p143b9500} fill="var(--fill-0, #F5F5F5)" id="Vector_25" />
         </g>
       </svg>
-    </div>
+    </RouterLink>
   );
 }
 
@@ -143,7 +143,7 @@ function Icon() {
       <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Arrow--right">
         <div className="absolute inset-[18.75%_12.5%]" data-name="Vector">
           <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 12.5">
-            <path d={svgPaths.p3be57f00} fill="var(--fill-0, #6A6B9E)" id="Vector" />
+            <path d={svgPaths.p3be57f00} fill="var(--fill-0, #AF63FF)" id="Vector" />
           </svg>
         </div>
       </div>
@@ -155,8 +155,8 @@ function List3() {
   return (
     <div className="content-stretch flex items-center justify-between pl-[16px] pr-[8px] py-[8px] relative rounded-[8px] shrink-0 w-[277px]" data-name="List">
       <div aria-hidden="true" className="absolute border border-[#f5f5f5] border-solid inset-0 pointer-events-none rounded-[8px]" />
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#9f68ff] text-[16px] whitespace-nowrap">Enter your email</p>
-      <Icon />
+      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic opacity-50 relative shrink-0 text-[#9293ba] text-[16px] whitespace-nowrap">Enter your email</p>
+      <div className="opacity-50"><Icon /></div>
     </div>
   );
 }

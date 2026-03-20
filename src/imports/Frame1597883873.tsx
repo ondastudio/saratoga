@@ -1,4 +1,5 @@
 import svgPaths from "./svg-yaj8c8053h";
+import { VideoPlayer } from "../app/components/VideoPlayer";
 
 function Frame5() {
   return (
@@ -11,25 +12,9 @@ function Frame5() {
   );
 }
 
-function Icon() {
-  return (
-    <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#f5f5f5] content-stretch flex items-center justify-center left-[calc(50%+0.5px)] rounded-[4px] size-[40px] top-[calc(50%+0.5px)]" data-name="Icon">
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Play--filled--alt">
-        <div className="absolute inset-[12.5%_12.5%_12.5%_18.75%]" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.75 15">
-            <path d={svgPaths.p345ecd80} fill="var(--fill-0, #202020)" id="Vector" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function Frame3() {
   return (
-    <div className="bg-[rgba(198,148,254,0.5)] h-[467px] overflow-clip relative rounded-[4px] shrink-0 w-[785px]">
-      <Icon />
-    </div>
+    <VideoPlayer className="h-[467px] shrink-0 w-[785px]" />
   );
 }
 

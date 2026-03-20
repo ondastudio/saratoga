@@ -1,28 +1,26 @@
-import svgPaths from "./svg-gqbwjzbr9z";
-import imgVector from "../assets/82a221ac8b6fd36418f5e31d0384c076c7749067.png";
-import imgVector1 from "../assets/2c11bde56cf4c8c3b42250877c5d47c0246af446.png";
-import imgVector2 from "../assets/fc272efad44da3e9a90fa81edaf8ef8e73e5010d.png";
-import imgVector3 from "../assets/d464cfdddb042e1b35405457d918e48e1a4e80bd.png";
+import imgCenter from "../assets/e8e50cb5da31c0610ffa7012f25368a24452d253.svg";
+import imgVector1 from "../assets/3bfff484ab8b35241003cb63407b3cffa734bf2f.png";
+import imgVector2 from "../assets/86527243a5a9d3a900a8c2ad8d3f148dedef5f67.png";
+import imgVector3 from "../assets/24eb6449af6fe310cc2966d0dcd7d620edeec620.png";
+import imgVector4 from "../assets/c7e4794a9443cb092794625d6388ed3e71fd0b85.png";
 
 export default function Group() {
   return (
     <div className="relative size-full">
-      <div className="absolute inset-[46.99%_46.79%_46.54%_46.74%]" data-name="Vector">
-        <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 36.0901 36.5054">
-          <path d={svgPaths.p8e2da80} fill="var(--fill-0, #8740FF)" id="Vector" />
-        </svg>
+      <div className="absolute inset-[60.89%_48.41%_35.46%_48.33%]" data-name="Vector">
+        <img alt="" className="absolute block max-w-none size-full" src={imgCenter} />
       </div>
-      <div className="absolute inset-[10.53%_57.9%_47.37%_0]" data-name="Vector">
-        <img alt="" className="absolute block max-w-none size-full" height="237.574" src={imgVector} width="234.871" />
+      <div className="absolute inset-[40.26%_54%_35.92%_24.79%]" data-name="Vector">
+        <img alt="" className="absolute block max-w-none size-full" height="308.853" src={imgVector1} width="305.339" />
       </div>
-      <div className="absolute inset-[0_10.53%_57.9%_47.37%]" data-name="Vector">
-        <img alt="" className="absolute block max-w-none size-full" height="237.574" src={imgVector1} width="234.881" />
+      <div className="absolute inset-[34.31%_30.15%_41.88%_48.65%]" data-name="Vector">
+        <img alt="" className="absolute block max-w-none size-full" height="308.853" src={imgVector2} width="305.352" />
       </div>
-      <div className="absolute inset-[47.37%_0_10.53%_57.89%]" data-name="Vector">
-        <img alt="" className="absolute block max-w-none size-full" height="237.584" src={imgVector2} width="234.881" />
+      <div className="absolute inset-[61.1%_24.85%_15.09%_53.95%]" data-name="Vector">
+        <img alt="" className="absolute block max-w-none size-full" height="308.866" src={imgVector3} width="305.352" />
       </div>
-      <div className="absolute inset-[57.89%_47.37%_0_10.53%]" data-name="Vector">
-        <img alt="" className="absolute block max-w-none size-full" height="237.584" src={imgVector3} width="234.871" />
+      <div className="absolute inset-[67.05%_48.7%_9.13%_30.09%]" data-name="Vector">
+        <img alt="" className="absolute block max-w-none size-full" height="308.866" src={imgVector4} width="305.339" />
       </div>
     </div>
   );

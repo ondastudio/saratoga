@@ -3,6 +3,7 @@ import imgVector from "../assets/202bd74443a026bae9f69ff14b087ee9c7166084.png";
 import imgVector1 from "../assets/a9243a57a7f097a11dd2cb1c9027604a26bf702b.png";
 import imgVector2 from "../assets/c476fea3063f2461c80bf7ea9d9df4b773aa1d8b.png";
 import imgVector3 from "../assets/5b7ee08eb14c2ab7994beb2d305024b166c40147.png";
+import { IconButton } from "../app/components/IconButton";
 
 function Group() {
   return (
@@ -66,7 +67,7 @@ function Group1() {
 function Frame16() {
   return (
     <div className="content-stretch flex items-center relative shrink-0">
-      <p className="font-['Px_Grotesk:Regular',sans-serif] font-['Saans:Medium',sans-serif] leading-[0] not-italic relative shrink-0 text-[#f5f5f5] text-[0px] text-[14px] whitespace-nowrap">
+      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#f5f5f5] text-[14px] whitespace-nowrap">
         <span className="leading-[1.2]">01.</span>
         <span className="leading-[1.2]">{` `}</span>
       </p>
@@ -272,15 +273,7 @@ function Link() {
 
 function Icon() {
   return (
-    <div className="bg-[#f5f5f5] content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[40px]" data-name="Icon">
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Arrow--right">
-        <div className="absolute inset-[18.75%_12.5%]" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 12.5">
-            <path d={svgPaths.p3be57f00} fill="var(--fill-0, #202020)" id="Vector" />
-          </svg>
-        </div>
-      </div>
-    </div>
+    <IconButton size={40} variant="filled-white" />
   );
 }
 
