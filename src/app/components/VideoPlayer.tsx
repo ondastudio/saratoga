@@ -48,7 +48,7 @@ export function VideoPlayer({ className }: VideoPlayerProps) {
   }, []);
 
   return (
-    <div className={`bg-[rgba(255,255,255,0.5)] overflow-clip relative rounded-[4px] ${className ?? ""}`}>
+    <div className={`bg-[rgba(198,148,254,0.5)] overflow-clip relative rounded-[4px] ${className ?? ""}`}>
       {/* Play button — centered, visible when NOT playing */}
       <div
         className={`-translate-x-1/2 -translate-y-1/2 absolute left-1/2 top-1/2 transition-all duration-300 ${isPlaying ? "opacity-0 pointer-events-none scale-75" : "opacity-100"}`}

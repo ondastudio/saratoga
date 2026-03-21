@@ -18,6 +18,8 @@ import { NavLink } from "../app/components/NavLink";
 import { IconButton } from "../app/components/IconButton";
 import { ArrowIcon } from "../app/components/ArrowIcon";
 import { VideoPlayer } from "../app/components/VideoPlayer";
+import { ExpandButton } from "../app/components/ExpandButton";
+import { LearnMoreCta } from "../app/components/LearnMoreCta";
 
 function Group() {
   return (
@@ -1286,17 +1288,7 @@ function Frame62() {
 }
 
 function Point6() {
-  return (
-    <div className="bg-[#110846] content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[32px]" data-name="Point">
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Add">
-        <div className="absolute inset-1/4" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 10 10">
-            <path d={svgPaths.pb719000} fill="var(--fill-0, #F5F5F5)" id="Vector" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  );
+  return <ExpandButton size={32} icon="add" />;
 }
 
 function Frame61() {
@@ -1309,7 +1301,7 @@ function Frame61() {
 }
 
 function Link20() {
-  return <SaratogaButton variant="primary" color="lilac">Why Saratoga?</SaratogaButton>;
+  return <SaratogaButton variant="primary" color="lilac" to="/company/why-saratoga">Why Saratoga?</SaratogaButton>;
 }
 
 function Icon2() {
@@ -1351,17 +1343,7 @@ function Frame63() {
 }
 
 function Point7() {
-  return (
-    <div className="bg-[#110846] content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[32px]" data-name="Point">
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Add">
-        <div className="absolute inset-1/4" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 10 10">
-            <path d={svgPaths.pb719000} fill="var(--fill-0, #F5F5F5)" id="Vector" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  );
+  return <ExpandButton size={32} icon="add" />;
 }
 
 function Frame54() {
@@ -1386,17 +1368,7 @@ function Frame65() {
 }
 
 function Point8() {
-  return (
-    <div className="bg-[#110846] content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[32px]" data-name="Point">
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Add">
-        <div className="absolute inset-1/4" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 10 10">
-            <path d={svgPaths.pb719000} fill="var(--fill-0, #F5F5F5)" id="Vector" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  );
+  return <ExpandButton size={32} icon="add" />;
 }
 
 function Frame64() {
@@ -1419,21 +1391,7 @@ function Discover() {
 }
 
 function Cta() {
-  return (
-    <div className="group flex gap-[10px] items-center relative shrink-0 cursor-pointer" data-name="CTA">
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[14px] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">LEARN MORE</p>
-      <div className="content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[40px]" data-name="Icon">
-        <div aria-hidden="true" className="absolute border border-[#f5f5f5] border-solid inset-0 pointer-events-none rounded-[4px] group-hover:bg-[#f5f5f5] transition-colors duration-200" />
-        <div className="overflow-clip relative shrink-0 size-[16px]" data-name="Arrow--right">
-          <div className="absolute inset-[18.75%_12.5%]" data-name="Vector">
-            <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12 10">
-              <path d={svgPaths.p2cb8b080} fill="#F5F5F5" className="group-hover:[fill:#110846] transition-colors duration-200" id="Vector" />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  return <LearnMoreCta variant="dark" />;
 }
 
 function Header1() {
@@ -1468,7 +1426,7 @@ function Content() {
 
 function Card2({ animStyle }: { animStyle?: React.CSSProperties }) {
   return (
-    <div className="bg-[#110846] flex-[1_0_0] h-full min-h-px min-w-px relative rounded-[8px] transition-all duration-1000 ease-out" data-name="Card-01" style={animStyle}>
+    <div className="group bg-[#110846] flex-[1_0_0] h-full min-h-px min-w-px relative rounded-[8px] transition-all duration-1000 ease-out" data-name="Card-01" style={animStyle}>
       <div className="content-stretch flex flex-col items-start justify-between p-[40px] relative size-full">
         <Header1 />
         <Content />
@@ -1545,19 +1503,7 @@ function Frame26() {
           </g>
         </svg>
       </div>
-      <div className="group flex items-center gap-[10px] cursor-pointer">
-        <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic text-[#f5f5f5] text-[14px] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">LEARN MORE</p>
-        <div className="content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[40px]" data-name="Point">
-          <div aria-hidden="true" className="absolute border border-[#f5f5f5] border-solid inset-0 pointer-events-none rounded-[4px] group-hover:bg-[#f5f5f5] transition-colors duration-200" />
-          <div className="overflow-clip relative shrink-0 size-[16px]" data-name="Arrow--right">
-            <div className="absolute inset-[18.75%_12.5%]" data-name="Vector">
-              <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12 10">
-                <path d={svgPaths.p2cb8b080} fill="#F5F5F5" className="group-hover:[fill:#110846] transition-colors duration-200" id="Vector" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
+      <LearnMoreCta variant="dark" />
     </div>
   );
 }
@@ -1581,7 +1527,7 @@ function Content1() {
 
 function Card3({ animStyle }: { animStyle?: React.CSSProperties }) {
   return (
-    <div className="bg-[#8740ff] flex-[1_0_0] h-full min-h-px min-w-px relative rounded-[8px] transition-all duration-1000 ease-out" data-name="Card-02" style={animStyle}>
+    <div className="group bg-[#8740ff] flex-[1_0_0] h-full min-h-px min-w-px relative rounded-[8px] transition-all duration-1000 ease-out" data-name="Card-02" style={animStyle}>
       <div className="content-stretch flex flex-col items-start justify-between p-[40px] relative size-full">
         <Frame26 />
         <Content1 />
@@ -1615,29 +1561,17 @@ function Frame28() {
             }
           `}</style>
           {/* Base e barra central fixas */}
-          <path d={balancePaths.p2071700} fill="var(--fill-0, #110846)" />
-          <path d={balancePaths.p36db9c00} fill="var(--fill-0, #110846)" />
+          <path d={balancePaths.p2071700} fill="var(--fill-0, #F5F5F5)" />
+          <path d={balancePaths.p36db9c00} fill="var(--fill-0, #F5F5F5)" />
           {/* Parte superior animada (barra horizontal, círculo e triângulo em stroke) */}
           <g style={{ transformOrigin: '50% 14%', animation: 'balanceSwing 1.5s ease-in-out infinite' }}>
-            <path d="M11.85 0.899219H65.85" stroke="var(--fill-0, #110846)" strokeWidth="1.7" />
-            <circle cx="11.85" cy="11.8992" r="11" stroke="var(--fill-0, #110846)" strokeWidth="1.7" />
-            <path d={balancePaths.p252e9700} stroke="var(--fill-0, #110846)" strokeWidth="1.7" />
+            <path d="M11.85 0.899219H65.85" stroke="var(--fill-0, #F5F5F5)" strokeWidth="1.7" />
+            <circle cx="11.85" cy="11.8992" r="11" stroke="var(--fill-0, #F5F5F5)" strokeWidth="1.7" />
+            <path d={balancePaths.p252e9700} stroke="var(--fill-0, #F5F5F5)" strokeWidth="1.7" />
           </g>
         </svg>
       </div>
-      <div className="group flex items-center gap-[10px] cursor-pointer">
-        <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic text-[#110846] text-[14px] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">LEARN MORE</p>
-        <div className="content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[40px]" data-name="Point">
-          <div aria-hidden="true" className="absolute border border-[#110846] border-solid inset-0 pointer-events-none rounded-[4px] group-hover:bg-[#110846] transition-colors duration-200" />
-          <div className="overflow-clip relative shrink-0 size-[16px]" data-name="Arrow--right">
-            <div className="absolute inset-[18.75%_12.5%]" data-name="Vector">
-              <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12 10">
-                <path d={svgPaths.p2cb8b080} fill="#110846" className="group-hover:[fill:#f5f5f5] transition-colors duration-200" id="Vector" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
+      <LearnMoreCta variant="dark" />
     </div>
   );
 }
@@ -1649,7 +1583,7 @@ function Frame25() {
 function Frame37() {
   return (
     <div className="content-stretch flex items-center justify-center relative shrink-0">
-      <p className="font-['Saans:Medium',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#110846] text-[28px] whitespace-nowrap">Mitigate Risk</p>
+      <p className="font-['Saans:Medium',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[28px] whitespace-nowrap">Mitigate Risk</p>
     </div>
   );
 }
@@ -1658,14 +1592,14 @@ function Content2() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0" data-name="Content">
       <Frame37 />
-      <p className="font-['Saans:Regular',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#110846] text-[18px] tracking-[0.18px] w-[503.5px]">Leverage intelligence tooling to gain visibility into your producer network, while modernizing your contracting process.</p>
+      <p className="font-['Saans:Regular',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#f5f5f5] text-[18px] tracking-[0.18px] w-[503.5px]">Leverage intelligence tooling to gain visibility into your producer network, while modernizing your contracting process.</p>
     </div>
   );
 }
 
 function Card({ animStyle }: { animStyle?: React.CSSProperties }) {
   return (
-    <div className="bg-[#af63ff] flex-[1_0_0] h-full min-h-px min-w-px relative rounded-[8px] transition-all duration-1000 ease-out" data-name="Card-01" style={animStyle}>
+    <div className="group bg-[#af63ff] flex-[1_0_0] h-full min-h-px min-w-px relative rounded-[8px] transition-all duration-1000 ease-out" data-name="Card-01" style={animStyle}>
       <div className="content-stretch flex flex-col items-start justify-between p-[40px] relative size-full">
         <Frame28 />
         <Frame25 />
@@ -1704,19 +1638,7 @@ function Frame27() {
           </g>
         </svg>
       </div>
-      <div className="group flex items-center gap-[10px] cursor-pointer">
-        <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic text-[#110846] text-[14px] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">LEARN MORE</p>
-        <div className="content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[40px]" data-name="Point">
-          <div aria-hidden="true" className="absolute border border-[#110846] border-solid inset-0 pointer-events-none rounded-[4px] group-hover:bg-[#110846] transition-colors duration-200" />
-          <div className="overflow-clip relative shrink-0 size-[16px]" data-name="Arrow--right">
-            <div className="absolute inset-[18.75%_12.5%]" data-name="Vector">
-              <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12 10">
-                <path d={svgPaths.p2cb8b080} fill="#110846" className="group-hover:[fill:#f5f5f5] transition-colors duration-200" id="Vector" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
+      <LearnMoreCta variant="light" />
     </div>
   );
 }
@@ -1740,7 +1662,7 @@ function Content3() {
 
 function Card1({ animStyle }: { animStyle?: React.CSSProperties }) {
   return (
-    <div className="bg-[#bcbcbc] flex-[1_0_0] h-full min-h-px min-w-px relative rounded-[8px] transition-all duration-1000 ease-out" data-name="Card-01" style={animStyle}>
+    <div className="group bg-[#bcbcbc] flex-[1_0_0] h-full min-h-px min-w-px relative rounded-[8px] transition-all duration-1000 ease-out" data-name="Card-01" style={animStyle}>
       <div className="content-stretch flex flex-col items-start justify-between p-[40px] relative size-full">
         <Frame27 />
         <Content3 />

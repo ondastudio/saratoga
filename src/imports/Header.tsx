@@ -18,7 +18,7 @@ function HeroLink() {
 }
 
 function HeroLink1() {
-  return <SaratogaButton variant="outline" color="white" showArrow>Why Saratoga</SaratogaButton>;
+  return <SaratogaButton variant="outline" color="white" showArrow to="/company/why-saratoga">Why Saratoga</SaratogaButton>;
 }
 
 function Cta() {

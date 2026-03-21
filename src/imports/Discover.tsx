@@ -4,6 +4,7 @@ import imgVector1 from "../assets/a9243a57a7f097a11dd2cb1c9027604a26bf702b.png";
 import imgVector2 from "../assets/c476fea3063f2461c80bf7ea9d9df4b773aa1d8b.png";
 import imgVector3 from "../assets/5b7ee08eb14c2ab7994beb2d305024b166c40147.png";
 import { IconButton } from "../app/components/IconButton";
+import { ExpandButton } from "../app/components/ExpandButton";
 
 function Group() {
   return (
@@ -241,17 +242,7 @@ function Frame18() {
 }
 
 function Point() {
-  return (
-    <div className="bg-[#110846] content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[32px]" data-name="Point">
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Add">
-        <div className="absolute inset-1/4" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 10 10">
-            <path d={svgPaths.pb719000} fill="var(--fill-0, #F5F5F5)" id="Vector" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  );
+  return <ExpandButton size={32} icon="add" />;
 }
 
 function Frame17() {
@@ -312,17 +303,7 @@ function Frame19() {
 }
 
 function Point1() {
-  return (
-    <div className="bg-[#110846] content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[32px]" data-name="Point">
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Add">
-        <div className="absolute inset-1/4" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 10 10">
-            <path d={svgPaths.pb719000} fill="var(--fill-0, #F5F5F5)" id="Vector" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  );
+  return <ExpandButton size={32} icon="add" />;
 }
 
 function Frame12() {
@@ -347,17 +328,7 @@ function Frame21() {
 }
 
 function Point2() {
-  return (
-    <div className="bg-[#110846] content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[32px]" data-name="Point">
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Add">
-        <div className="absolute inset-1/4" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 10 10">
-            <path d={svgPaths.pb719000} fill="var(--fill-0, #F5F5F5)" id="Vector" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  );
+  return <ExpandButton size={32} icon="add" />;
 }
 
 function Frame20() {

@@ -179,7 +179,7 @@ function Container() {
 
 function Group1() {
   return (
-    <div className="h-[40px] relative shrink-0 w-[150.345px]">
+    <RouterLink to="/" aria-label="Go to homepage" className="h-[40px] relative shrink-0 w-[150.345px] block">
       <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 150.345 40">
         <g id="Group 15439">
           <path d={svgPaths.pfdd2400} fill="var(--fill-0, white)" id="Vector" />
@@ -209,7 +209,7 @@ function Group1() {
           <path d={svgPaths.p15dd8500} fill="var(--fill-0, white)" id="Vector_25" />
         </g>
       </svg>
-    </div>
+    </RouterLink>
   );
 }
 

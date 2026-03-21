@@ -154,16 +154,27 @@ export function AnimatedCardCarousel() {
                   (currentRef.current - 1 + CARDS.length) % CARDS.length
                 )
               }
-              className={`content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[40px] border border-solid cursor-pointer bg-transparent ${displayed > 0 ? "border-[#8740ff]" : "border-[#bdbdd6]"}`}
+              className={`group content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[40px] border border-solid cursor-pointer bg-transparent transition-colors duration-200 hover:bg-[#af63ff] hover:border-[#af63ff] ${displayed > 0 ? "border-[#8740ff]" : "border-[#bdbdd6]"}`}
               aria-label="Previous card"
             >
-              <div className="overflow-clip relative shrink-0 size-[20px]">
-                <div className="absolute inset-[18.75%_12.5%]">
-                  <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 12.5">
-                    <path d="M6.25 12.5L7.13125 11.6188L2.39375 6.875H15V5.625H2.39375L7.13125 0.88125L6.25 0L0 6.25L6.25 12.5Z" fill={displayed > 0 ? "#110846" : "#BDBDD6"} />
-                  </svg>
+              <span className="group-hover:hidden">
+                <div className="overflow-clip relative shrink-0 size-[20px]">
+                  <div className="absolute inset-[18.75%_12.5%]">
+                    <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 12.5">
+                      <path d="M6.25 12.5L7.13125 11.6188L2.39375 6.875H15V5.625H2.39375L7.13125 0.88125L6.25 0L0 6.25L6.25 12.5Z" fill={displayed > 0 ? "#110846" : "#BDBDD6"} />
+                    </svg>
+                  </div>
                 </div>
-              </div>
+              </span>
+              <span className="hidden group-hover:block">
+                <div className="overflow-clip relative shrink-0 size-[20px]">
+                  <div className="absolute inset-[18.75%_12.5%]">
+                    <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 12.5">
+                      <path d="M6.25 12.5L7.13125 11.6188L2.39375 6.875H15V5.625H2.39375L7.13125 0.88125L6.25 0L0 6.25L6.25 12.5Z" fill="#F5F5F5" />
+                    </svg>
+                  </div>
+                </div>
+              </span>
             </button>
 
             {/* Dots with timeline stroke */}
@@ -224,16 +235,27 @@ export function AnimatedCardCarousel() {
                   (currentRef.current + 1) % CARDS.length
                 )
               }
-              className={`content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[40px] border border-solid cursor-pointer bg-transparent ${displayed < CARDS.length - 1 ? "border-[#8740ff]" : "border-[#bdbdd6]"}`}
+              className={`group content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[40px] border border-solid cursor-pointer bg-transparent transition-colors duration-200 hover:bg-[#af63ff] hover:border-[#af63ff] ${displayed < CARDS.length - 1 ? "border-[#8740ff]" : "border-[#bdbdd6]"}`}
               aria-label="Next card"
             >
-              <div className="overflow-clip relative shrink-0 size-[20px]">
-                <div className="absolute inset-[18.75%_12.5%]">
-                  <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 12.5">
-                    <path d="M8.75 0L7.85625 0.870625L12.5937 5.625H0V6.875H12.5937L7.85625 11.6081L8.75 12.5L15 6.25L8.75 0Z" fill={displayed < CARDS.length - 1 ? "#110846" : "#BDBDD6"} />
-                  </svg>
+              <span className="group-hover:hidden">
+                <div className="overflow-clip relative shrink-0 size-[20px]">
+                  <div className="absolute inset-[18.75%_12.5%]">
+                    <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 12.5">
+                      <path d="M8.75 0L7.85625 0.870625L12.5937 5.625H0V6.875H12.5937L7.85625 11.6081L8.75 12.5L15 6.25L8.75 0Z" fill={displayed < CARDS.length - 1 ? "#110846" : "#BDBDD6"} />
+                    </svg>
+                  </div>
                 </div>
-              </div>
+              </span>
+              <span className="hidden group-hover:block">
+                <div className="overflow-clip relative shrink-0 size-[20px]">
+                  <div className="absolute inset-[18.75%_12.5%]">
+                    <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 12.5">
+                      <path d="M8.75 0L7.85625 0.870625L12.5937 5.625H0V6.875H12.5937L7.85625 11.6081L8.75 12.5L15 6.25L8.75 0Z" fill="#F5F5F5" />
+                    </svg>
+                  </div>
+                </div>
+              </span>
             </button>
           </div>
         </div>

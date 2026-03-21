@@ -1,4 +1,5 @@
 import svgPaths from "./svg-0ws1xy5g1y";
+import { ExpandButton } from "../app/components/ExpandButton";
 
 function Frame14() {
   return (
@@ -20,17 +21,7 @@ function Frame13() {
 }
 
 function Point() {
-  return (
-    <div className="bg-[#110846] content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[32px]" data-name="Point">
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Close">
-        <div className="absolute inset-1/4" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 10 10">
-            <path d={svgPaths.p25fa3200} fill="var(--fill-0, #F5F5F5)" id="Vector" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  );
+  return <ExpandButton size={32} icon="maximize" />;
 }
 
 function Frame15() {

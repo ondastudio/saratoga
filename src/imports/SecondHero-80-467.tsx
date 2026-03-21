@@ -13,9 +13,13 @@ const marqueeStyles = `
 
 function Frame4() {
   return (
-    <div className="content-stretch flex items-start pb-[40px] relative shrink-0 w-full">
-      <div aria-hidden="true" className="absolute border-[#8740ff] border-b border-solid inset-0 pointer-events-none" />
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#af63ff] text-[14px] uppercase w-[350px]">Trusted By</p>
+    <div className="content-stretch flex items-start pb-[32px] relative shrink-0 w-full">
+      <div aria-hidden="true" className="absolute border-[#af63ff] border-b border-solid inset-0 pointer-events-none" />
+      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[16px] not-italic relative shrink-0 text-[#f5f5f5] text-[14px] text-center uppercase w-full">
+        {`Trusted By The Most `}
+        <span className="text-[#af63ff]">{`Innovative & Efficient Insurance`}</span>
+        {` Agents, Carriers & MGAs`}
+      </p>
     </div>
   );
 }
@@ -500,7 +504,7 @@ function Frame3() {
 
 export default function SecondHero() {
   return (
-    <div className="bg-[#ededed] content-stretch flex flex-col items-start pb-[120px] pt-[64px] px-[80px] relative size-full" data-name="Second-hero" style={{ "--fill-0": "#110846" } as React.CSSProperties}>
+    <div className="bg-[#110846] content-stretch flex flex-col items-start pb-[120px] pt-[64px] px-[80px] relative w-[1440px]" data-name="Second-hero" style={{ "--fill-0": "#F5F5F5" } as React.CSSProperties}>
       <style>{marqueeStyles}</style>
       <Frame3 />
     </div>

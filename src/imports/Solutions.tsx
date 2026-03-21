@@ -140,57 +140,21 @@ function IsolationMode() {
   );
 }
 
-function Frame() {
-  return (
-    <div className="content-stretch flex flex-col h-[140px] items-start relative shrink-0 w-[650px]">
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.1] not-italic relative shrink-0 text-[#f5f5f5] text-[40px] tracking-[-0.4px] w-[497px] whitespace-pre-wrap">
-        {`Insurance Agencies `}
-        <br aria-hidden="true" />
-        {`& Brokers`}
-      </p>
-    </div>
-  );
-}
-
-function Frame2() {
-  return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0 w-[512px]">
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[24px] tracking-[-0.24px] w-full whitespace-pre-wrap">
-        {`Compliance Software & Managed Services `}
-        <br aria-hidden="true" />
-        Built for the Way Agencies Actually Work
-      </p>
-    </div>
-  );
-}
-
-function Icon() {
-  return <IconButton size={32} variant="filled-lilac" />;
-}
-
-function Link() {
-  return (
-    <div className="bg-[#f5f5f5] content-stretch flex gap-[16px] h-[40px] items-center pl-[24px] pr-[4px] relative rounded-[8px] shrink-0" data-name="Link">
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#110846] text-[14px] uppercase whitespace-nowrap">rEQUEST A DEMO</p>
-      <Icon />
-    </div>
-  );
-}
-
-function Frame21() {
-  return (
-    <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0">
-      <Frame2 />
-      <Link />
-    </div>
-  );
-}
-
 function Frame1() {
   return (
-    <div className="absolute bottom-[73px] content-stretch flex items-start left-[80px] w-[1280px]">
-      <Frame />
-      <Frame21 />
+    <div className="absolute left-1/2 -translate-x-1/2 top-[346px] content-stretch flex flex-col gap-[40px] items-center w-[682px]">
+      <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
+        <p className="font-['Saans:Regular',sans-serif] leading-[52px] not-italic relative shrink-0 text-[#f5f5f5] text-[48px] text-center w-full">{`Insurance Agencies & Brokers`}</p>
+        <p className="font-['Saans:Regular',sans-serif] leading-[28px] not-italic relative shrink-0 text-[#f5f5f5] text-[20px] text-center tracking-[0.2px] w-full">
+          {`Compliance Software & Managed Services `}
+          <br aria-hidden="true" />
+          Built for the Way Agencies Actually Work
+        </p>
+      </div>
+      <div className="content-stretch flex gap-[8px] items-start relative shrink-0">
+        <SaratogaButton variant="primary" color="purple" showArrow>Request a Demo</SaratogaButton>
+        <SaratogaButton variant="outline" color="white" showArrow>Why Saratoga</SaratogaButton>
+      </div>
     </div>
   );
 }
@@ -283,12 +247,12 @@ function Group3() {
       <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 150.345 40">
         <g id="Group 15439">
           <path d={svgPaths.pfdd2400} fill="var(--fill-0, white)" id="Vector" />
-          <path d={svgPaths.p264cbcf0} fill="var(--fill-0, #110846)" id="Vector_2" />
-          <path d={svgPaths.p33f8b580} fill="var(--fill-0, #110846)" id="Vector_3" />
-          <path d={svgPaths.p6d8ab70} fill="var(--fill-0, #110846)" id="Vector_4" />
-          <path d={svgPaths.p1911cd00} fill="var(--fill-0, #110846)" id="Vector_5" />
-          <path d={svgPaths.p24380180} fill="var(--fill-0, #110846)" id="Vector_6" />
-          <path d={svgPaths.p17e56580} fill="var(--fill-0, #110846)" id="Vector_7" />
+          <path d={svgPaths.p264cbcf0} fill="var(--fill-0, #AF63FF)" id="Vector_2" />
+          <path d={svgPaths.p33f8b580} fill="var(--fill-0, #AF63FF)" id="Vector_3" />
+          <path d={svgPaths.p6d8ab70} fill="var(--fill-0, #AF63FF)" id="Vector_4" />
+          <path d={svgPaths.p1911cd00} fill="var(--fill-0, #AF63FF)" id="Vector_5" />
+          <path d={svgPaths.p24380180} fill="var(--fill-0, #AF63FF)" id="Vector_6" />
+          <path d={svgPaths.p17e56580} fill="var(--fill-0, #AF63FF)" id="Vector_7" />
           <path d={svgPaths.p247c72f0} fill="var(--fill-0, white)" id="Vector_8" />
           <path d={svgPaths.p53f3b00} fill="var(--fill-0, white)" id="Vector_9" />
           <path d={svgPaths.p107d9a40} fill="var(--fill-0, white)" id="Vector_10" />
@@ -300,12 +264,12 @@ function Group3() {
           <path d={svgPaths.p1fcad300} fill="var(--fill-0, white)" id="Vector_16" />
           <path d={svgPaths.p1934b800} fill="var(--fill-0, white)" id="Vector_17" />
           <path d={svgPaths.p33c80500} fill="var(--fill-0, white)" id="Vector_18" />
-          <path d={svgPaths.p2f44fa80} fill="var(--fill-0, #110846)" id="Vector_19" />
-          <path d={svgPaths.p52cbc00} fill="var(--fill-0, #110846)" id="Vector_20" />
-          <path d={svgPaths.p1cf9ed00} fill="var(--fill-0, #110846)" id="Vector_21" />
-          <path d={svgPaths.p15175680} fill="var(--fill-0, #110846)" id="Vector_22" />
-          <path d={svgPaths.p2d5e6900} fill="var(--fill-0, #110846)" id="Vector_23" />
-          <path d={svgPaths.p5d26700} fill="var(--fill-0, #110846)" id="Vector_24" />
+          <path d={svgPaths.p2f44fa80} fill="var(--fill-0, #AF63FF)" id="Vector_19" />
+          <path d={svgPaths.p52cbc00} fill="var(--fill-0, #AF63FF)" id="Vector_20" />
+          <path d={svgPaths.p1cf9ed00} fill="var(--fill-0, #AF63FF)" id="Vector_21" />
+          <path d={svgPaths.p15175680} fill="var(--fill-0, #AF63FF)" id="Vector_22" />
+          <path d={svgPaths.p2d5e6900} fill="var(--fill-0, #AF63FF)" id="Vector_23" />
+          <path d={svgPaths.p5d26700} fill="var(--fill-0, #AF63FF)" id="Vector_24" />
           <path d={svgPaths.p15dd8500} fill="var(--fill-0, white)" id="Vector_25" />
         </g>
       </svg>
@@ -356,7 +320,7 @@ function Link18() {
 }
 
 function Link19() {
-  return <SaratogaButton variant="primary" color="lilac">Request a Demo</SaratogaButton>;
+  return <SaratogaButton variant="primary" color="gradient">Request a Demo</SaratogaButton>;
 }
 
 function Action() {
@@ -402,9 +366,13 @@ function Header() {
 
 function Frame26() {
   return (
-    <div className="content-stretch flex items-start pb-[40px] relative shrink-0 w-full">
-      <div aria-hidden="true" className="absolute border-[#8740ff] border-b border-solid inset-0 pointer-events-none" />
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#af63ff] text-[14px] uppercase w-[350px]">{`Trusted By `}</p>
+    <div className="content-stretch flex items-start pb-[32px] relative shrink-0 w-full">
+      <div aria-hidden="true" className="absolute border-[#af63ff] border-b border-solid inset-0 pointer-events-none" />
+      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[16px] not-italic relative shrink-0 text-[#f5f5f5] text-[14px] text-center uppercase w-full">
+        {`Trusted By The Most `}
+        <span className="text-[#af63ff]">{`Innovative & Efficient Insurance`}</span>
+        {` Agents, Carriers & MGAs`}
+      </p>
     </div>
   );
 }
@@ -889,7 +857,7 @@ function Frame24() {
 
 function SecondHero() {
   return (
-    <div className="bg-[#ededed] relative shrink-0 w-full" data-name="Second-hero">
+    <div className="bg-[#110846] relative shrink-0 w-full" data-name="Second-hero" style={{ "--fill-0": "#F5F5F5" } as React.CSSProperties}>
       <div className="overflow-clip rounded-[inherit] size-full">
         <div className="content-stretch flex flex-col items-start pb-[120px] pt-[64px] px-[80px] relative w-full">
           <Frame24 />
@@ -945,10 +913,7 @@ function OpeningText() {
 function Frame31() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-      <div className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic overflow-hidden relative shrink-0 text-[#110846] text-[28px] text-ellipsis w-[786px]">
-        <p className="mb-0">Hear Our Customers In</p>
-        <p>Their Own Words</p>
-      </div>
+      <p className="font-['Saans:Regular',sans-serif] leading-[32px] not-italic relative shrink-0 text-[#110846] text-[28px] w-[500px]">{`Hear How We Help Our Clients, `}<br aria-hidden="true" />In Their Own Words</p>
     </div>
   );
 }
@@ -987,12 +952,12 @@ function Frame19() {
 
 function Point() {
   return (
-    <div className="content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[40px]" data-name="Point">
-      <div aria-hidden="true" className="absolute border border-[#6a6b9e] border-solid inset-0 pointer-events-none rounded-[4px]" />
+    <div className="content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[40px] opacity-50" data-name="Point">
+      <div aria-hidden="true" className="absolute border border-[#9293ba] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Arrow--left">
-        <div className="absolute inset-[18.75%_12.5%]" data-name="Vector">
+        <div className="absolute inset-[18.75%_12.5%]">
           <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 12.5">
-            <path d={svgPaths.pc3cec00} fill="var(--fill-0, #6A6B9E)" id="Vector" />
+            <path d={svgPaths.pc3cec00} fill="#9293BA" />
           </svg>
         </div>
       </div>
@@ -1046,16 +1011,27 @@ function Frame10() {
 
 function Point5() {
   return (
-    <div className="content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[40px]" data-name="Point">
-      <div aria-hidden="true" className="absolute border border-[#8740ff] border-solid inset-0 pointer-events-none rounded-[4px]" />
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Arrow--right">
-        <div className="absolute inset-[18.75%_12.5%]" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 12.5">
-            <path d={svgPaths.p3be57f00} fill="var(--fill-0, #110846)" id="Vector" />
-          </svg>
+    <button className="group content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[40px] cursor-pointer transition-colors duration-200 hover:bg-[#af63ff] bg-transparent border-0 p-0" data-name="Point">
+      <div aria-hidden="true" className="absolute border border-[#8740ff] border-solid inset-0 pointer-events-none rounded-[4px] group-hover:border-[#af63ff] transition-colors duration-200" />
+      <span className="group-hover:hidden">
+        <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Arrow--right">
+          <div className="absolute inset-[18.75%_12.5%]">
+            <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 12.5">
+              <path d={svgPaths.p3be57f00} fill="#110846" />
+            </svg>
+          </div>
         </div>
-      </div>
-    </div>
+      </span>
+      <span className="hidden group-hover:block">
+        <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Arrow--right">
+          <div className="absolute inset-[18.75%_12.5%]">
+            <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 12.5">
+              <path d={svgPaths.p3be57f00} fill="#F5F5F5" />
+            </svg>
+          </div>
+        </div>
+      </span>
+    </button>
   );
 }
 

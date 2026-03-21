@@ -5,6 +5,7 @@ import Group2103 from "../../imports/Group15483-3-2103";
 import Group2107 from "../../imports/Group15483-3-2107";
 import Group2111 from "../../imports/Group15483-3-2111";
 import LinkButton from "../../imports/Link-3-2137";
+import { ExpandButton, ToggleExpandButton } from "./ExpandButton";
 
 interface DiscoverStep {
   id: string;
@@ -190,22 +191,7 @@ export function AnimatedDiscoverSection() {
                         {step.id}
                       </p>
                     </div>
-                    <div
-                      className="bg-[#110846] content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[32px] cursor-pointer"
-                      data-name="Point"
-                      onClick={() => setIsCollapsed(prev => !prev)}
-                    >
-                      <div className="overflow-clip relative shrink-0 size-[20px]" data-name={isCollapsed ? "Add" : "Close"}>
-                        <div className="absolute inset-1/4" data-name="Vector">
-                          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 10 10">
-                            {isCollapsed
-                              ? <path d={svgPaths.pb719000} fill="var(--fill-0, #F5F5F5)" id="Vector" />
-                              : <path d={svgPaths.p25fa3200} fill="var(--fill-0, #F5F5F5)" id="Vector" />
-                            }
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
+                    <ToggleExpandButton size={32} isExpanded={!isCollapsed} onClick={() => setIsCollapsed(prev => !prev)} />
                   </div>
                   <p className="font-['Saans:Medium',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[20px] w-full">
                     {step.panelTitle}
@@ -269,18 +255,7 @@ export function AnimatedDiscoverSection() {
               </p>
               <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] relative shrink-0 uppercase">{chipStep.shortLabel}</p>
             </div>
-            <div
-              className="bg-[#110846] content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[32px]"
-              data-name="Point"
-            >
-              <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Add">
-                <div className="absolute inset-1/4" data-name="Vector">
-                  <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 10 10">
-                    <path d={svgPaths.pb719000} fill="var(--fill-0, #F5F5F5)" id="Vector" />
-                  </svg>
-                </div>
-              </div>
-            </div>
+            <ExpandButton size={32} icon="add" />
           </div>
         );
       })}

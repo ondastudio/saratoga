@@ -1,4 +1,5 @@
 import svgPaths from "./svg-adm5ef8z0b";
+import { SaratogaButton } from "../app/components/SaratogaButton";
 
 function Frame() {
   return (
@@ -922,12 +923,7 @@ function Icon2() {
 }
 
 function Link26() {
-  return (
-    <div className="bg-[#f5f5f5] content-stretch flex gap-[16px] h-[40px] items-center pl-[24px] pr-[4px] relative rounded-[8px] shrink-0" data-name="Link">
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#110846] text-[14px] uppercase whitespace-nowrap">Contact us</p>
-      <Icon2 />
-    </div>
-  );
+  return <SaratogaButton variant="primary" color="white" showArrow>Contact us</SaratogaButton>;
 }
 
 function Frame9() {
