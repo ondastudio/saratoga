@@ -109,44 +109,32 @@ const STATE_NAME_MAP: Record<string, string> = {
   "Vector_99": "Hawaii",
 };
 
-function Frame() {
+function HeroLeft() {
   return (
-    <div className="content-stretch flex flex-col font-['Saans:Regular',sans-serif] gap-[24px] h-[140px] items-start leading-[1.1] not-italic relative shrink-0 text-[#f5f5f5] w-[650px]">
-      <p className="relative shrink-0 text-[40px] tracking-[-0.4px] w-[440px]">Regulatory Database</p>
-      <p className="relative shrink-0 text-[24px] tracking-[-0.24px] w-[346px]">{`50-State Regulatory Intelligence at Your Fingertips `}</p>
+    <div className="content-stretch flex flex-col font-['Saans:Regular',sans-serif] gap-[24px] items-start leading-[1.1] not-italic relative shrink-0 text-[#f5f5f5] w-[413px]">
+      <p className="relative shrink-0 text-[40px] leading-[44px] w-full">Regulatory Database</p>
+      <p className="relative shrink-0 text-[24px] leading-[28px] w-full">{`Live 50 State + All Territories Regulatory Intelligence at Your Fingertips`}</p>
     </div>
   );
 }
 
-function Icon() {
+function HeroRight() {
   return (
-    <IconButton size={32} variant="filled-lilac" />
-  );
-}
-
-function Link() {
-  return (
-    <div className="bg-[#f5f5f5] content-stretch flex gap-[16px] h-[40px] items-center pl-[24px] pr-[4px] relative rounded-[8px] shrink-0" data-name="Link">
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#110846] text-[14px] uppercase whitespace-nowrap">rEQUEST A DEMO</p>
-      <Icon />
-    </div>
-  );
-}
-
-function Frame27() {
-  return (
-    <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0">
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[18px] tracking-[-0.18px] w-[599px]">Access our comprehensive, continuously updated database of state-by-state insurance regulatory requirements. Search by state, license type, line of authority or topic to find DOI contact information, licensing fees, filing deadlines, CE requirements, appointment rules and more. A must-have resource for compliance professionals operating across multiple jurisdictions.</p>
-      <Link />
+    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[40px] items-start min-h-px min-w-px relative">
+      <p className="font-['Saans:Regular',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#f5f5f5] text-[18px] tracking-[0.18px] w-full">Access our comprehensive, continuously updated database of state-by-state insurance regulatory requirements. Search by state, license type, line of authority or topic to find DOI contact information, licensing fees, filing deadlines, CE requirements, appointment rules and more. A must-have resource for compliance professionals operating across multiple jurisdictions.</p>
+      <div className="content-stretch flex gap-[8px] items-start relative shrink-0">
+        <SaratogaButton variant="primary" color="purple" showArrow to="/request-demo">Request a Demo</SaratogaButton>
+        <SaratogaButton variant="outline" color="white" showArrow to="/why-saratoga">Why Saratoga</SaratogaButton>
+      </div>
     </div>
   );
 }
 
 function Frame1() {
   return (
-    <div className="absolute content-stretch flex items-start left-[80px] top-[200px] w-[1280px]">
-      <Frame />
-      <Frame27 />
+    <div className="absolute content-stretch flex gap-[232px] items-start left-[85px] top-[200px] w-[1280px]">
+      <HeroLeft />
+      <HeroRight />
     </div>
   );
 }
@@ -203,7 +191,7 @@ function Link5() {
 
 function Link6() {
   return (
-    <div className="h-[40px] relative shrink-0" data-name="Link">
+    <div className="h-[40px] relative shrink-0" data-name="Link" onClick={() => window.dispatchEvent(new Event("open-search"))}>
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex h-full items-center px-[16px] relative">
         <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Search">
           <div className="absolute inset-[6.14%_9.37%_9.37%_6.14%]" data-name="Vector">
@@ -705,7 +693,7 @@ function Icon1() {
 function List() {
   return (
     <div className="relative rounded-[8px] shrink-0 w-full" data-name="List">
-      <div aria-hidden="true" className="absolute border border-[#f5f5f5] border-solid inset-0 pointer-events-none rounded-[8px]" />
+      <div aria-hidden="true" className="absolute border border-[#f5f5f5] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center justify-between pl-[32px] pr-[8px] py-[8px] relative w-full">
           <p className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#6a6b9e] text-[16px] whitespace-nowrap">Search by state</p>
@@ -733,7 +721,7 @@ function Point({ onClose }: { onClose?: () => void }) {
 function Frame26({ onClose, stateName }: { onClose?: () => void; stateName?: string }) {
   return (
     <div className="content-stretch flex items-center justify-between relative shrink-0 w-full">
-      <p className="font-['Saans:Medium',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[28px] w-[303px]">{stateName || "Alabama"}</p>
+      <p className="flex-[1_0_0] font-['Saans:Medium',sans-serif] font-medium leading-[32px] not-italic relative text-[#f5f5f5] text-[28px]">{stateName || "Alabama"}</p>
       <Point onClose={onClose} />
     </div>
   );
@@ -741,17 +729,13 @@ function Frame26({ onClose, stateName }: { onClose?: () => void; stateName?: str
 
 function Frame20({ onClose, stateName }: { onClose?: () => void; stateName?: string }) {
   return (
-    <div className="relative shrink-0 w-full">
-      <div className="flex flex-col justify-center size-full">
-        <div className="content-stretch flex flex-col gap-[16px] items-start justify-center p-[24px] relative w-full">
-          <Frame26 onClose={onClose} stateName={stateName} />
-          <p className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[18px] w-[303px]">
-            Assessment Date
-            <br aria-hidden="true" />
-            Oct 1 (prior year)
-          </p>
-        </div>
-      </div>
+    <div className="content-stretch flex flex-col gap-[16px] items-start justify-center p-[24px] relative shrink-0 w-full">
+      <Frame26 onClose={onClose} stateName={stateName} />
+      <p className="font-['Saans:Regular',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#f5f5f5] text-[18px] tracking-[0.18px]">
+        Assessment Date
+        <br aria-hidden="true" />
+        Oct 1 (prior year)
+      </p>
     </div>
   );
 }
@@ -846,7 +830,7 @@ function Frame24({ onClose, stateName }: { onClose?: () => void; stateName?: str
 function Frame25({ onClose, isCardVisible, stateName }: { onClose: () => void; isCardVisible: boolean; stateName?: string }) {
   return (
     <div
-      className="bg-[#33317a] h-[474px] relative rounded-[8px] shrink-0 w-full"
+      className="bg-[#33317a] h-[476px] relative rounded-[8px] shrink-0 w-full"
       style={{
         opacity: isCardVisible ? 1 : 0,
         transform: isCardVisible ? "translateY(0)" : "translateY(20px)",
@@ -937,6 +921,100 @@ function Frame15() {
             </svg>
           </div>
         </div>
+      </div>
+    </div>
+  );
+}
+
+function NewsCard({ title, description }: { title: string; description: string }) {
+  return (
+    <div className="content-stretch flex gap-[24px] h-[420px] items-start relative shrink-0 w-[1089px]">
+      <div className="bg-[#9293ba] h-full rounded-[4px] shrink-0 w-[500px]" />
+      <div className="border-[#6a6b9e] border-l border-solid content-stretch flex flex-[1_0_0] flex-col h-full items-start justify-between min-h-px min-w-px pb-[24px] pl-[24px] pr-[40px] pt-[40px] relative">
+        <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
+          <p className="font-['Saans:Medium',sans-serif] font-medium leading-[28px] not-italic relative shrink-0 text-[#f5f5f5] text-[24px] w-full">{title}</p>
+          <p className="font-['Saans:Regular',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#f5f5f5] text-[18px] tracking-[0.18px] w-full">{description}</p>
+        </div>
+        <div className="content-stretch flex gap-[8px] items-center relative shrink-0">
+          <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[16px] not-italic relative shrink-0 text-[#af63ff] text-[14px] uppercase whitespace-nowrap">READ MORE</p>
+          <div className="content-stretch flex items-center relative shrink-0 size-[32px]">
+            <div className="content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[32px]">
+              <svg className="shrink-0" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M3.75 10H16.25M16.25 10L10 3.75M16.25 10L10 16.25" stroke="#af63ff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function RegulatoryNewsSection() {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const totalSlides = 3;
+
+  return (
+    <div className="bg-[#300067] content-stretch flex flex-col gap-[40px] items-start px-[80px] py-[84px] relative shrink-0 w-full" data-name="Section">
+      <p className="font-['Saans:Regular',sans-serif] leading-[32px] mb-[24px] not-italic relative shrink-0 text-[#f5f5f5] text-[28px] w-[360px]">{`Recent Regulatory News, Legislation & Updates`}</p>
+      <div className="content-stretch flex flex-col items-start relative shrink-0">
+        <div className="content-stretch flex gap-[40px] items-start overflow-hidden relative shrink-0 w-[1360px]">
+          <div
+            className="content-stretch flex gap-[40px] items-start transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${activeSlide * (1089 + 40)}px)` }}
+          >
+            <NewsCard
+              title="Maryland passes new insurance producer law"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            />
+            <NewsCard
+              title="Maryland passes new insurance producer law"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            />
+            <NewsCard
+              title="Maryland passes new insurance producer law"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            />
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex gap-[64px] items-center justify-center relative shrink-0 w-full">
+        {/* Left arrow */}
+        <button
+          onClick={() => setActiveSlide(Math.max(0, activeSlide - 1))}
+          className={`content-stretch flex gap-[10px] items-center relative shrink-0 cursor-pointer bg-transparent border-0 p-0 ${activeSlide === 0 ? "opacity-50" : ""}`}
+          disabled={activeSlide === 0}
+        >
+          <div className="border border-[#9293ba] border-solid content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[40px]">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M16.25 10H3.75M3.75 10L10 16.25M3.75 10L10 3.75" stroke="#9293ba" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+        </button>
+        {/* Dots */}
+        <div className="content-stretch flex gap-[8px] items-center relative shrink-0">
+          {Array.from({ length: totalSlides }).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setActiveSlide(i)}
+              className={`content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[16px] cursor-pointer bg-transparent border-0 p-0 ${i === activeSlide ? "border border-[#af63ff] border-solid" : ""}`}
+            >
+              <div className={`shrink-0 size-[6px] ${i === activeSlide ? "bg-[#af63ff]" : "bg-[#f5f5f5]"}`} />
+            </button>
+          ))}
+        </div>
+        {/* Right arrow */}
+        <button
+          onClick={() => setActiveSlide(Math.min(totalSlides - 1, activeSlide + 1))}
+          className={`content-stretch flex gap-[10px] items-center relative shrink-0 cursor-pointer bg-transparent border-0 p-0 ${activeSlide === totalSlides - 1 ? "opacity-50" : ""}`}
+          disabled={activeSlide === totalSlides - 1}
+        >
+          <div className="border border-[#f5f5f5] border-solid content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[40px]">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M3.75 10H16.25M16.25 10L10 3.75M16.25 10L10 16.25" stroke="#f5f5f5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+        </button>
       </div>
     </div>
   );
@@ -1058,7 +1136,7 @@ function Frame19() {
   return (
     <div className="absolute content-stretch flex flex-col gap-[24px] items-start left-[80px] top-[84px] w-[305px]">
       <Group2 />
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] min-w-full not-italic relative shrink-0 text-[#f5f5f5] text-[16px] w-[min-content] whitespace-pre-wrap">{`Saratoga Compliance Solutions is the leading provider of all-on-one compliance and license operations software and AI-enabled managed services for insurance companies in the U.S. and Canada.  `}</p>
+      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] min-w-full not-italic relative shrink-0 text-[#f5f5f5] text-[16px] w-[min-content] whitespace-pre-wrap">{`Saratoga Compliance Solutions is the leading provider of all-in-one compliance and license operations software and AI-enabled compliance managed services for insurance companies in the U.S. and Canada.  `}</p>
     </div>
   );
 }
@@ -1089,14 +1167,14 @@ function Frame8() {
 
 function Icon3() {
   return (
-    <ArrowIcon color="#AF63FF" />
+    <ArrowIcon color="#9293BA" />
   );
 }
 
 function List4() {
   return (
-    <div className="content-stretch flex items-center justify-between pl-[16px] pr-[8px] py-[8px] relative rounded-[8px] shrink-0 w-[277px]" data-name="List">
-      <div aria-hidden="true" className="absolute border border-[#f5f5f5] border-solid inset-0 pointer-events-none rounded-[8px]" />
+    <div className="content-stretch flex items-center justify-between pl-[16px] pr-[8px] py-[8px] relative rounded-[4px] shrink-0 w-[277px]" data-name="List">
+      <div aria-hidden="true" className="absolute border border-[#f5f5f5] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <p className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic opacity-50 relative shrink-0 text-[#9293ba] text-[16px] whitespace-nowrap">Enter your email</p>
       <div className="opacity-50"><Icon3 /></div>
     </div>
@@ -1138,7 +1216,8 @@ function List6() {
     <div className="content-stretch flex flex-col font-['Saans:Regular',sans-serif] gap-[8px] items-start relative shrink-0 text-[#f5f5f5] text-[16px] w-full" data-name="List">
       <FooterLink to="/partners/integrations">Integrations</FooterLink>
       <FooterLink to="/partners/developer-portal">Developer Portal</FooterLink>
-      <FooterLink to="/partners/alliances">Alliances</FooterLink>
+      <FooterLink to="/partners/ecosystem-partners">Ecosystem Partners</FooterLink>
+      <p className="relative shrink-0">{`Legal & Regulatory Alliances`}</p>
     </div>
   );
 }
@@ -1246,7 +1325,6 @@ function TermsOfService() {
       <p className="relative shrink-0">Terms of Service</p>
       <p className="relative shrink-0">Privacy Policy</p>
       <p className="relative shrink-0">Data Security</p>
-      <p className="relative shrink-0">Cookie Policy</p>
     </div>
   );
 }
@@ -1270,6 +1348,7 @@ export default function RegulatoryDatabase() {
     <div className="bg-[#ededed] content-stretch flex flex-col items-start relative size-full" data-name="Regulatory Database">
       <Header />
       <Frame28 />
+      <RegulatoryNewsSection />
       <Customers />
       <div className="bg-[#110846] h-[717px] overflow-clip relative shrink-0 w-[1440px]" data-name="Footer">
         <Container2 />

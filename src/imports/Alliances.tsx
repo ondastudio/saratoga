@@ -88,7 +88,7 @@ function Link5() {
 
 function Link6() {
   return (
-    <div className="h-[40px] relative shrink-0" data-name="Link">
+    <div className="h-[40px] relative shrink-0" data-name="Link" onClick={() => window.dispatchEvent(new Event("open-search"))}>
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex h-full items-center px-[16px] relative">
         <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Search">
           <div className="absolute inset-[6.14%_9.37%_9.37%_6.14%]" data-name="Vector">
@@ -1145,7 +1145,7 @@ function Frame12() {
   return (
     <div className="absolute content-stretch flex flex-col gap-[24px] items-start left-[80px] top-[84px] w-[305px]">
       <Group1 />
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] min-w-full not-italic relative shrink-0 text-[#f5f5f5] text-[16px] w-[min-content] whitespace-pre-wrap">{`Saratoga Compliance Solutions is the leading provider of all-on-one compliance and license operations software and AI-enabled managed services for insurance companies in the U.S. and Canada.  `}</p>
+      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] min-w-full not-italic relative shrink-0 text-[#f5f5f5] text-[16px] w-[min-content] whitespace-pre-wrap">{`Saratoga Compliance Solutions is the leading provider of all-in-one compliance and license operations software and AI-enabled compliance managed services for insurance companies in the U.S. and Canada.  `}</p>
     </div>
   );
 }
@@ -1176,14 +1176,14 @@ function Frame3() {
 
 function Icon2() {
   return (
-    <ArrowIcon color="#AF63FF" />
+    <ArrowIcon color="#9293BA" />
   );
 }
 
 function List3() {
   return (
-    <div className="content-stretch flex items-center justify-between pl-[16px] pr-[8px] py-[8px] relative rounded-[8px] shrink-0 w-[277px]" data-name="List">
-      <div aria-hidden="true" className="absolute border border-[#f5f5f5] border-solid inset-0 pointer-events-none rounded-[8px]" />
+    <div className="content-stretch flex items-center justify-between pl-[16px] pr-[8px] py-[8px] relative rounded-[4px] shrink-0 w-[277px]" data-name="List">
+      <div aria-hidden="true" className="absolute border border-[#f5f5f5] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <p className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic opacity-50 relative shrink-0 text-[#9293ba] text-[16px] whitespace-nowrap">Enter your email</p>
       <div className="opacity-50"><Icon2 /></div>
     </div>
@@ -1225,7 +1225,8 @@ function List5() {
     <div className="content-stretch flex flex-col font-['Saans:Regular',sans-serif] gap-[8px] items-start relative shrink-0 text-[#f5f5f5] text-[16px] w-full" data-name="List">
       <FooterLink to="/partners/integrations">Integrations</FooterLink>
       <FooterLink to="/partners/developer-portal">Developer Portal</FooterLink>
-      <FooterLink to="/partners/alliances">Alliances</FooterLink>
+      <FooterLink to="/partners/ecosystem-partners">Ecosystem Partners</FooterLink>
+      <p className="relative shrink-0">{`Legal & Regulatory Alliances`}</p>
     </div>
   );
 }
@@ -1333,7 +1334,6 @@ function TermsOfService() {
       <p className="relative shrink-0">Terms of Service</p>
       <p className="relative shrink-0">Privacy Policy</p>
       <p className="relative shrink-0">Data Security</p>
-      <p className="relative shrink-0">Cookie Policy</p>
     </div>
   );
 }

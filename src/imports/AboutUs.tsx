@@ -7,6 +7,7 @@ import { NavLink } from "../app/components/NavLink";
 import { IconButton } from "../app/components/IconButton";
 import { ArrowIcon } from "../app/components/ArrowIcon";
 import { VideoPlayer } from "../app/components/VideoPlayer";
+import { NumberHighlights as NumberHighlightsComponent } from "../app/components/NumberHighlights";
 import imgVector from "../assets/ef5572c015c73d71d9a598d94ebd28c5a06adf97.png";
 import imgVector1 from "../assets/1c2a7b782923b4a797dda50a3a1e6fb0170649e1.png";
 import imgVector2 from "../assets/bbdd942b9d2a3b2723a6afbdc06ece526b00d413.png";
@@ -65,7 +66,7 @@ function Link4() {
 
 function Link5() {
   return (
-    <div className="h-[40px] relative shrink-0" data-name="Link">
+    <div className="h-[40px] relative shrink-0" data-name="Link" onClick={() => window.dispatchEvent(new Event("open-search"))}>
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex h-full items-center px-[16px] relative">
         <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Search">
           <div className="absolute inset-[6.14%_9.37%_9.37%_6.14%]" data-name="Vector">
@@ -339,7 +340,7 @@ function Frame31() {
       <div className="font-['Saans:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#af63ff] text-[0px] text-[20px] w-[522px] whitespace-pre-wrap">
         <p className="mb-0">
           <span className="leading-[1.2] text-[#f5f5f5]">Saratoga Compliance Solutions was founded on a simple premise: insurance compliance is too important to get wrong, and too complex to manage with spreadsheets and manual processes. For over two decades,</span>
-          <span className="leading-[1.2]">{` we've partnered with insurance organizations of every size – from newly formed MGAs to some of the largest agencies and brokerages in the country – to deliver the software, managed services and regulatory expertise they need to stay compliant, reduce costs and grow their businesses.`}</span>
+          <span className="leading-[1.2]">{` we've partnered with insurance organizations of every size – from newly formed MGAs to some of the largest agencies and brokerages in the country – to deliver the software, managed compliance services and regulatory expertise they need to stay compliant, reduce costs and grow their businesses.`}</span>
         </p>
         <p className="leading-[1.2] mb-0">&nbsp;</p>
         <p className="leading-[1.2] mb-0">We are a dedicated group of insurance regulatory experts, software engineers, license operations executives and product managers building solutions to make your life easier. Our team combines deep industry knowledge with modern technology to deliver a compliance experience that is actually enjoyable to work with.</p>
@@ -436,7 +437,7 @@ function ScrollRevealText() {
         className="scroll-reveal-gradient font-['Saans:Regular',sans-serif] not-italic relative shrink-0 text-[20px] w-[522px] whitespace-pre-wrap"
       >
         <p className="leading-[1.2] mb-0">
-          Saratoga Compliance Solutions was founded on a simple premise: insurance compliance is too important to get wrong, and too complex to manage with spreadsheets and manual processes. For over two decades, we've partnered with insurance organizations of every size – from newly formed MGAs to some of the largest agencies and brokerages in the country – to deliver the software, managed services and regulatory expertise they need to stay compliant, reduce costs and grow their businesses.
+          Saratoga Compliance Solutions was founded on a simple premise: insurance compliance is too important to get wrong, and too complex to manage with spreadsheets and manual processes. For over two decades, we've partnered with insurance organizations of every size – from newly formed MGAs to some of the largest agencies and brokerages in the country – to deliver the software, managed compliance services and regulatory expertise they need to stay compliant, reduce costs and grow their businesses.
         </p>
         <p className="leading-[1.2] mb-0">&nbsp;</p>
         <p className="leading-[1.2] mb-0">We are a dedicated group of insurance regulatory experts, software engineers, license operations executives and product managers building solutions to make your life easier. Our team combines deep industry knowledge with modern technology to deliver a compliance experience that is actually enjoyable to work with.</p>
@@ -452,10 +453,13 @@ function SecondHero() {
     <div className="bg-[#300067] relative shrink-0 w-full" data-name="Second-hero">
       <div className="overflow-clip rounded-[inherit] size-full">
         <div className="content-stretch flex gap-[453px] items-start pb-[64px] px-[80px] relative w-full">
-          <div className="flex h-[194.763px] items-center justify-center leading-[0] relative shrink-0 w-[197px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "365" } as React.CSSProperties}>
-            <div className="-rotate-90 flex-none">
-              <ScrollTrackingGroup15 />
+          <div className="flex flex-col gap-[24px] items-center relative shrink-0 w-[197px]">
+            <div className="flex h-[194.763px] items-center justify-center leading-[0] relative shrink-0 w-[197px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "365" } as React.CSSProperties}>
+              <div className="-rotate-90 flex-none">
+                <ScrollTrackingGroup15 />
+              </div>
             </div>
+            <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.4] not-italic text-[#af63ff] text-[12px] uppercase tracking-[0.08em] text-center w-[197px]">Built in Saratoga Springs, New York with Passion</p>
           </div>
           <ScrollRevealText />
         </div>
@@ -951,7 +955,7 @@ function Frame33() {
 
 function SecondHero1() {
   return (
-    <div className="bg-[#300067] relative shrink-0 w-full" data-name="Second-hero">
+    <div className="bg-[#110846] relative shrink-0 w-full" data-name="Second-hero">
       <div className="overflow-clip rounded-[inherit] size-full">
         <div className="content-stretch flex flex-col items-start px-[80px] py-[64px] relative w-full">
           <style>{`
@@ -1333,215 +1337,87 @@ function Frame44() {
   );
 }
 
-function Container3() {
-  return (
-    <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Container">
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="User--filled">
-        <div className="absolute inset-[6.25%_18.75%]" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.5 17.5">
-            <g id="Vector">
-              <path d={svgPaths.p15c76300} fill="#AF63FF" />
-              <path d={svgPaths.pa517000} fill="#AF63FF" />
-            </g>
-          </svg>
-        </div>
-      </div>
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#f5f5f5] text-[14px] uppercase whitespace-nowrap">Placeholder</p>
-    </div>
-  );
-}
-
-function Container4() {
-  return (
-    <div className="content-stretch flex items-center relative shrink-0 w-full" data-name="Container">
-      <p className="font-['Saans:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#f5f5f5] text-[48px] tracking-[0.3955px] whitespace-nowrap">
-        <span className="leading-none">000</span>
-        <span className="leading-none text-[30.96px]">+</span>
-      </p>
-    </div>
-  );
-}
-
-function Container2() {
-  return (
-    <div className="bg-[#110846] flex-[1_0_0] h-[317px] min-h-px min-w-px relative rounded-[4px]" data-name="Container">
-      <div className="content-stretch flex flex-col items-start justify-between pb-[24px] pt-[16px] px-[24px] relative size-full">
-        <Container3 />
-        <Container4 />
-      </div>
-    </div>
-  );
-}
-
-function Container6() {
-  return (
-    <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Container">
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Document">
-        <div className="absolute inset-[6.25%_18.75%]" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.5 17.5">
-            <g id="Vector">
-              <path d={svgPaths.p2f81c380} fill="#F5F5F5" />
-              <path d="M10 12.5H2.5V13.75H10V12.5Z" fill="#F5F5F5" />
-              <path d="M10 8.75H2.5V10H10V8.75Z" fill="#F5F5F5" />
-            </g>
-          </svg>
-        </div>
-      </div>
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#110846] text-[14px] uppercase whitespace-nowrap">Placeholder</p>
-    </div>
-  );
-}
-
-function Container7() {
-  return (
-    <div className="content-stretch flex items-center relative shrink-0 w-full" data-name="Container">
-      <p className="font-['Saans:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#f5f5f5] text-[48px] tracking-[0.3955px] whitespace-nowrap">
-        <span className="leading-none">00K</span>
-        <span className="leading-none text-[30.96px]">+</span>
-      </p>
-    </div>
-  );
-}
-
-function Container5() {
-  return (
-    <div className="bg-[#8740ff] flex-[1_0_0] h-[317px] min-h-px min-w-px relative rounded-[4px]" data-name="Container">
-      <div className="content-stretch flex flex-col items-start justify-between pb-[24px] pt-[16px] px-[24px] relative size-full">
-        <Container6 />
-        <Container7 />
-      </div>
-    </div>
-  );
-}
-
-function Container9() {
-  return (
-    <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Container">
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="User--filled">
-        <div className="absolute inset-[6.25%_18.75%]" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.5 17.5">
-            <g id="Vector">
-              <path d={svgPaths.p15c76300} fill="#F5F5F5" />
-              <path d={svgPaths.pa517000} fill="#F5F5F5" />
-            </g>
-          </svg>
-        </div>
-      </div>
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#110846] text-[14px] uppercase whitespace-nowrap">Placeholder</p>
-    </div>
-  );
-}
-
-function Container10() {
-  return (
-    <div className="content-stretch flex items-center relative shrink-0 w-full" data-name="Container">
-      <p className="font-['Saans:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#f5f5f5] text-[48px] tracking-[0.3955px] whitespace-nowrap">
-        <span className="leading-none">$00B</span>
-        <span className="leading-none text-[30.96px]">+</span>
-      </p>
-    </div>
-  );
-}
-
-function Container8() {
-  return (
-    <div className="bg-[#af63ff] flex-[1_0_0] h-[317px] min-h-px min-w-px relative rounded-[4px]" data-name="Container">
-      <div className="content-stretch flex flex-col items-start justify-between pb-[24px] pt-[16px] px-[24px] relative size-full">
-        <Container9 />
-        <Container10 />
-      </div>
-    </div>
-  );
-}
-
-function Container12() {
-  return (
-    <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Container">
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="User--filled">
-        <div className="absolute inset-[6.25%_18.75%]" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.5 17.5">
-            <g id="Vector">
-              <path d={svgPaths.p15c76300} fill="#AF63FF" />
-              <path d={svgPaths.pa517000} fill="#AF63FF" />
-            </g>
-          </svg>
-        </div>
-      </div>
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#110846] text-[14px] uppercase whitespace-nowrap">Placeholder</p>
-    </div>
-  );
-}
-
-function Container13() {
-  return (
-    <div className="content-stretch flex items-center relative shrink-0 w-full" data-name="Container">
-      <p className="font-['Saans:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#110846] text-[48px] tracking-[0.3955px] whitespace-nowrap">
-        <span className="leading-none">0M</span>
-        <span className="leading-none text-[30.96px]">+</span>
-      </p>
-    </div>
-  );
-}
-
-function Container11() {
-  return (
-    <div className="bg-[#bcbcbc] flex-[1_0_0] h-[317px] min-h-px min-w-px relative rounded-[4px]" data-name="Container">
-      <div className="content-stretch flex flex-col items-start justify-between pb-[24px] pt-[16px] px-[24px] relative size-full">
-        <Container12 />
-        <Container13 />
-      </div>
-    </div>
-  );
-}
-
-function Highlights() {
-  return (
-    <div className="content-stretch flex gap-[4px] items-start relative shrink-0 w-full" data-name="Highlights">
-      <Container2 />
-      <Container5 />
-      <Container8 />
-      <Container11 />
-    </div>
-  );
-}
-
 function NumberHighlights() {
-  const ref = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.15 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
-
-  const getCardStyle = (index: number): React.CSSProperties => ({
-    opacity: isVisible ? 1 : 0,
-    transform: isVisible ? "translateY(0)" : "translateY(80px)",
-    transition: `opacity 1000ms ease-out ${index * 200}ms, transform 1000ms ease-out ${index * 200}ms`,
-    flex: "1 0 0",
-    minWidth: 0,
-    minHeight: 0,
-  });
-
   return (
-    <div ref={ref} className="bg-[#300067] content-stretch flex flex-col gap-[64px] items-start overflow-clip px-[80px] py-[120px] relative shrink-0 w-[1440px]" data-name="Number Highlights">
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[36px] w-[412px]">Saratoga by the Numbers</p>
-      <div className="content-stretch flex gap-[4px] items-start relative shrink-0 w-full" data-name="Highlights">
-        <div style={getCardStyle(0)}><Container2 /></div>
-        <div style={getCardStyle(1)}><Container5 /></div>
-        <div style={getCardStyle(2)}><Container8 /></div>
-        <div style={getCardStyle(3)}><Container11 /></div>
-      </div>
-    </div>
+    <NumberHighlightsComponent
+      title="Saratoga by the Numbers"
+      bgColor="#4E0276"
+      cards={[
+        {
+          icon: (
+            <div className="overflow-clip relative shrink-0 size-[20px]" data-name="User--filled">
+              <div className="absolute inset-[6.25%_18.75%]" data-name="Vector">
+                <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.5 17.5">
+                  <g id="Vector">
+                    <path d={svgPaths.p15c76300} fill="#AF63FF" />
+                    <path d={svgPaths.pa517000} fill="#AF63FF" />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          ),
+          label: "Employees",
+          value: "000+",
+          bgColor: "#110846",
+        },
+        {
+          icon: (
+            <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Document">
+              <div className="absolute inset-[6.25%_18.75%]" data-name="Vector">
+                <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.5 17.5">
+                  <g id="Vector">
+                    <path d={svgPaths.p2f81c380} fill="#F5F5F5" />
+                    <path d="M10 12.5H2.5V13.75H10V12.5Z" fill="#F5F5F5" />
+                    <path d="M10 8.75H2.5V10H10V8.75Z" fill="#F5F5F5" />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          ),
+          label: "Offices",
+          value: "3",
+          bgColor: "#8740ff",
+          labelColor: "#110846",
+        },
+        {
+          icon: (
+            <div className="overflow-clip relative shrink-0 size-[20px]" data-name="User--filled">
+              <div className="absolute inset-[6.25%_18.75%]" data-name="Vector">
+                <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.5 17.5">
+                  <g id="Vector">
+                    <path d={svgPaths.p15c76300} fill="#F5F5F5" />
+                    <path d={svgPaths.pa517000} fill="#F5F5F5" />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          ),
+          label: "Clients",
+          value: "330+",
+          bgColor: "#af63ff",
+          labelColor: "#110846",
+        },
+        {
+          icon: (
+            <div className="overflow-clip relative shrink-0 size-[20px]" data-name="User--filled">
+              <div className="absolute inset-[6.25%_18.75%]" data-name="Vector">
+                <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.5 17.5">
+                  <g id="Vector">
+                    <path d={svgPaths.p15c76300} fill="#AF63FF" />
+                    <path d={svgPaths.pa517000} fill="#AF63FF" />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          ),
+          label: "Years Building with Passion",
+          value: "23+",
+          bgColor: "#bcbcbc",
+          labelColor: "#110846",
+          valueColor: "#110846",
+        },
+      ]}
+    />
   );
 }
 
@@ -1557,7 +1433,7 @@ function Frame1() {
 function Frame59({ active = true }: { active?: boolean }) {
   return (
     <div className="relative shrink-0 w-full">
-      <div aria-hidden="true" className={`absolute border-solid border-t inset-0 pointer-events-none transition-colors duration-500 ${active ? 'border-[#af63ff]' : 'border-[#33317a]'}`} />
+      <div aria-hidden="true" className={`absolute border-solid border-t border-b inset-0 pointer-events-none transition-colors duration-500 ${active ? 'border-[#af63ff]' : 'border-[#33317a]'}`} />
       <div className="flex flex-row items-center size-full">
         <div className={`content-stretch flex gap-[20px] items-center py-[16px] relative w-full transition-all duration-500 ${active ? 'pl-[64px]' : 'pl-0'}`}>
           <div className={`h-[32px] relative shrink-0 transition-all duration-500 overflow-hidden ${active ? 'w-[24px] opacity-100' : 'w-0 opacity-0'}`} data-name="Vector">
@@ -1588,7 +1464,7 @@ function Frame61({ active = false }: { active?: boolean }) {
 
 function Frame60({ activeSection }: { activeSection: 'executive' | 'board' }) {
   return (
-    <div className="sticky top-[100px] self-start content-stretch flex flex-col items-start shrink-0 w-[305.25px] bg-[#110846]">
+    <div className="sticky top-[152px] self-start content-stretch flex flex-col items-start shrink-0 w-[305.25px] bg-[#110846]">
       <Frame59 active={activeSection === 'executive'} />
       <Frame61 active={activeSection === 'board'} />
     </div>
@@ -2435,6 +2311,168 @@ function Frame66({ boardRef }: { boardRef: React.RefObject<HTMLDivElement | null
   );
 }
 
+function OurValues() {
+  const values = [
+    {
+      title: "Precision",
+      description: "We strive for excellence in performance and outcomes, in everything we do. Being right and accurate matters to us.",
+      icon: new URL("../assets/icon-goals.svg", import.meta.url).href,
+    },
+    {
+      title: "Integrity",
+      description: "We value honesty, transparency and strive to hold ourselves to a high standard.",
+      icon: new URL("../assets/icon-integrity.svg", import.meta.url).href,
+    },
+    {
+      title: "Trust",
+      description: "We know our counterparties rely on us for critical workflows. We have earned that trust with 20 years of diligence. We do not want to lose that.",
+      icon: new URL("../assets/icon-trust.svg", import.meta.url).href,
+    },
+    {
+      title: "Expert",
+      description: "We strive to be the best at what we do, to know our subject matter, to be interimately familiar with each of the regulators we interface with, to be a trusted thought partner to the clients we serve.",
+      icon: new URL("../assets/icon-trophy.svg", import.meta.url).href,
+    },
+    {
+      title: "Service",
+      description: 'How can we do more for our clients? That is the question at the core of everything we do here. New products, innovative approaches, improved pricing, new features, more interface options. It\'s all about having a service mindset.',
+      icon: new URL("../assets/icon-service.svg", import.meta.url).href,
+    },
+    {
+      title: "Rigor",
+      description: 'We sweat the details. We rely on our team to cross every "T", dot every "I" and ensure we test every line of code, every compliance managed service offering and validate each payment orchestration. Having attention to detail is critical.',
+      icon: new URL("../assets/icon-rigor.svg", import.meta.url).href,
+    },
+    {
+      title: "Ownership",
+      description: "We are building Saratoga for the next 20 years, and every decision should be put in that context. We are curious, we care about the long-term well being of our clients, we care about excellence and craftsmanship. We don't hide things under the rug - we fix and remodel the flooring for the long-term.",
+      icon: new URL("../assets/icon-ownership.svg", import.meta.url).href,
+    },
+  ];
+
+  return (
+    <div className="bg-[#110846] content-stretch flex items-start justify-between px-[80px] py-[120px] relative shrink-0 w-[1440px]" data-name="Our Values">
+      <p className="font-['Saans:Regular',sans-serif] leading-[40px] not-italic sticky top-[152px] shrink-0 text-[#f5f5f5] text-[36px] self-start">Our Values</p>
+      <div className="content-stretch flex flex-col gap-[10px] items-start overflow-clip relative shrink-0 w-[738px]">
+        {values.map((value, index) => (
+          <div key={index} className="border-[#af63ff] border-solid border-t content-stretch flex items-start pb-[64px] pt-[32px] relative shrink-0 w-full" style={{ gap: `${140 - value.title.length * 2}px` }}>
+            <div className="content-stretch flex gap-[32px] items-start relative shrink-0">
+              <div className="relative shrink-0 size-[76px]">
+                <img alt={value.title} className="absolute block max-w-none size-full" src={value.icon} />
+              </div>
+              <p className="font-['Saans:Medium',sans-serif] leading-[28px] not-italic relative shrink-0 text-[#f5f5f5] text-[20px] tracking-[0.2px] whitespace-nowrap pt-[4px]">{value.title}</p>
+            </div>
+            <p className="font-['Saans:Regular',sans-serif] leading-[20px] not-italic relative text-[#f5f5f5] text-[16px] tracking-[0.16px] flex-1">{value.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function LatestFromTeamCard() {
+  return (
+    <div className="content-stretch flex gap-[24px] h-[420px] items-start relative shrink-0 w-[1089px]">
+      <div className="bg-[#9293ba] h-full rounded-[4px] shrink-0 w-[500px]" />
+      <div className="border-[#6a6b9e] border-l border-solid content-stretch flex flex-[1_0_0] flex-col h-full items-start justify-between min-h-px min-w-px pb-[24px] pl-[24px] pr-[40px] pt-[40px] relative">
+        <div className="content-stretch flex gap-[8px] items-start relative shrink-0 w-full">
+          <div className="bg-[#af63ff] content-stretch flex h-[32px] items-center justify-center px-[24px] py-[8px] relative rounded-[4px] shrink-0">
+            <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[16px] not-italic relative shrink-0 text-[#f5f5f5] text-[14px] uppercase whitespace-nowrap">Tag</p>
+          </div>
+          <div className="bg-[#af63ff] content-stretch flex h-[32px] items-center justify-center px-[24px] py-[8px] relative rounded-[4px] shrink-0">
+            <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[16px] not-italic relative shrink-0 text-[#f5f5f5] text-[14px] uppercase whitespace-nowrap">Tag</p>
+          </div>
+          <div className="bg-[#af63ff] content-stretch flex h-[32px] items-center justify-center px-[24px] py-[8px] relative rounded-[4px] shrink-0">
+            <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[16px] not-italic relative shrink-0 text-[#f5f5f5] text-[14px] uppercase whitespace-nowrap">Tag</p>
+          </div>
+        </div>
+        <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
+          <p className="font-['Saans:Medium',sans-serif] leading-[28px] not-italic relative shrink-0 text-[#f5f5f5] text-[24px] w-full">Maryland passes new insurance producer law</p>
+          <p className="font-['Saans:Regular',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#f5f5f5] text-[18px] tracking-[0.18px] w-full">{`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `}</p>
+        </div>
+        <div className="content-stretch flex gap-[8px] items-center relative shrink-0 cursor-pointer group/link">
+          <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[16px] not-italic relative shrink-0 text-[#af63ff] text-[14px] uppercase whitespace-nowrap">READ MORE</p>
+          <div className="content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[32px]">
+            <div className="overflow-clip relative shrink-0 size-[20px]">
+              <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 12.5">
+                <path d={svgPaths.p3be57f00} fill="var(--fill-0, #AF63FF)" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function LatestFromTeam() {
+  return (
+    <div className="bg-[#300067] content-stretch flex flex-col gap-[40px] items-start px-[80px] py-[120px] relative shrink-0 w-[1440px]" data-name="Latest From Our Team">
+      <p className="font-['Saans:Regular',sans-serif] leading-[32px] not-italic relative shrink-0 text-[#f5f5f5] text-[28px]">Latest From Out Team</p>
+      <div className="content-stretch flex flex-col gap-[64px] items-start relative shrink-0">
+        <div className="content-stretch flex gap-[40px] items-start overflow-clip relative shrink-0 w-[1360px]">
+          <LatestFromTeamCard />
+          <LatestFromTeamCard />
+        </div>
+      </div>
+      {/* Navigation */}
+      <div className="content-stretch flex gap-[64px] items-center justify-center relative shrink-0 w-full">
+        <div className="content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[40px] opacity-50">
+          <div aria-hidden="true" className="absolute border border-[#9293ba] border-solid inset-0 pointer-events-none rounded-[4px]" />
+          <div className="overflow-clip relative shrink-0 size-[20px]">
+            <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 12.5">
+              <path d={svgPaths.pc3cec00} fill="var(--fill-0, #9293BA)" />
+            </svg>
+          </div>
+        </div>
+        <div className="flex gap-[8px] items-center">
+          <div className="content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[16px]">
+            <div aria-hidden="true" className="absolute border border-[#af63ff] border-solid inset-0 pointer-events-none rounded-[4px]" />
+            <div className="bg-[#af63ff] shrink-0 size-[6px]" />
+          </div>
+          <div className="content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[16px]">
+            <div className="bg-[#f5f5f5] shrink-0 size-[6px]" />
+          </div>
+          <div className="content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[16px]">
+            <div className="bg-[#f5f5f5] shrink-0 size-[6px]" />
+          </div>
+        </div>
+        <IconButton size={40} variant="outline-white" />
+      </div>
+    </div>
+  );
+}
+
+function TeamPhotos() {
+  const labels = [
+    "Lorem Ipsum Sin Dolore", "Lorem Ipsum Sin Dolore", "Lorem Ipsum Sin Dolore",
+    "Lorem Ipsum Sin Dolore", "Lorem Ipsum Sin Dolore", "Lorem Ipsum Sin Dolore",
+    "Lorem Ipsum Sin Dolore", "Lorem Ipsum Sin Dolore", "Lorem Ipsum Sin Dolore",
+  ];
+
+  return (
+    <div className="bg-[#300067] content-stretch flex flex-col items-start px-[80px] py-[120px] relative shrink-0 w-[1440px]" data-name="Team Photos">
+      <div className="content-stretch flex flex-col gap-[68px] items-start relative shrink-0 w-[1280px]">
+        <p className="font-['Saans:Regular',sans-serif] leading-[28px] not-italic relative shrink-0 text-[#f5f5f5] text-[28px]">Placeholder Text</p>
+        <div className="content-stretch flex flex-col gap-[10px] items-start relative shrink-0 w-full">
+          {[0, 1, 2].map((row) => (
+            <div key={row} className="content-stretch flex gap-[10px] items-start relative shrink-0 w-full">
+              {[0, 1, 2].map((col) => (
+                <div key={col} className="relative shrink-0 w-[420px] h-[336px]">
+                  <div className="absolute bg-[rgba(217,217,217,0.5)] rounded-[4px] inset-0" />
+                  <div className="absolute bottom-[24px] left-[24px] bg-[#af63ff] content-stretch flex h-[32px] items-center justify-center px-[24px] py-[8px] rounded-[4px]">
+                    <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[16px] not-italic text-[#f5f5f5] text-[14px] uppercase whitespace-nowrap">{labels[row * 3 + col]}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function Frame58() {
   const boardRef = useRef<HTMLDivElement | null>(null);
   const [activeSection, setActiveSection] = useState<'executive' | 'board'>('executive');
@@ -2804,7 +2842,7 @@ function Frame16() {
   return (
     <div className="absolute content-stretch flex flex-col gap-[24px] items-start left-[80px] top-[84px] w-[305px]">
       <Group13 />
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] min-w-full not-italic relative shrink-0 text-[#f5f5f5] text-[16px] w-[min-content] whitespace-pre-wrap">{`Saratoga Compliance Solutions is the leading provider of all-on-one compliance and license operations software and AI-enabled managed services for insurance companies in the U.S. and Canada.  `}</p>
+      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] min-w-full not-italic relative shrink-0 text-[#f5f5f5] text-[16px] w-[min-content] whitespace-pre-wrap">{`Saratoga Compliance Solutions is the leading provider of all-in-one compliance and license operations software and AI-enabled compliance managed services for insurance companies in the U.S. and Canada.  `}</p>
     </div>
   );
 }
@@ -2834,13 +2872,13 @@ function Frame4() {
 }
 
 function Icon4() {
-  return <ArrowIcon color="#AF63FF" />;
+  return <ArrowIcon color="#9293BA" />;
 }
 
 function List3() {
   return (
-    <div className="content-stretch flex items-center justify-between pl-[16px] pr-[8px] py-[8px] relative rounded-[8px] shrink-0 w-[277px]" data-name="List">
-      <div aria-hidden="true" className="absolute border border-[#f5f5f5] border-solid inset-0 pointer-events-none rounded-[8px]" />
+    <div className="content-stretch flex items-center justify-between pl-[16px] pr-[8px] py-[8px] relative rounded-[4px] shrink-0 w-[277px]" data-name="List">
+      <div aria-hidden="true" className="absolute border border-[#f5f5f5] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <p className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic opacity-50 relative shrink-0 text-[#9293ba] text-[16px] whitespace-nowrap">Enter your email</p>
       <div className="opacity-50"><Icon4 /></div>
     </div>
@@ -2882,7 +2920,8 @@ function List5() {
     <div className="content-stretch flex flex-col font-['Saans:Regular',sans-serif] gap-[8px] items-start relative shrink-0 text-[#f5f5f5] text-[16px] w-full" data-name="List">
       <FooterLink to="/partners/integrations">Integrations</FooterLink>
       <FooterLink to="/partners/developer-portal">Developer Portal</FooterLink>
-      <FooterLink to="/partners/alliances">Alliances</FooterLink>
+      <FooterLink to="/partners/ecosystem-partners">Ecosystem Partners</FooterLink>
+      <p className="relative shrink-0">{`Legal & Regulatory Alliances`}</p>
     </div>
   );
 }
@@ -2990,7 +3029,6 @@ function TermsOfService() {
       <p className="relative shrink-0">Terms of Service</p>
       <p className="relative shrink-0">Privacy Policy</p>
       <p className="relative shrink-0">Data Security</p>
-      <p className="relative shrink-0">Cookie Policy</p>
     </div>
   );
 }
@@ -3058,12 +3096,11 @@ export default function AboutUs() {
         <Frame54 />
         <SecondHero />
         <SecondHero1 />
-        <SecondHero2 />
-        <Frame35 />
-        <Frame44 />
+        <LatestFromTeam />
+        <OurValues />
+        <TeamPhotos />
         <NumberHighlights />
         <Frame58 />
-        <Frame47 />
         <Customers />
         <div className="bg-[#300067] h-[717px] overflow-clip relative shrink-0 w-[1440px]" data-name="Footer">
         <Container14 />

@@ -8,7 +8,10 @@ import RegulatoryDatabase from "../imports/RegulatoryDatabase";
 import AboutUs from "../imports/AboutUs";
 import WhySaratoga from "../imports/WhySaratoga";
 import DeveloperPortal from "../imports/DeveloperPortal";
-import { useEffect } from "react";
+import EcosystemPartners from "../imports/EcosystemPartners";
+import { useEffect, useState } from "react";
+import { SearchOverlay } from "../app/components/SearchOverlay";
+import SearchResults from "../imports/SearchResults";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -19,12 +22,21 @@ function ScrollToTop() {
 }
 
 function RootLayout() {
+  const [searchOpen, setSearchOpen] = useState(false);
+
+  useEffect(() => {
+    const handleOpenSearch = () => setSearchOpen(true);
+    window.addEventListener("open-search", handleOpenSearch);
+    return () => window.removeEventListener("open-search", handleOpenSearch);
+  }, []);
+
   return (
     <div className="w-full" style={{ overflowX: "clip" }}>
       <ScrollToTop />
       <div className="max-w-[1440px] mx-auto w-full relative">
         <Outlet />
       </div>
+      <SearchOverlay isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
     </div>
   );
 }
@@ -55,6 +67,10 @@ export const router = createBrowserRouter([
         element: <Alliances />,
       },
       {
+        path: "partners/ecosystem-partners",
+        element: <EcosystemPartners />,
+      },
+      {
         path: "resources/regulatory-database",
         element: <RegulatoryDatabase />,
       },
@@ -69,6 +85,10 @@ export const router = createBrowserRouter([
       {
         path: "partners/developer-portal",
         element: <DeveloperPortal />,
+      },
+      {
+        path: "search",
+        element: <SearchResults />,
       },
     ],
   },

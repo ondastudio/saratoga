@@ -8,29 +8,28 @@ import { ArrowIcon } from "../app/components/ArrowIcon";
 
 function Frame() {
   return (
-    <div className="content-stretch flex flex-col font-['Saans:Regular',sans-serif] gap-[24px] h-[140px] items-start leading-[1.1] not-italic relative shrink-0 text-[#f5f5f5] w-[650px]">
-      <p className="relative shrink-0 text-[40px] tracking-[-0.4px] w-[440px]">Integrations</p>
-      <p className="relative shrink-0 text-[24px] tracking-[-0.24px] w-[440px]">Powerful Integrations That Connect Saratoga to the Systems You Already Use</p>
+    <div className="content-stretch flex flex-col font-['Saans:Regular',sans-serif] gap-[24px] items-start leading-[1.1] not-italic relative shrink-0 text-[#f5f5f5] w-[413px]">
+      <p className="relative shrink-0 text-[40px] tracking-[-0.4px]">Integrations</p>
+      <p className="relative shrink-0 text-[24px] tracking-[-0.24px] leading-[28px]">Powerful Integrations That Connect Saratoga to the Systems You Already Use</p>
     </div>
   );
 }
 
-function Link() {
-  return <SaratogaButton variant="primary" color="white" showArrow>Request a Demo</SaratogaButton>;
-}
-
 function Frame13() {
   return (
-    <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0">
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[18px] tracking-[-0.18px] w-[599px]">Saratoga is designed to fit seamlessly into your existing technology ecosystem. Our pre-built integrations and open API architecture ensure that compliance data flows where it needs to go – eliminating manual data entry, connecting disparate systems and keeping your entire organization aligned on one authoritative set of records.</p>
-      <Link />
+    <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-[635px]">
+      <p className="font-['Saans:Regular',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#f5f5f5] text-[18px] tracking-[0.18px] w-full">Saratoga is designed to fit seamlessly into your existing technology ecosystem. Our pre-built integrations and open API architecture ensure that compliance data flows where it needs to go – eliminating manual data entry, connecting disparate systems and keeping your entire organization aligned on one authoritative set of records.</p>
+      <div className="content-stretch flex gap-[8px] items-start relative shrink-0">
+        <SaratogaButton variant="primary" color="purple" showArrow>Request a Demo</SaratogaButton>
+        <SaratogaButton variant="outline" color="purple" showArrow to="/company/why-saratoga">Why Saratoga</SaratogaButton>
+      </div>
     </div>
   );
 }
 
 function Frame1() {
   return (
-    <div className="absolute bottom-[80px] content-stretch flex items-start left-[80px] w-[1280px]">
+    <div className="absolute bottom-[80px] content-stretch flex gap-[232px] items-start left-[85px] w-[1280px]">
       <Frame />
       <Frame13 />
     </div>
@@ -89,7 +88,7 @@ function Link5() {
 
 function Link6() {
   return (
-    <div className="h-[40px] relative shrink-0" data-name="Link">
+    <div className="h-[40px] relative shrink-0" data-name="Link" onClick={() => window.dispatchEvent(new Event("open-search"))}>
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex h-full items-center px-[16px] relative">
         <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Search">
           <div className="absolute inset-[6.14%_9.37%_9.37%_6.14%]" data-name="Vector">
@@ -280,6 +279,7 @@ function Frame2() {
 function Header() {
   return (
     <div className="bg-[#110846] h-[470px] overflow-clip relative shrink-0 w-[1440px]" data-name="Header">
+      {/* Background pattern removed */}
       <Frame1 />
       <div className="-translate-x-1/2 absolute content-stretch flex flex-col items-end left-1/2 pt-[16px] px-[80px] top-0 w-[1440px]" data-name="Navigation">
         <Container />
@@ -289,493 +289,125 @@ function Header() {
   );
 }
 
-function Frame29() {
-  return (
-    <div className="absolute content-stretch flex items-center justify-center left-[122px] top-[80px]">
-      <p className="font-['Saans:Medium',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#33317a] text-[20px] tracking-[-0.2px] whitespace-nowrap">Client Logo</p>
-    </div>
-  );
-}
+// Integration logos
+import docusignLogo from "../assets/integrations/docusign.svg";
+// finraLogo: complex clip-path logo, needs manual SVG export from Figma
+import salesforceLogo from "../assets/integrations/salesforce.svg";
+import varicentLogo from "../assets/integrations/varicent.svg";
+import verifiedfirstLogo from "../assets/integrations/verifiedfirst.svg";
+import webceLogo from "../assets/integrations/webce.svg";
 
-function Logo() {
-  return (
-    <div className="bg-[#6a6b9e] h-[183px] relative rounded-[4px] shrink-0 w-full" data-name="Logo">
-      <Frame29 />
-    </div>
-  );
-}
+const integrations = [
+  {
+    name: "Accurate",
+    description: "Accurate + AgentSync offers in-system background checks to keep your onboarding streamlined and efficient.",
+    logo: null,
+  },
+  {
+    name: "BIG",
+    description: "BIG's background check solutions integrate with AgentSync's Manage product to give you greater visibility and control of your producer, broker, and adjuster management.",
+    logo: null,
+  },
+  {
+    name: "Docusign",
+    description: "AgentSync customers benefit from the speed and efficiency of Docusign integration to send, track and sign agreements with the world's #1 electronic signature solution.",
+    logo: docusignLogo,
+  },
+  {
+    name: "FINRA",
+    description: "AgentSync leverages FINRA's API Developer Center initiative to provide realtime visibility into the total compliance of variable lines brokers.",
+    logo: null,
+  },
+  {
+    name: "Guidewire",
+    description: "PolicyCenter integration with AgentSync allows for real-time checking of producer compliance status as a policy moves through the lifecycle.",
+    logo: null,
+  },
+  {
+    name: "NIPR",
+    description: "AgentSync leverages NIPR's data stream to deliver realtime, integrated, and automated compliance services to carriers, agencies, and MGAs/MGUs.",
+    logo: null,
+  },
+  {
+    name: "Salesforce",
+    description: "AgentSync + Salesforce unlocks business data to give you a 360-degree view of your customer and distribution channel.",
+    logo: salesforceLogo,
+  },
+  {
+    name: "Varicent",
+    description: "With Varicent and AgentSync, you can redefine producer management and team incentives.",
+    logo: varicentLogo,
+  },
+  {
+    name: "VerifiedFirst",
+    description: "Verified First and AgentSync partner to provide a comprehensive automated background check and producer management process.",
+    logo: verifiedfirstLogo,
+  },
+  {
+    name: "WebCE",
+    description: "WebCE's continuing education courses integrate with AgentSync's Manage product through the service, Learn, to give you visibility into the CE compliance status of your producers.",
+    logo: webceLogo,
+  },
+];
 
-function Frame30() {
+function IntegrationCard({ name, description, logo }: { name: string; description: string; logo: string | null }) {
   return (
-    <div className="content-stretch flex items-center justify-center relative shrink-0">
-      <p className="font-['Saans:Medium',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[20px] tracking-[-0.2px] whitespace-nowrap">NIPR</p>
-    </div>
-  );
-}
-
-function Frame21() {
-  return (
-    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
-      <Frame30 />
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.3] min-w-full not-italic relative shrink-0 text-[#f5f5f5] text-[18px] tracking-[-0.18px] w-[min-content]">Native integration with the National Insurance Producer Registry for real-time producer data, license verification, appointment processing and regulatory transactions.</p>
-    </div>
-  );
-}
-
-function Frame45() {
-  return (
-    <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-[139.906px]">
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[19.5px] not-italic relative shrink-0 text-[#af63ff] text-[14px] uppercase whitespace-nowrap">LEARN MORE</p>
-      <div className="h-[8px] relative shrink-0 w-[10px]" data-name="Vector">
-        <div className="absolute inset-[-9.38%_-7.5%]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 11.5 9.5">
-            <path d={svgPaths.pa712600} id="Vector" stroke="var(--stroke-0, #AF63FF)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-          </svg>
+    <div className="flex-[1_0_0] min-w-0 relative">
+      <div aria-hidden="true" className="absolute border-[#33317a] border-l border-solid inset-0 pointer-events-none" />
+      <div className="content-stretch flex flex-col gap-[24px] items-start justify-between px-[40px] py-[24px] relative size-full">
+        <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full">
+          <div className="bg-[#D8C1FE] h-[183px] relative rounded-[4px] shrink-0 w-full flex items-center justify-center" data-name="Logo">
+            {logo ? (
+              <img src={logo} alt={`${name} logo`} className="max-h-[60%] max-w-[70%] object-contain" />
+            ) : (
+              <p className="font-['Saans:Medium',sans-serif] leading-[1.2] not-italic text-[#33317a] text-[20px] tracking-[-0.2px]">Client Logo</p>
+            )}
+          </div>
+          <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
+            <p className="font-['Saans:Medium',sans-serif] leading-[28px] not-italic relative shrink-0 text-[#f5f5f5] text-[20px] tracking-[0.2px]">{name}</p>
+            <p className="font-['Saans:Regular',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#f5f5f5] text-[18px] tracking-[0.18px] w-full">{description}</p>
+          </div>
+        </div>
+        <div className="content-stretch flex gap-[8px] items-center relative shrink-0">
+          <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[16px] not-italic relative shrink-0 text-[#af63ff] text-[14px] uppercase whitespace-nowrap">LEARN MORE</p>
+          <div className="shrink-0 size-[32px] flex items-center justify-center">
+            <svg width="15" height="12.5" viewBox="0 0 15 12.5" fill="none">
+              <path d="M8.75 0L7.85625 0.870625L12.5937 5.625H0V6.875H12.5937L7.85625 11.6081L8.75 12.5L15 6.25L8.75 0Z" fill="#AF63FF" />
+            </svg>
+          </div>
         </div>
       </div>
-    </div>
-  );
-}
-
-function Link20() {
-  return (
-    <div className="content-stretch flex items-center justify-end relative shrink-0" data-name="Link">
-      <Frame45 />
-    </div>
-  );
-}
-
-function Frame35() {
-  return (
-    <div className="content-stretch flex items-start relative shrink-0 w-full">
-      <Link20 />
-    </div>
-  );
-}
-
-function Frame46() {
-  return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-      <Frame35 />
-    </div>
-  );
-}
-
-function Frame14() {
-  return (
-    <div className="flex-[1_0_0] h-full min-h-px min-w-px relative">
-      <div aria-hidden="true" className="absolute border-[#33317a] border-l border-solid inset-0 pointer-events-none" />
-      <div className="content-stretch flex flex-col items-start justify-between px-[40px] py-[24px] relative size-full">
-        <Logo />
-        <Frame21 />
-        <Frame46 />
-      </div>
-    </div>
-  );
-}
-
-function Frame31() {
-  return (
-    <div className="absolute content-stretch flex items-center justify-center left-[122.33px] top-[80px]">
-      <p className="font-['Saans:Medium',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#33317a] text-[20px] tracking-[-0.2px] whitespace-nowrap">Client Logo</p>
-    </div>
-  );
-}
-
-function Logo1() {
-  return (
-    <div className="bg-[#6a6b9e] h-[183px] relative rounded-[4px] shrink-0 w-full" data-name="Logo">
-      <Frame31 />
-    </div>
-  );
-}
-
-function Frame32() {
-  return (
-    <div className="content-stretch flex items-center justify-center relative shrink-0">
-      <p className="font-['Saans:Medium',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[20px] tracking-[-0.2px] whitespace-nowrap">Applied Epic</p>
-    </div>
-  );
-}
-
-function Frame23() {
-  return (
-    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
-      <Frame32 />
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.3] min-w-full not-italic relative shrink-0 text-[#f5f5f5] text-[18px] tracking-[-0.18px] w-[min-content]">{`Seamlessly connect sales and compliance functions within Applied's industry-leading agency management system.`}</p>
-    </div>
-  );
-}
-
-function Frame48() {
-  return (
-    <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-[139.906px]">
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[19.5px] not-italic relative shrink-0 text-[#af63ff] text-[14px] uppercase whitespace-nowrap">LEARN MORE</p>
-      <div className="h-[8px] relative shrink-0 w-[10px]" data-name="Vector">
-        <div className="absolute inset-[-9.38%_-7.5%]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 11.5 9.5">
-            <path d={svgPaths.pa712600} id="Vector" stroke="var(--stroke-0, #AF63FF)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Link21() {
-  return (
-    <div className="content-stretch flex items-center justify-end relative shrink-0" data-name="Link">
-      <Frame48 />
-    </div>
-  );
-}
-
-function Frame36() {
-  return (
-    <div className="content-stretch flex items-start relative shrink-0 w-full">
-      <Link21 />
-    </div>
-  );
-}
-
-function Frame47() {
-  return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-      <Frame36 />
-    </div>
-  );
-}
-
-function Frame16() {
-  return (
-    <div className="flex-[1_0_0] h-full min-h-px min-w-px relative">
-      <div aria-hidden="true" className="absolute border-[#33317a] border-l border-solid inset-0 pointer-events-none" />
-      <div className="content-stretch flex flex-col items-start justify-between px-[40px] py-[24px] relative size-full">
-        <Logo1 />
-        <Frame23 />
-        <Frame47 />
-      </div>
-    </div>
-  );
-}
-
-function Frame33() {
-  return (
-    <div className="absolute content-stretch flex items-center justify-center left-[122.67px] top-[80px]">
-      <p className="font-['Saans:Medium',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#33317a] text-[20px] tracking-[-0.2px] whitespace-nowrap">Client Logo</p>
-    </div>
-  );
-}
-
-function Logo2() {
-  return (
-    <div className="bg-[#6a6b9e] h-[183px] relative rounded-[4px] shrink-0 w-full" data-name="Logo">
-      <Frame33 />
-    </div>
-  );
-}
-
-function Frame34() {
-  return (
-    <div className="content-stretch flex items-center justify-center relative shrink-0">
-      <p className="font-['Saans:Medium',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[20px] tracking-[-0.2px] whitespace-nowrap">Salesforce</p>
-    </div>
-  );
-}
-
-function Frame24() {
-  return (
-    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
-      <Frame34 />
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.3] min-w-full not-italic relative shrink-0 text-[#f5f5f5] text-[18px] tracking-[-0.18px] w-[min-content]">Embed compliance data directly into your CRM workflows for informed decision-making without switching systems.</p>
-    </div>
-  );
-}
-
-function Frame51() {
-  return (
-    <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-[139.906px]">
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[19.5px] not-italic relative shrink-0 text-[#af63ff] text-[14px] uppercase whitespace-nowrap">LEARN MORE</p>
-      <div className="h-[8px] relative shrink-0 w-[10px]" data-name="Vector">
-        <div className="absolute inset-[-9.38%_-7.5%]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 11.5 9.5">
-            <path d={svgPaths.pa712600} id="Vector" stroke="var(--stroke-0, #AF63FF)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Link22() {
-  return (
-    <div className="content-stretch flex items-center justify-end relative shrink-0" data-name="Link">
-      <Frame51 />
-    </div>
-  );
-}
-
-function Frame37() {
-  return (
-    <div className="content-stretch flex items-start relative shrink-0 w-full">
-      <Link22 />
-    </div>
-  );
-}
-
-function Frame50() {
-  return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-      <Frame37 />
-    </div>
-  );
-}
-
-function Frame17() {
-  return (
-    <div className="flex-[1_0_0] h-full min-h-px min-w-px relative">
-      <div aria-hidden="true" className="absolute border-[#33317a] border-l border-solid inset-0 pointer-events-none" />
-      <div className="content-stretch flex flex-col items-start justify-between px-[40px] py-[24px] relative size-full">
-        <Logo2 />
-        <Frame24 />
-        <Frame50 />
-      </div>
-    </div>
-  );
-}
-
-function Frame22() {
-  return (
-    <div className="content-stretch flex h-[488px] items-center relative shrink-0 w-full">
-      <Frame14 />
-      <Frame16 />
-      <Frame17 />
-    </div>
-  );
-}
-
-function Frame28() {
-  return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-      <Frame22 />
-    </div>
-  );
-}
-
-function Frame39() {
-  return (
-    <div className="absolute content-stretch flex items-center justify-center left-[122px] top-[80px]">
-      <p className="font-['Saans:Medium',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#33317a] text-[20px] tracking-[-0.2px] whitespace-nowrap">Client Logo</p>
-    </div>
-  );
-}
-
-function Logo3() {
-  return (
-    <div className="bg-[#6a6b9e] h-[183px] relative rounded-[4px] shrink-0 w-full" data-name="Logo">
-      <Frame39 />
-    </div>
-  );
-}
-
-function Frame40() {
-  return (
-    <div className="content-stretch flex items-center justify-center relative shrink-0">
-      <p className="font-['Saans:Medium',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[20px] tracking-[-0.2px] whitespace-nowrap">Agency Management System</p>
-    </div>
-  );
-}
-
-function Frame26() {
-  return (
-    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
-      <Frame40 />
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.3] min-w-full not-italic relative shrink-0 text-[#f5f5f5] text-[18px] tracking-[-0.18px] w-[min-content]">Connect with leading AMS platforms to synchronize producer data, compliance statuses and appointment records.</p>
-    </div>
-  );
-}
-
-function Frame53() {
-  return (
-    <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-[139.906px]">
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[19.5px] not-italic relative shrink-0 text-[#af63ff] text-[14px] uppercase whitespace-nowrap">LEARN MORE</p>
-      <div className="h-[8px] relative shrink-0 w-[10px]" data-name="Vector">
-        <div className="absolute inset-[-9.38%_-7.5%]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 11.5 9.5">
-            <path d={svgPaths.pa712600} id="Vector" stroke="var(--stroke-0, #AF63FF)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Link23() {
-  return (
-    <div className="content-stretch flex items-center justify-end relative shrink-0" data-name="Link">
-      <Frame53 />
-    </div>
-  );
-}
-
-function Frame41() {
-  return (
-    <div className="content-stretch flex items-start relative shrink-0 w-full">
-      <Link23 />
-    </div>
-  );
-}
-
-function Frame52() {
-  return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-      <Frame41 />
-    </div>
-  );
-}
-
-function Frame15() {
-  return (
-    <div className="flex-[1_0_0] h-full min-h-px min-w-px relative">
-      <div aria-hidden="true" className="absolute border-[#33317a] border-l border-solid inset-0 pointer-events-none" />
-      <div className="content-stretch flex flex-col items-start justify-between px-[40px] py-[24px] relative size-full">
-        <Logo3 />
-        <Frame26 />
-        <Frame52 />
-      </div>
-    </div>
-  );
-}
-
-function Frame42() {
-  return (
-    <div className="absolute content-stretch flex items-center justify-center left-[122.33px] top-[80px]">
-      <p className="font-['Saans:Medium',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#33317a] text-[20px] tracking-[-0.2px] whitespace-nowrap">Client Logo</p>
-    </div>
-  );
-}
-
-function Logo4() {
-  return (
-    <div className="bg-[#6a6b9e] h-[183px] relative rounded-[4px] shrink-0 w-full" data-name="Logo">
-      <Frame42 />
-    </div>
-  );
-}
-
-function Frame43() {
-  return (
-    <div className="content-stretch flex items-center justify-center relative shrink-0">
-      <p className="font-['Saans:Medium',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[20px] tracking-[-0.2px] whitespace-nowrap">Carrier Systems</p>
-    </div>
-  );
-}
-
-function Frame27() {
-  return (
-    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
-      <Frame43 />
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.3] min-w-full not-italic relative shrink-0 text-[#f5f5f5] text-[18px] tracking-[-0.18px] w-[min-content]">API connectivity for submitting contracting data, receiving appointment confirmations and maintaining synchronized records with carrier partners.</p>
-    </div>
-  );
-}
-
-function Frame55() {
-  return (
-    <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-[139.906px]">
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[19.5px] not-italic relative shrink-0 text-[#af63ff] text-[14px] uppercase whitespace-nowrap">LEARN MORE</p>
-      <div className="h-[8px] relative shrink-0 w-[10px]" data-name="Vector">
-        <div className="absolute inset-[-9.38%_-7.5%]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 11.5 9.5">
-            <path d={svgPaths.pa712600} id="Vector" stroke="var(--stroke-0, #AF63FF)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Link24() {
-  return (
-    <div className="content-stretch flex items-center justify-end relative shrink-0" data-name="Link">
-      <Frame55 />
-    </div>
-  );
-}
-
-function Frame44() {
-  return (
-    <div className="content-stretch flex items-start relative shrink-0 w-full">
-      <Link24 />
-    </div>
-  );
-}
-
-function Frame54() {
-  return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-      <Frame44 />
-    </div>
-  );
-}
-
-function Frame19() {
-  return (
-    <div className="flex-[1_0_0] h-full min-h-px min-w-px relative">
-      <div aria-hidden="true" className="absolute border-[#33317a] border-l border-solid inset-0 pointer-events-none" />
-      <div className="content-stretch flex flex-col items-start justify-between px-[40px] py-[24px] relative size-full">
-        <Logo4 />
-        <Frame27 />
-        <Frame54 />
-      </div>
-    </div>
-  );
-}
-
-function Frame20() {
-  return (
-    <div className="flex-[1_0_0] h-full min-h-px min-w-px relative">
-      <div className="size-full" />
-    </div>
-  );
-}
-
-function Frame25() {
-  return (
-    <div className="content-stretch flex h-[488px] items-center relative shrink-0 w-full">
-      <Frame15 />
-      <Frame19 />
-      <Frame20 />
-    </div>
-  );
-}
-
-function Frame38() {
-  return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-      <Frame25 />
-    </div>
-  );
-}
-
-function Frame49() {
-  return (
-    <div className="absolute content-stretch flex flex-col gap-[84px] items-start left-[80px] top-[211px] w-[1280px]">
-      <Frame28 />
-      <Frame38 />
     </div>
   );
 }
 
 function Frame18() {
+  const rows = [];
+  for (let i = 0; i < integrations.length; i += 3) {
+    rows.push(integrations.slice(i, i + 3));
+  }
+
   return (
-    <div className="bg-[#110846] h-[1395px] relative shrink-0 w-full">
-      <p className="absolute font-['Saans:Regular',sans-serif] leading-[1.2] left-[80px] not-italic text-[#f5f5f5] text-[36px] top-[84.48px] w-[412px]">Featured Integrations</p>
-      <Frame49 />
-      <div className="-translate-x-1/2 absolute content-stretch flex gap-[16px] h-[40px] items-center justify-center left-[calc(50%+0.5px)] pl-[25px] pr-[5px] py-px rounded-[8px] top-[1355px]" data-name="Link">
-        <div aria-hidden="true" className="absolute border border-[#af63ff] border-solid inset-0 pointer-events-none rounded-[8px]" />
-        <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#fafafa] text-[14px] uppercase whitespace-nowrap">EXPLORE FULL INTEGRATIONS LIBRARY</p>
-        <IconButton size={32} variant="filled-lilac" />
+    <div className="bg-[#110846] relative shrink-0 w-full px-[80px] py-[84px]">
+      <p className="font-['Saans:Regular',sans-serif] leading-[32px] not-italic text-[#f5f5f5] text-[28px] mb-[64px]">Featured Integrations</p>
+      <div className="content-stretch flex flex-col gap-[84px] items-start w-full">
+        {rows.map((row, rowIndex) => (
+          <div key={rowIndex} className="content-stretch flex items-stretch relative shrink-0 w-full">
+            {row.map((integration) => (
+              <IntegrationCard key={integration.name} {...integration} />
+            ))}
+            {row.length < 3 && Array.from({ length: 3 - row.length }).map((_, i) => (
+              <div key={`empty-${i}`} className="flex-[1_0_0] min-w-0" />
+            ))}
+          </div>
+        ))}
+      </div>
+      <div className="flex justify-center mt-[84px]">
+        <div className="content-stretch flex gap-[16px] h-[40px] items-center justify-center pl-[25px] pr-[5px] py-px rounded-[8px] relative" data-name="Link">
+          <div aria-hidden="true" className="absolute border border-[#af63ff] border-solid inset-0 pointer-events-none rounded-[8px]" />
+          <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#fafafa] text-[14px] uppercase whitespace-nowrap">EXPLORE FULL INTEGRATIONS LIBRARY</p>
+          <IconButton size={32} variant="filled-lilac" />
+        </div>
       </div>
     </div>
   );
@@ -941,7 +573,7 @@ function Frame12() {
   return (
     <div className="absolute content-stretch flex flex-col gap-[24px] items-start left-[80px] top-[84px] w-[305px]">
       <Group1 />
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] min-w-full not-italic relative shrink-0 text-[#f5f5f5] text-[16px] w-[min-content] whitespace-pre-wrap">{`Saratoga Compliance Solutions is the leading provider of all-on-one compliance and license operations software and AI-enabled managed services for insurance companies in the U.S. and Canada.  `}</p>
+      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] min-w-full not-italic relative shrink-0 text-[#f5f5f5] text-[16px] w-[min-content] whitespace-pre-wrap">{`Saratoga Compliance Solutions is the leading provider of all-in-one compliance and license operations software and AI-enabled compliance managed services for insurance companies in the U.S. and Canada.  `}</p>
     </div>
   );
 }
@@ -972,14 +604,14 @@ function Frame3() {
 
 function Icon2() {
   return (
-    <ArrowIcon color="#AF63FF" />
+    <ArrowIcon color="#9293BA" />
   );
 }
 
 function List3() {
   return (
-    <div className="content-stretch flex items-center justify-between pl-[16px] pr-[8px] py-[8px] relative rounded-[8px] shrink-0 w-[277px]" data-name="List">
-      <div aria-hidden="true" className="absolute border border-[#f5f5f5] border-solid inset-0 pointer-events-none rounded-[8px]" />
+    <div className="content-stretch flex items-center justify-between pl-[16px] pr-[8px] py-[8px] relative rounded-[4px] shrink-0 w-[277px]" data-name="List">
+      <div aria-hidden="true" className="absolute border border-[#f5f5f5] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <p className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic opacity-50 relative shrink-0 text-[#9293ba] text-[16px] whitespace-nowrap">Enter your email</p>
       <div className="opacity-50"><Icon2 /></div>
     </div>
@@ -1021,7 +653,8 @@ function List5() {
     <div className="content-stretch flex flex-col font-['Saans:Regular',sans-serif] gap-[8px] items-start relative shrink-0 text-[#f5f5f5] text-[16px] w-full" data-name="List">
       <FooterLink to="/partners/integrations">Integrations</FooterLink>
       <FooterLink to="/partners/developer-portal">Developer Portal</FooterLink>
-      <FooterLink to="/partners/alliances">Alliances</FooterLink>
+      <FooterLink to="/partners/ecosystem-partners">Ecosystem Partners</FooterLink>
+      <p className="relative shrink-0">{`Legal & Regulatory Alliances`}</p>
     </div>
   );
 }
@@ -1129,7 +762,6 @@ function TermsOfService() {
       <p className="relative shrink-0">Terms of Service</p>
       <p className="relative shrink-0">Privacy Policy</p>
       <p className="relative shrink-0">Data Security</p>
-      <p className="relative shrink-0">Cookie Policy</p>
     </div>
   );
 }

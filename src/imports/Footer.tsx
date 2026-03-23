@@ -108,7 +108,7 @@ function Frame5() {
   return (
     <div className="absolute content-stretch flex flex-col gap-[24px] items-start left-[80px] top-[84px] w-[305px]">
       <Group />
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] min-w-full not-italic relative shrink-0 text-[#f5f5f5] text-[16px] w-[min-content] whitespace-pre-wrap">{`Saratoga Compliance Solutions is the leading provider of all-on-one compliance and license operations software and AI-enabled managed services for insurance companies in the U.S. and Canada.  `}</p>
+      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] min-w-full not-italic relative shrink-0 text-[#f5f5f5] text-[16px] w-[min-content] whitespace-pre-wrap">{`Saratoga Compliance Solutions is the leading provider of all-in-one compliance and license operations software and AI-enabled compliance managed services for insurance companies in the U.S. and Canada.  `}</p>
     </div>
   );
 }
@@ -143,7 +143,7 @@ function Icon() {
       <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Arrow--right">
         <div className="absolute inset-[18.75%_12.5%]" data-name="Vector">
           <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 12.5">
-            <path d={svgPaths.p3be57f00} fill="var(--fill-0, #AF63FF)" id="Vector" />
+            <path d={svgPaths.p3be57f00} fill="var(--fill-0, #9293BA)" id="Vector" />
           </svg>
         </div>
       </div>
@@ -153,8 +153,8 @@ function Icon() {
 
 function List3() {
   return (
-    <div className="content-stretch flex items-center justify-between pl-[16px] pr-[8px] py-[8px] relative rounded-[8px] shrink-0 w-[277px]" data-name="List">
-      <div aria-hidden="true" className="absolute border border-[#f5f5f5] border-solid inset-0 pointer-events-none rounded-[8px]" />
+    <div className="content-stretch flex items-center justify-between pl-[16px] pr-[8px] py-[8px] relative rounded-[4px] shrink-0 w-[277px]" data-name="List">
+      <div aria-hidden="true" className="absolute border border-[#f5f5f5] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <p className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic opacity-50 relative shrink-0 text-[#9293ba] text-[16px] whitespace-nowrap">Enter your email</p>
       <div className="opacity-50"><Icon /></div>
     </div>
@@ -196,7 +196,8 @@ function List5() {
     <div className="content-stretch flex flex-col font-['Saans:Regular',sans-serif] gap-[8px] items-start relative shrink-0 text-[#f5f5f5] text-[16px] w-full" data-name="List">
       <FooterLink to="/partners/integrations">Integrations</FooterLink>
       <FooterLink to="/partners/developer-portal">Developer Portal</FooterLink>
-      <FooterLink to="/partners/alliances">Alliances</FooterLink>
+      <FooterLink to="/partners/ecosystem-partners">Ecosystem Partners</FooterLink>
+      <p className="relative shrink-0">{`Legal & Regulatory Alliances`}</p>
     </div>
   );
 }
@@ -304,7 +305,6 @@ function TermsOfService() {
       <p className="relative shrink-0">Terms of Service</p>
       <p className="relative shrink-0">Privacy Policy</p>
       <p className="relative shrink-0">Data Security</p>
-      <p className="relative shrink-0">Cookie Policy</p>
     </div>
   );
 }
