@@ -4,13 +4,13 @@ import { Link as RouterLink } from "react-router";
 import { FooterLink } from "../app/components/FooterLink";
 import { AnimatedCardCarousel } from "../app/components/AnimatedCardCarousel";
 import { ScrollRevealList } from "../app/components/ScrollRevealList";
-import { useState, useEffect, useRef } from "react";
 import LogoMarquee from "./SecondHero-80-467";
 import { SaratogaButton } from "../app/components/SaratogaButton";
 import { NavLink } from "../app/components/NavLink";
 import { IconButton } from "../app/components/IconButton";
 import { ArrowIcon } from "../app/components/ArrowIcon";
 import StickyNav from "./Navigation";
+import { NumberHighlights as NumberHighlightsComponent } from "../app/components/NumberHighlights";
 
 function Group() {
   return (
@@ -198,7 +198,7 @@ function Link5() {
 
 function Link6() {
   return (
-    <div className="h-[40px] relative shrink-0" data-name="Link">
+    <div className="h-[40px] relative shrink-0" data-name="Link" onClick={() => window.dispatchEvent(new Event("open-search"))}>
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex h-full items-center px-[16px] relative">
         <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Search">
           <div className="absolute inset-[6.14%_9.37%_9.37%_6.14%]" data-name="Vector">
@@ -613,214 +613,65 @@ function OpeningText() {
   );
 }
 
-function Frame28() {
-  return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0 w-[545px]">
-      <p className="font-['Saans:Regular',sans-serif] leading-[32px] not-italic relative shrink-0 text-[#110846] text-[28px] w-full">{`The Leader for Insurance Specific Entity Management & Registerd Agent Solutions`}</p>
-    </div>
-  );
-}
-
-function Container3() {
-  return (
-    <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Container">
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="User--filled">
-        <div className="absolute inset-[6.25%_18.75%]" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.5 17.5">
-            <g id="Vector">
-              <path d={svgPaths.p15c76300} fill="#AF63FF" />
-              <path d={svgPaths.pa517000} fill="#AF63FF" />
-            </g>
-          </svg>
-        </div>
-      </div>
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#f5f5f5] text-[14px] uppercase whitespace-nowrap">Placeholder</p>
-    </div>
-  );
-}
-
-function Container4() {
-  return (
-    <div className="content-stretch flex items-center relative shrink-0 w-full" data-name="Container">
-      <p className="font-['Saans:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#f5f5f5] text-[48px] tracking-[0.3955px] whitespace-nowrap">
-        <span className="leading-none">000</span>
-        <span className="leading-none text-[30.96px] align-super">+</span>
-      </p>
-    </div>
-  );
-}
-
-function Container2({ animStyle }: { animStyle?: React.CSSProperties }) {
-  return (
-    <div className="bg-[#110846] flex-[1_0_0] h-[317px] min-h-px min-w-px relative rounded-[4px] transition-all duration-1000 ease-out" data-name="Container" style={animStyle}>
-      <div className="content-stretch flex flex-col items-start justify-between p-[24px] relative size-full">
-        <Container3 />
-        <Container4 />
-      </div>
-    </div>
-  );
-}
-
-function Container6() {
-  return (
-    <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Container">
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="User--filled">
-        <div className="absolute inset-[6.25%_18.75%]" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.5 17.5">
-            <g id="Vector">
-              <path d={svgPaths.p15c76300} fill="#F5F5F5" />
-              <path d={svgPaths.pa517000} fill="#F5F5F5" />
-            </g>
-          </svg>
-        </div>
-      </div>
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#110846] text-[14px] uppercase whitespace-nowrap">Placeholder</p>
-    </div>
-  );
-}
-
-function Container7() {
-  return (
-    <div className="content-stretch flex items-center relative shrink-0 w-full" data-name="Container">
-      <p className="font-['Saans:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#f5f5f5] text-[48px] tracking-[0.3955px] whitespace-nowrap">
-        <span className="leading-none">00K</span>
-        <span className="leading-none text-[30.96px] align-super">+</span>
-      </p>
-    </div>
-  );
-}
-
-function Container5({ animStyle }: { animStyle?: React.CSSProperties }) {
-  return (
-    <div className="bg-[#8740ff] flex-[1_0_0] h-[317px] min-h-px min-w-px relative rounded-[4px] transition-all duration-1000 ease-out" data-name="Container" style={animStyle}>
-      <div className="content-stretch flex flex-col items-start justify-between p-[24px] relative size-full">
-        <Container6 />
-        <Container7 />
-      </div>
-    </div>
-  );
-}
-
-function Container9() {
-  return (
-    <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Container">
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="User--filled">
-        <div className="absolute inset-[6.25%_18.75%]" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.5 17.5">
-            <g id="Vector">
-              <path d={svgPaths.p15c76300} fill="#F5F5F5" />
-              <path d={svgPaths.pa517000} fill="#F5F5F5" />
-            </g>
-          </svg>
-        </div>
-      </div>
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#110846] text-[14px] uppercase whitespace-nowrap">Placeholder</p>
-    </div>
-  );
-}
-
-function Container10() {
-  return (
-    <div className="content-stretch flex items-center relative shrink-0 w-full" data-name="Container">
-      <p className="font-['Saans:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#f5f5f5] text-[48px] tracking-[0.3955px] whitespace-nowrap">
-        <span className="leading-none">$00B</span>
-        <span className="leading-none text-[30.96px] align-super">+</span>
-      </p>
-    </div>
-  );
-}
-
-function Container8({ animStyle }: { animStyle?: React.CSSProperties }) {
-  return (
-    <div className="bg-[#af63ff] flex-[1_0_0] h-[317px] min-h-px min-w-px relative rounded-[4px] transition-all duration-1000 ease-out" data-name="Container" style={animStyle}>
-      <div className="content-stretch flex flex-col items-start justify-between p-[24px] relative size-full">
-        <Container9 />
-        <Container10 />
-      </div>
-    </div>
-  );
-}
-
-function Container12() {
-  return (
-    <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Container">
-      <div className="overflow-clip relative shrink-0 size-[20px]" data-name="User--filled">
-        <div className="absolute inset-[6.25%_18.75%]" data-name="Vector">
-          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.5 17.5">
-            <g id="Vector">
-              <path d={svgPaths.p15c76300} fill="#110846" />
-              <path d={svgPaths.pa517000} fill="#110846" />
-            </g>
-          </svg>
-        </div>
-      </div>
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#110846] text-[14px] uppercase whitespace-nowrap">Placeholder</p>
-    </div>
-  );
-}
-
-function Container13() {
-  return (
-    <div className="content-stretch flex items-center relative shrink-0 w-full" data-name="Container">
-      <p className="font-['Saans:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#110846] text-[48px] tracking-[0.3955px] whitespace-nowrap">
-        <span className="leading-none">0M</span>
-        <span className="leading-none text-[30.96px] align-super">+</span>
-      </p>
-    </div>
-  );
-}
-
-function Container11({ animStyle }: { animStyle?: React.CSSProperties }) {
-  return (
-    <div className="bg-[#bcbcbc] flex-[1_0_0] h-[317px] min-h-px min-w-px relative rounded-[4px] transition-all duration-1000 ease-out" data-name="Container" style={animStyle}>
-      <div className="content-stretch flex flex-col items-start justify-between p-[24px] relative size-full">
-        <Container12 />
-        <Container13 />
-      </div>
-    </div>
-  );
-}
-
-function Highlights() {
-  const ref = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.15 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
-
-  const getCardStyle = (index: number): React.CSSProperties => ({
-    opacity: isVisible ? 1 : 0,
-    transform: isVisible ? "translateY(0)" : "translateY(80px)",
-    transitionDelay: `${index * 200}ms`,
-  });
-
-  return (
-    <div ref={ref} className="content-stretch flex gap-[4px] items-start relative shrink-0 w-full" data-name="Highlights">
-      <Container2 animStyle={getCardStyle(0)} />
-      <Container5 animStyle={getCardStyle(1)} />
-      <Container8 animStyle={getCardStyle(2)} />
-      <Container11 animStyle={getCardStyle(3)} />
-    </div>
-  );
-}
-
 function NumberHighlights() {
-  return (
-    <div className="bg-[#ededed] content-stretch flex flex-col gap-[64px] items-start overflow-clip px-[80px] py-[84px] relative shrink-0 w-[1440px]" data-name="Number Highlights">
-      <Frame28 />
-      <Highlights />
+  const userIcon = (fill: string) => (
+    <div className="overflow-clip relative shrink-0 size-[20px]" data-name="User--filled">
+      <div className="absolute inset-[6.25%_18.75%]" data-name="Vector">
+        <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.5 17.5">
+          <g id="Vector">
+            <path d={svgPaths.p15c76300} fill={fill} />
+            <path d={svgPaths.pa517000} fill={fill} />
+          </g>
+        </svg>
+      </div>
     </div>
+  );
+
+  return (
+    <NumberHighlightsComponent
+      titleElement={
+        <div className="content-stretch flex flex-col items-start relative shrink-0 w-[545px]">
+          <p className="font-['Saans:Regular',sans-serif] leading-[32px] not-italic relative shrink-0 text-[#110846] text-[28px] w-full">{`The Leader for Insurance Specific Entity Management & Registerd Agent Solutions`}</p>
+        </div>
+      }
+      bgColor="#ededed"
+      paddingTop={84}
+      paddingBottom={84}
+      cards={[
+        {
+          icon: userIcon("#AF63FF"),
+          label: "Placeholder",
+          value: "000+",
+          bgColor: "#110846",
+          labelColor: "#f5f5f5",
+          valueColor: "#f5f5f5",
+        },
+        {
+          icon: userIcon("#F5F5F5"),
+          label: "Placeholder",
+          value: "00K+",
+          bgColor: "#8740ff",
+          labelColor: "#110846",
+          valueColor: "#f5f5f5",
+        },
+        {
+          icon: userIcon("#F5F5F5"),
+          label: "Placeholder",
+          value: "$00B+",
+          bgColor: "#af63ff",
+          labelColor: "#110846",
+          valueColor: "#f5f5f5",
+        },
+        {
+          icon: userIcon("#110846"),
+          label: "Placeholder",
+          value: "0M+",
+          bgColor: "#bcbcbc",
+          labelColor: "#110846",
+          valueColor: "#110846",
+        },
+      ]}
+    />
   );
 }
 
@@ -1593,7 +1444,7 @@ function Frame17() {
   return (
     <div className="absolute content-stretch flex flex-col gap-[24px] items-start left-[80px] top-[84px] w-[305px]">
       <Group7 />
-      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] min-w-full not-italic relative shrink-0 text-[#F5F5F5] text-[16px] w-[min-content] whitespace-pre-wrap">{`Saratoga Compliance Solutions is the leading provider of all-on-one compliance and license operations software and AI-enabled managed services for insurance companies in the U.S. and Canada.  `}</p>
+      <p className="font-['Saans:Regular',sans-serif] leading-[1.2] min-w-full not-italic relative shrink-0 text-[#F5F5F5] text-[16px] w-[min-content] whitespace-pre-wrap">{`Saratoga Compliance Solutions is the leading provider of all-in-one compliance and license operations software and AI-enabled compliance managed services for insurance companies in the U.S. and Canada.  `}</p>
     </div>
   );
 }
@@ -1623,13 +1474,13 @@ function Frame5() {
 }
 
 function Icon2() {
-  return <ArrowIcon color="#AF63FF" />;
+  return <ArrowIcon color="#9293BA" />;
 }
 
 function List3() {
   return (
-    <div className="content-stretch flex items-center justify-between pl-[16px] pr-[8px] py-[8px] relative rounded-[8px] shrink-0 w-[277px]" data-name="List">
-      <div aria-hidden="true" className="absolute border border-[#f5f5f5] border-solid inset-0 pointer-events-none rounded-[8px]" />
+    <div className="content-stretch flex items-center justify-between pl-[16px] pr-[8px] py-[8px] relative rounded-[4px] shrink-0 w-[277px]" data-name="List">
+      <div aria-hidden="true" className="absolute border border-[#f5f5f5] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <p className="font-['Saans:Regular',sans-serif] leading-[1.2] not-italic opacity-50 relative shrink-0 text-[#9293ba] text-[16px] whitespace-nowrap">Enter your email</p>
       <div className="opacity-50"><Icon2 /></div>
     </div>
@@ -1671,7 +1522,8 @@ function List5() {
     <div className="content-stretch flex flex-col font-['Saans:Regular',sans-serif] gap-[8px] items-start relative shrink-0 text-[#f5f5f5] text-[16px] w-full" data-name="List">
       <FooterLink to="/partners/integrations">Integrations</FooterLink>
       <FooterLink to="/partners/developer-portal">Developer Portal</FooterLink>
-      <FooterLink to="/partners/alliances">Alliances</FooterLink>
+      <FooterLink to="/partners/ecosystem-partners">Ecosystem Partners</FooterLink>
+      <p className="relative shrink-0">{`Legal & Regulatory Alliances`}</p>
     </div>
   );
 }
@@ -1779,7 +1631,6 @@ function TermsOfService() {
       <p className="relative shrink-0">Terms of Service</p>
       <p className="relative shrink-0">Privacy Policy</p>
       <p className="relative shrink-0">Data Security</p>
-      <p className="relative shrink-0">Cookie Policy</p>
     </div>
   );
 }

@@ -60,7 +60,7 @@ function Container1() {
 function Container2() {
   return (
     <div className="content-stretch flex items-center relative shrink-0 w-full" data-name="Container">
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#f5f5f5] text-[0px] tracking-[0.3955px] whitespace-nowrap">
+      <p className="font-['Saans:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#f5f5f5] text-[0px] tracking-[0.3955px] whitespace-nowrap">
         <span className="leading-none text-[40px]">330</span>
         <sup className="text-[20px] top-[-0.6em] relative">+</sup>
       </p>
@@ -101,7 +101,7 @@ function Container4() {
 function Container5() {
   return (
     <div className="content-stretch flex items-center relative shrink-0 w-full" data-name="Container">
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#f5f5f5] text-[0px] tracking-[0.3955px] whitespace-nowrap">
+      <p className="font-['Saans:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#f5f5f5] text-[0px] tracking-[0.3955px] whitespace-nowrap">
         <span className="leading-none text-[40px]">40K</span>
         <sup className="text-[20px] top-[-0.6em] relative">+</sup>
       </p>
@@ -136,7 +136,7 @@ function Container7() {
 function Container8() {
   return (
     <div className="content-stretch flex items-center relative shrink-0 w-full" data-name="Container">
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#f5f5f5] text-[0px] tracking-[0.3955px] whitespace-nowrap">
+      <p className="font-['Saans:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#f5f5f5] text-[0px] tracking-[0.3955px] whitespace-nowrap">
         <span className="leading-none text-[40px]">$30B</span>
         <sup className="text-[20px] top-[-0.6em] relative">+</sup>
       </p>
@@ -172,7 +172,7 @@ function Container10() {
 function Container11() {
   return (
     <div className="content-stretch flex items-center relative shrink-0 w-full" data-name="Container">
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#110846] text-[0px] tracking-[0.3955px] whitespace-nowrap">
+      <p className="font-['Saans:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#110846] text-[0px] tracking-[0.3955px] whitespace-nowrap">
         <span className="leading-none text-[40px]">1M</span>
         <sup className="text-[20px] top-[-0.6em] relative">+</sup>
       </p>
@@ -348,7 +348,7 @@ function Link6() {
 
 function Link7() {
   return (
-    <div className="h-[40px] relative shrink-0 cursor-pointer" data-name="Link">
+    <div className="h-[40px] relative shrink-0 cursor-pointer" data-name="Link" onClick={() => window.dispatchEvent(new Event("open-search"))}>
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex h-full items-center px-[16px] relative">
         <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Search">
           <div className="absolute inset-[6.14%_9.37%_9.37%_6.14%]" data-name="Vector">
