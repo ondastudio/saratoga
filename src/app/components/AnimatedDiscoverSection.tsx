@@ -178,7 +178,7 @@ export function AnimatedDiscoverSection() {
 
         {/* Animated info panel */}
         <div
-          className="absolute bg-[#33317a] content-stretch flex items-start left-[973px] pb-[8px] px-[8px] rounded-[8px] top-[349px] w-[387px]"
+          className="absolute bg-[#33317a] content-stretch flex items-start left-[973px] pb-[8px] px-[8px] rounded-[4px] top-[349px] w-[387px]"
         >
           <div ref={panelRef} className="content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px relative self-stretch w-full">
             {/* Panel header: step badge + close icon + title */}
@@ -239,7 +239,7 @@ export function AnimatedDiscoverSection() {
         return (
           <div
             key={stepIdx}
-            className="absolute bg-[#6a6b9e] content-stretch flex gap-[16px] items-center pl-[16px] pr-[4px] py-[4px] rounded-[8px] cursor-pointer"
+            className="absolute bg-[#6a6b9e] content-stretch flex gap-[16px] items-center pl-[16px] pr-[4px] py-[4px] rounded-[4px] cursor-pointer"
             style={{
               left: `${pos.left}px`,
               top: `${pos.top}px`,

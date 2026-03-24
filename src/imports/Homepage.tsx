@@ -1124,7 +1124,7 @@ function Frame58() {
 
 function Frame57() {
   return (
-    <div className="bg-[#af63ff] content-stretch flex h-[40px] items-center px-[16px] relative rounded-[8px] shrink-0">
+    <div className="bg-[#af63ff] content-stretch flex h-[40px] items-center px-[16px] relative rounded-[4px] shrink-0">
       <Frame58 />
     </div>
   );
@@ -1269,7 +1269,7 @@ function Frame55() {
 
 function Frame56() {
   return (
-    <div className="absolute bg-[#33317a] content-stretch flex h-[528px] items-start left-[973px] pb-[8px] px-[8px] rounded-[8px] top-[349px] w-[387px]">
+    <div className="absolute bg-[#33317a] content-stretch flex h-[528px] items-start left-[973px] pb-[8px] px-[8px] rounded-[4px] top-[349px] w-[387px]">
       <Frame55 />
     </div>
   );
@@ -1293,7 +1293,7 @@ function Point6() {
 
 function Frame61() {
   return (
-    <div className="absolute bg-[#6a6b9e] content-stretch flex gap-[16px] items-center left-[632px] pl-[16px] pr-[4px] py-[4px] rounded-[8px] top-[791px]">
+    <div className="absolute bg-[#6a6b9e] content-stretch flex gap-[16px] items-center left-[632px] pl-[16px] pr-[4px] py-[4px] rounded-[4px] top-[791px]">
       <Frame62 />
       <Point6 />
     </div>
@@ -1348,7 +1348,7 @@ function Point7() {
 
 function Frame54() {
   return (
-    <div className="absolute bg-[#6a6b9e] content-stretch flex gap-[16px] items-center left-[calc(16.67%+99px)] pl-[16px] pr-[4px] py-[4px] rounded-[8px] top-[644px]">
+    <div className="absolute bg-[#6a6b9e] content-stretch flex gap-[16px] items-center left-[calc(16.67%+99px)] pl-[16px] pr-[4px] py-[4px] rounded-[4px] top-[644px]">
       <Frame63 />
       <Point7 />
     </div>
@@ -1373,7 +1373,7 @@ function Point8() {
 
 function Frame64() {
   return (
-    <div className="absolute bg-[#6a6b9e] content-stretch flex gap-[16px] items-center left-[166px] pl-[16px] pr-[4px] py-[4px] rounded-[8px] top-[869px]">
+    <div className="absolute bg-[#6a6b9e] content-stretch flex gap-[16px] items-center left-[166px] pl-[16px] pr-[4px] py-[4px] rounded-[4px] top-[869px]">
       <Frame65 />
       <Point8 />
     </div>
@@ -1426,7 +1426,7 @@ function Content() {
 
 function Card2({ animStyle }: { animStyle?: React.CSSProperties }) {
   return (
-    <div className="group bg-[#110846] flex-[1_0_0] h-full min-h-px min-w-px relative rounded-[8px] transition-all duration-1000 ease-out" data-name="Card-01" style={animStyle}>
+    <div className="group bg-[#110846] flex-[1_0_0] h-full min-h-px min-w-px relative rounded-[4px] transition-all duration-1000 ease-out" data-name="Card-01" style={animStyle}>
       <div className="content-stretch flex flex-col items-start justify-between p-[40px] relative size-full">
         <Header1 />
         <Content />
@@ -1527,7 +1527,7 @@ function Content1() {
 
 function Card3({ animStyle }: { animStyle?: React.CSSProperties }) {
   return (
-    <div className="group bg-[#8740ff] flex-[1_0_0] h-full min-h-px min-w-px relative rounded-[8px] transition-all duration-1000 ease-out" data-name="Card-02" style={animStyle}>
+    <div className="group bg-[#8740ff] flex-[1_0_0] h-full min-h-px min-w-px relative rounded-[4px] transition-all duration-1000 ease-out" data-name="Card-02" style={animStyle}>
       <div className="content-stretch flex flex-col items-start justify-between p-[40px] relative size-full">
         <Frame26 />
         <Content1 />
@@ -1599,7 +1599,7 @@ function Content2() {
 
 function Card({ animStyle }: { animStyle?: React.CSSProperties }) {
   return (
-    <div className="group bg-[#af63ff] flex-[1_0_0] h-full min-h-px min-w-px relative rounded-[8px] transition-all duration-1000 ease-out" data-name="Card-01" style={animStyle}>
+    <div className="group bg-[#af63ff] flex-[1_0_0] h-full min-h-px min-w-px relative rounded-[4px] transition-all duration-1000 ease-out" data-name="Card-01" style={animStyle}>
       <div className="content-stretch flex flex-col items-start justify-between p-[40px] relative size-full">
         <Frame28 />
         <Frame25 />
@@ -1662,7 +1662,7 @@ function Content3() {
 
 function Card1({ animStyle }: { animStyle?: React.CSSProperties }) {
   return (
-    <div className="group bg-[#bcbcbc] flex-[1_0_0] h-full min-h-px min-w-px relative rounded-[8px] transition-all duration-1000 ease-out" data-name="Card-01" style={animStyle}>
+    <div className="group bg-[#bcbcbc] flex-[1_0_0] h-full min-h-px min-w-px relative rounded-[4px] transition-all duration-1000 ease-out" data-name="Card-01" style={animStyle}>
       <div className="content-stretch flex flex-col items-start justify-between p-[40px] relative size-full">
         <Frame27 />
         <Content3 />

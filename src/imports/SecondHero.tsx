@@ -68,12 +68,12 @@ function Frame1() {
 
 function Point5() {
   return (
-    <div className="content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[40px]" data-name="Point">
-      <div aria-hidden="true" className="absolute border border-[#f5f5f5] border-solid inset-0 pointer-events-none rounded-[4px]" />
+    <div className="group/arrow content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[40px] cursor-pointer hover:bg-[#f5f5f5] transition-colors duration-200" data-name="Point">
+      <div aria-hidden="true" className="absolute border border-[#f5f5f5] border-solid inset-0 pointer-events-none rounded-[4px] group-hover/arrow:border-transparent transition-colors duration-200" />
       <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Arrow--right">
         <div className="absolute inset-[18.75%_12.5%]" data-name="Vector">
           <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 12.5">
-            <path d={svgPaths.p3be57f00} fill="var(--fill-0, #F5F5F5)" id="Vector" />
+            <path d={svgPaths.p3be57f00} fill="#F5F5F5" className="group-hover/arrow:fill-[#110846] transition-colors duration-200" id="Vector" />
           </svg>
         </div>
       </div>
