@@ -1,4 +1,5 @@
 import svgPaths from "./svg-3myuv0x2cn";
+import gradientVertical from "../../assets/svg/Gradient_Vertical.svg";
 import logoSvgPaths from "./svg-ncc7160vc1";
 import { Link as RouterLink } from "react-router";
 import Footer from "../app/components/Footer";
@@ -12,124 +13,6 @@ import StickyNav from "./Navigation";
 import { NumberHighlights as NumberHighlightsComponent } from "../app/components/NumberHighlights";
 import PrimaryNavbar from "../app/components/PrimaryNavbar";
 
-function Group() {
-  return (
-    <div className="absolute inset-[45.5%_0_0_0]" data-name="Group">
-      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 2109.48 784.86">
-        <g id="Group">
-          <path d="M0 653.717L0 784.86H859.6V653.717H0Z" fill="url(#paint0_linear_3_3020)" id="Vector" />
-          <path d="M106.359 522.965V654.108H861V522.965H106.359Z" fill="url(#paint1_linear_3_3020)" id="Vector_2" />
-          <path d="M164.133 392.229V523.373H859.1V392.229H164.133Z" fill="url(#paint2_linear_3_3020)" id="Vector_3" />
-          <path d="M270.485 261.487V392.631H860.5V261.487H270.485Z" fill="url(#paint3_linear_3_3020)" id="Vector_4" />
-          <path d="M332.865 130.744V261.887H860.9V130.744H332.865Z" fill="url(#paint4_linear_3_3020)" id="Vector_5" />
-          <path d="M439.883 653.713V784.856H2109.48V653.713H439.883Z" fill="url(#paint5_linear_3_3020)" id="Vector_6" />
-        </g>
-        <defs>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_3_3020" x1="1638.15" x2="174.444" y1="719.283" y2="719.283">
-            <stop stopColor="white" />
-            <stop offset="0.47" stopColor="#A567F7" />
-            <stop offset="0.75" stopColor="#7E44F6" />
-            <stop offset="1" stopColor="#100843" />
-          </linearGradient>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear_3_3020" x1="1744.51" x2="280.803" y1="588.532" y2="588.532">
-            <stop stopColor="white" />
-            <stop offset="0.47" stopColor="#A567F7" />
-            <stop offset="0.75" stopColor="#7E44F6" />
-            <stop offset="1" stopColor="#100843" />
-          </linearGradient>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint2_linear_3_3020" x1="1802.28" x2="338.577" y1="457.796" y2="457.796">
-            <stop stopColor="white" />
-            <stop offset="0.47" stopColor="#A567F7" />
-            <stop offset="0.75" stopColor="#7E44F6" />
-            <stop offset="1" stopColor="#100843" />
-          </linearGradient>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint3_linear_3_3020" x1="1908.65" x2="444.949" y1="327.064" y2="327.064">
-            <stop stopColor="white" />
-            <stop offset="0.47" stopColor="#A567F7" />
-            <stop offset="0.75" stopColor="#7E44F6" />
-            <stop offset="1" stopColor="#100843" />
-          </linearGradient>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint4_linear_3_3020" x1="1971.02" x2="507.309" y1="196.32" y2="196.32">
-            <stop stopColor="white" />
-            <stop offset="0.47" stopColor="#A567F7" />
-            <stop offset="0.75" stopColor="#7E44F6" />
-            <stop offset="1" stopColor="#100843" />
-          </linearGradient>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint5_linear_3_3020" x1="2078.03" x2="614.327" y1="65.5767" y2="65.5767">
-            <stop stopColor="white" />
-            <stop offset="0.47" stopColor="#A567F7" />
-            <stop offset="0.75" stopColor="#7E44F6" />
-            <stop offset="1" stopColor="#100843" />
-          </linearGradient>
-        </defs>
-      </svg>
-    </div>
-  );
-}
-
-function Group1() {
-  return (
-    <div className="absolute inset-[0_0_45.5%_0]" data-name="Group">
-      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 2109.48 784.856">
-        <g id="Group">
-          <path d="M0 0L0 131.143H859.6V0H0Z" fill="url(#paint0_linear_3_2909)" id="Vector" />
-          <path d="M106.365 130.756V261.899H860.6V130.756H106.365Z" fill="url(#paint1_linear_3_2909)" id="Vector_2" />
-          <path d="M164.14 261.478V392.621H860.4V261.478H164.14Z" fill="url(#paint2_linear_3_2909)" id="Vector_3" />
-          <path d="M270.498 392.233V523.377H860.3V392.233H270.498Z" fill="url(#paint3_linear_3_2909)" id="Vector_4" />
-          <path d="M332.865 522.957V654.101H860.9V522.957H332.865Z" fill="url(#paint4_linear_3_2909)" id="Vector_5" />
-          <path d="M439.883 653.713V784.856H860.2V653.713H439.883Z" fill="url(#paint5_linear_3_2909)" id="Vector_6" />
-        </g>
-        <defs>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_3_2909" x1="1638.15" x2="174.444" y1="65.5668" y2="65.5668">
-            <stop stopColor="white" />
-            <stop offset="0.47" stopColor="#A567F7" />
-            <stop offset="0.75" stopColor="#7E44F6" />
-            <stop offset="1" stopColor="#100843" />
-          </linearGradient>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear_3_2909" x1="1744.5" x2="280.797" y1="196.322" y2="196.322">
-            <stop stopColor="white" />
-            <stop offset="0.47" stopColor="#A567F7" />
-            <stop offset="0.75" stopColor="#7E44F6" />
-            <stop offset="1" stopColor="#100843" />
-          </linearGradient>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint2_linear_3_2909" x1="1802.28" x2="338.571" y1="327.054" y2="327.054">
-            <stop stopColor="white" />
-            <stop offset="0.47" stopColor="#A567F7" />
-            <stop offset="0.75" stopColor="#7E44F6" />
-            <stop offset="1" stopColor="#100843" />
-          </linearGradient>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint3_linear_3_2909" x1="1908.65" x2="444.949" y1="457.8" y2="457.8">
-            <stop stopColor="white" />
-            <stop offset="0.47" stopColor="#A567F7" />
-            <stop offset="0.75" stopColor="#7E44F6" />
-            <stop offset="1" stopColor="#100843" />
-          </linearGradient>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint4_linear_3_2909" x1="1971.02" x2="507.309" y1="588.534" y2="588.534">
-            <stop stopColor="white" />
-            <stop offset="0.47" stopColor="#A567F7" />
-            <stop offset="0.75" stopColor="#7E44F6" />
-            <stop offset="1" stopColor="#100843" />
-          </linearGradient>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint5_linear_3_2909" x1="2078.03" x2="614.328" y1="719.289" y2="719.289">
-            <stop stopColor="white" />
-            <stop offset="0.47" stopColor="#A567F7" />
-            <stop offset="0.75" stopColor="#7E44F6" />
-            <stop offset="1" stopColor="#100843" />
-          </linearGradient>
-        </defs>
-      </svg>
-    </div>
-  );
-}
-
-function IsolationMode() {
-  return (
-    <div className="backdrop-blur-[2px] bg-[#100843] overflow-clip relative size-full" data-name="Isolation_Mode">
-      <Group />
-      <Group1 />
-    </div>
-  );
-}
 
 function Frame1() {
   return (
@@ -149,11 +32,7 @@ function Frame1() {
 function Header() {
   return (
     <div className="h-[645px] overflow-clip relative shrink-0 w-[1440px]" data-name="Header">
-      <div className="absolute flex inset-[-12.4%_0_-205.29%_0] items-center justify-center">
-        <div className="flex-none h-[1440px] rotate-90 w-[2049.123px]">
-          <IsolationMode />
-        </div>
-      </div>
+      <img src={gradientVertical} alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" />
       <Frame1 />
       <PrimaryNavbar />
     </div>

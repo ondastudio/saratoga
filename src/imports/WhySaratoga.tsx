@@ -34,16 +34,40 @@ function MaxMinIcons() {
 }
 
 function HeroSymbol() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = true;
+    v.play().catch(() => {});
+  }, []);
   return (
     <div className="absolute left-[451px] top-[132px] w-[538px] h-[544px]" data-name="Vector">
       <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 889.84 900">
-        <g id="Group 59654">
-          <path d={svgPaths.pd87ec00} fill="#300067" id="Vector" />
-          <path d={svgPaths.p3b5ade80} fill="#300067" id="Vector_2" />
-          <path d={svgPaths.p3e23bd00} fill="#300067" id="Vector_3" />
-          <path d={svgPaths.p24395000} fill="#300067" id="Vector_4" />
-          <path d={svgPaths.p3dcfed00} fill="#300067" id="Vector_5" />
-        </g>
+        <defs>
+          <clipPath id="why-hero-symbol-clip">
+            <path d={svgPaths.pd87ec00} />
+            <path d={svgPaths.p3b5ade80} />
+            <path d={svgPaths.p3e23bd00} />
+            <path d={svgPaths.p24395000} />
+            <path d={svgPaths.p3dcfed00} />
+          </clipPath>
+        </defs>
+        <foreignObject x="0" y="0" width="889.84" height="900" clipPath="url(#why-hero-symbol-clip)">
+          <div style={{ width: "100%", height: "100%", position: "relative", overflow: "hidden" }}>
+            <video
+              ref={videoRef}
+              autoPlay
+              loop
+              playsInline
+              preload="auto"
+              style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover" }}
+            >
+              <source src="https://onda-studio.lon1.cdn.digitaloceanspaces.com/saratoga.mp4" type="video/mp4" />
+            </video>
+            <div style={{ position: "absolute", inset: 0, backgroundColor: "#300067", opacity: 0.5 }} />
+          </div>
+        </foreignObject>
       </svg>
     </div>
   );
@@ -78,30 +102,6 @@ function Frame81() {
 }
 
 
-function HeroVideoMask() {
-  // Geometric mask symbol matching Figma design — ready to receive a video.
-  // Place a <video> inside to use as masked background content.
-  const maskSvg = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 538 544'%3E%3Crect x='0' y='0' width='269' height='272' fill='black'/%3E%3Crect x='134' y='136' width='269' height='272' fill='black'/%3E%3Crect x='269' y='0' width='269' height='272' fill='black'/%3E%3Crect x='0' y='272' width='269' height='272' fill='black'/%3E%3Crect x='134' y='272' width='269' height='272' fill='black'/%3E%3Crect x='269' y='272' width='269' height='272' fill='black'/%3E%3C/svg%3E")`;
-  return (
-    <div
-      className="absolute left-1/2 top-[14.7%] -translate-x-1/2 w-[37.35%] aspect-[538/544] overflow-hidden"
-      data-name="Mask group"
-      style={{
-        maskImage: maskSvg,
-        WebkitMaskImage: maskSvg,
-        maskSize: "100% 100%",
-        WebkitMaskSize: "100% 100%",
-        maskRepeat: "no-repeat",
-        WebkitMaskRepeat: "no-repeat",
-      }}
-    >
-      {/* Video placeholder — replace src with hosted video */}
-      <video autoPlay loop muted playsInline className="absolute object-cover size-full mix-blend-luminosity opacity-80">
-        <source src="https://videos.pexels.com/video-files/3129957/3129957-uhd_2560_1440_30fps.mp4" type="video/mp4" />
-      </video>
-    </div>
-  );
-}
 
 function Header() {
   return (

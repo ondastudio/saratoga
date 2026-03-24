@@ -1,4 +1,5 @@
 import svgPaths from "./svg-8czbyhjgmo";
+import gradientHorizontal from "../../assets/svg/Gradient_Horizontal.svg";
 import Footer from "../app/components/Footer";
 import { SaratogaButton } from "../app/components/SaratogaButton";
 import PrimaryNavbar from "../app/components/PrimaryNavbar";
@@ -140,6 +141,7 @@ function Frame1() {
 function Header() {
   return (
     <div className="bg-[#110846] h-[474px] overflow-clip relative shrink-0 w-[1440px]" data-name="Header">
+      <img src={gradientHorizontal} alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" />
       <Frame1 />
       <PrimaryNavbar />
     </div>
@@ -303,51 +305,25 @@ function Group3({ onPathHover, onPathLeave, onPathClick, selectedVectorId }: { o
   );
 }
 
-function Frame14() {
-  return <div className="absolute h-[22px] left-[96px] top-[-3.62px] w-[19px]" />;
-}
-
-function Frame13({ stateName }: { stateName?: string }) {
-  return (
-    <div className="absolute bg-[#ddc0fe] content-stretch flex items-center justify-center left-0 px-[24px] py-[4px] rounded-[4px] top-[16px]">
-      <div aria-hidden="true" className="absolute border border-[#110846] border-solid inset-0 pointer-events-none rounded-[4px]" />
-      <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.4] not-italic relative shrink-0 text-[#110846] text-[14px] tracking-[0.56px] uppercase whitespace-nowrap">{stateName || "state"}</p>
-    </div>
-  );
-}
-
-function Cursor() {
-  return (
-    <div className="relative size-[20px]" data-name="Cursor--2">
-      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 20 20">
-        <g id="Cursor--2">
-          <path d={svgPaths.p2ec200} fill="var(--fill-0, #161616)" id="Vector" />
-        </g>
-      </svg>
-    </div>
-  );
-}
-
 function LocationLabel({ x, y, visible, stateName }: { x?: number; y?: number; visible?: boolean; stateName?: string }) {
   return (
     <div
-      className="absolute h-[44px] pointer-events-none transition-opacity duration-300"
+      className="absolute pointer-events-none transition-opacity duration-300 flex items-center gap-[8px]"
       data-name="Location Label"
       style={{
         left: x !== undefined ? `${x}px` : '658px',
         top: y !== undefined ? `${y}px` : '392px',
+        transform: 'translateX(-100%)',
         opacity: visible ? 1 : 0,
-        width: 'auto',
-        minWidth: '131px',
       }}
     >
-      <Frame14 />
-      <Frame13 stateName={stateName} />
-      <div className="absolute flex items-center justify-center left-[111px] size-[20px] top-[0.38px]">
-        <div className="-scale-y-100 flex-none rotate-180">
-          <Cursor />
-        </div>
+      <div className="bg-[#ddc0fe] flex items-center justify-center px-[24px] py-[4px] rounded-[4px] relative self-end mb-[-20px]">
+        <div aria-hidden="true" className="absolute border border-[#110846] border-solid inset-0 pointer-events-none rounded-[4px]" />
+        <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.4] text-[#110846] text-[14px] tracking-[0.56px] uppercase whitespace-nowrap">{stateName || "state"}</p>
       </div>
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0L1.57875e-05 4.40684L4.40667 4.40685L4.4067 13.2205L13.2208 13.2206L13.2208 17.6274L17.6274 17.6274L17.6274 6.2407e-05L0 0Z" fill="#110846"/>
+      </svg>
     </div>
   );
 }
@@ -362,7 +338,7 @@ function Layer({ onStateClick, selectedVectorId }: { onStateClick?: (stateName: 
   });
 
   const getTargetInfo = useCallback((target: SVGElement): { stateName: string | null; vectorId: string | null } => {
-    const id = target.id || (target.parentElement as SVGElement | null)?.id;
+    const id = target.id || (target.parentElement as unknown as SVGElement | null)?.id;
     return { stateName: id ? STATE_NAME_MAP[id] || null : null, vectorId: id || null };
   }, []);
 
@@ -370,19 +346,8 @@ function Layer({ onStateClick, selectedVectorId }: { onStateClick?: (stateName: 
     const target = e.target as SVGElement;
     if (target.tagName === 'path' && containerRef.current) {
       const rect = containerRef.current.getBoundingClientRect();
-      // Scale label offset proportionally to state size (larger states = more distance)
-      let offsetX = 130;
-      let offsetY = 50;
-      try {
-        const bbox = (target as unknown as SVGGraphicsElement).getBBox();
-        const sizeFactor = Math.max(0.4, Math.min(1.6, Math.sqrt((bbox.width * bbox.height) / (80 * 60))));
-        offsetX = 90 + 50 * sizeFactor;
-        offsetY = 30 + 25 * sizeFactor;
-      } catch {
-        // fallback to defaults
-      }
-      const x = e.clientX - rect.left - offsetX;
-      const y = e.clientY - rect.top - offsetY;
+      const x = e.clientX - rect.left - 10;
+      const y = e.clientY - rect.top + 20;
       const { stateName } = getTargetInfo(target);
       setHoverState({ x, y, visible: true, stateName: stateName || '' });
     }
@@ -403,7 +368,7 @@ function Layer({ onStateClick, selectedVectorId }: { onStateClick?: (stateName: 
   }, [getTargetInfo, onStateClick]);
 
   return (
-    <div ref={containerRef} className="absolute h-[673.171px] left-[195px] overflow-clip top-[179px] w-[1050.56px] cursor-pointer" data-name="Layer_1">
+    <div ref={containerRef} className="absolute h-[673.171px] left-[195px] top-[179px] w-[1050.56px] cursor-pointer" data-name="Layer_1">
       <Group3 onPathHover={handlePathHover} onPathLeave={handlePathLeave} onPathClick={handlePathClick} selectedVectorId={selectedVectorId} />
       <LocationLabel x={hoverState.x} y={hoverState.y} visible={hoverState.visible} stateName={hoverState.stateName} />
     </div>

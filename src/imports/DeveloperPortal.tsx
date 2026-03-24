@@ -1,5 +1,6 @@
 import svgPaths from "./svg-wrzcsbcok7";
 import { useRef, useEffect } from "react";
+import gradientHorizontal from "../../assets/svg/Gradient_Horizontal.svg";
 import Footer from "../app/components/Footer";
 import { SaratogaButton } from "../app/components/SaratogaButton";
 import { IconButton } from "../app/components/IconButton";
@@ -43,6 +44,7 @@ function Frame1() {
 function Header() {
   return (
     <div className="bg-[#110846] h-[470px] overflow-clip relative shrink-0 w-[1440px]" data-name="Header">
+      <img src={gradientHorizontal} alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" />
       <Frame1 />
       <PrimaryNavbar />
     </div>

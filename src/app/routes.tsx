@@ -9,6 +9,9 @@ import AboutUs from "../imports/AboutUs";
 import WhySaratoga from "../imports/WhySaratoga";
 import DeveloperPortal from "../imports/DeveloperPortal";
 import EcosystemPartners from "../imports/EcosystemPartners";
+import SolutionsLaunchAnAgency from "../imports/SolutionsLaunchAnAgency";
+import LegalRegulatoryAlliances from "../imports/LegalRegulatoryAlliances";
+import Careers from "../imports/Careers";
 import { useEffect, useState } from "react";
 import { SearchOverlay } from "../app/components/SearchOverlay";
 import SearchResults from "../imports/SearchResults";
@@ -85,6 +88,18 @@ export const router = createBrowserRouter([
       {
         path: "partners/developer-portal",
         element: <DeveloperPortal />,
+      },
+      {
+        path: "solutions/launch-an-agency",
+        element: <SolutionsLaunchAnAgency />,
+      },
+      {
+        path: "partners/legal-regulatory-alliances",
+        element: <LegalRegulatoryAlliances />,
+      },
+      {
+        path: "company/careers",
+        element: <Careers />,
       },
       {
         path: "search",

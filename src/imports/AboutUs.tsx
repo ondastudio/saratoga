@@ -1,4 +1,5 @@
 import svgPaths from "./svg-nlk6vj1kj9";
+import saratogaSpring from "../assets/saratoga-spring.svg";
 import { useRef, useEffect, useState } from "react";
 import Footer from "../app/components/Footer";
 import { SaratogaButton } from "../app/components/SaratogaButton";
@@ -209,14 +210,9 @@ function SecondHero() {
   return (
     <div className="bg-[#300067] relative shrink-0 w-full" data-name="Second-hero">
       <div className="overflow-clip rounded-[inherit] size-full">
-        <div className="content-stretch flex gap-[453px] items-start pb-[64px] px-[80px] relative w-full">
-          <div className="flex flex-col gap-[24px] items-center relative shrink-0 w-[197px]">
-            <div className="flex h-[194.763px] items-center justify-center leading-[0] relative shrink-0 w-[197px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "365" } as React.CSSProperties}>
-              <div className="-rotate-90 flex-none">
-                <ScrollTrackingGroup15 />
-              </div>
-            </div>
-            <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.4] not-italic text-[#af63ff] text-[12px] uppercase tracking-[0.08em] text-center w-[197px]">Built in Saratoga Springs, New York with Passion</p>
+        <div className="content-stretch flex gap-[250px] items-end pb-[64px] px-[80px] relative w-full">
+          <div className="flex flex-col items-center relative shrink-0 w-[400px]">
+            <img src={saratogaSpring} alt="Saratoga Springs" className="w-[400px] object-contain" />
           </div>
           <ScrollRevealText />
         </div>
@@ -2444,14 +2440,14 @@ function Frame47() {
 function Frame14() {
   return (
     <div className="content-stretch flex flex-col font-['Saans:Regular',sans-serif] gap-[24px] items-start leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-center w-[451px]">
-      <p className="relative shrink-0 text-[36px] w-[417px]">Lorem ipsum dolor sit amet consectetur?</p>
-      <p className="min-w-full relative shrink-0 text-[18px] w-[min-content]">{`Eliminate Compliance Infractions, Reduce Costs & Unleash Your Teams to Sell with Saratoga`}</p>
+      <p className="relative shrink-0 text-[36px] w-[417px]">Join Saratoga.<br/>Build Something Special With Us</p>
+      <p className="min-w-full relative shrink-0 text-[18px] w-[min-content]">{`Our team is growing. Are you talented, passionate, detail-oriented and looking to join a high growth organization? Connect with us today.`}</p>
     </div>
   );
 }
 
 function Link20() {
-  return <SaratogaButton variant="primary" color="white" showArrow>Contact us</SaratogaButton>;
+  return <SaratogaButton variant="primary" color="white" showArrow>View open roles</SaratogaButton>;
 }
 
 function Frame13() {
@@ -2489,6 +2485,107 @@ function Customers() {
   return (
     <div className="bg-[#300067] content-stretch flex flex-col items-start overflow-clip p-[16px] relative shrink-0" data-name="Customers">
       <Frame12 />
+    </div>
+  );
+}
+
+const CARD_ICONS = {
+  briefcase: "https://www.figma.com/api/mcp/asset/d7fa3b75-08df-479d-bd5c-8d5d3fea7260",
+  envelope: "https://www.figma.com/api/mcp/asset/a7ba7335-a7ed-4723-809d-22f6fddceeb5",
+  storage: "https://www.figma.com/api/mcp/asset/e8b78873-2a0d-42e3-add6-8faca555809b",
+};
+
+function AboutUsCardsRow() {
+  const [hovered, setHovered] = useState<number | null>(null);
+
+  const cards = [
+    { bg: "#110846", icon: CARD_ICONS.briefcase, title: "Careers",   textColor: "#f5f5f5", borderColor: "#f5f5f5", hoverBg: "#f5f5f5", hoverArrow: "#110846" },
+    { bg: "#bcbcbc", icon: CARD_ICONS.envelope,  title: "Newsroom",  textColor: "#110846", borderColor: "#110846", hoverBg: "#110846", hoverArrow: "#f5f5f5" },
+    { bg: "#af63ff", icon: CARD_ICONS.storage,   title: "Resources", textColor: "#f5f5f5", borderColor: "#f5f5f5", hoverBg: "#f5f5f5", hoverArrow: "#110846" },
+  ];
+
+  return (
+    <div className="bg-[#300067] w-full px-[16px] pt-[120px]">
+      <div className="flex gap-[16px] w-full">
+        {cards.map((card, i) => (
+          <div
+            key={i}
+            className="flex-[1_0_0] h-[200px] flex flex-col justify-between p-[24px] rounded-[8px]"
+            style={{ backgroundColor: card.bg }}
+          >
+            <div className="flex items-start justify-between w-full">
+              <img src={card.icon} alt="" className="h-[38px] w-[44px] object-contain" />
+              <div
+                className="flex items-center gap-[16px] cursor-pointer"
+                onMouseEnter={() => setHovered(i)}
+                onMouseLeave={() => setHovered(null)}
+              >
+                <span
+                  className="font-['Px_Grotesk:Regular',sans-serif] text-[14px] uppercase tracking-[0.08em] whitespace-nowrap"
+                  style={{
+                    color: card.textColor,
+                    opacity: hovered === i ? 1 : 0,
+                    transition: "opacity 0.25s ease",
+                  }}
+                >
+                  LEARN MORE
+                </span>
+                <div
+                  className="flex items-center justify-center rounded-[4px] size-[40px]"
+                  style={{
+                    backgroundColor: hovered === i ? card.hoverBg : "transparent",
+                    border: `1px solid ${card.borderColor}`,
+                    transition: "background-color 0.25s ease",
+                  }}
+                >
+                  <svg width="15" height="13" viewBox="0 0 15 13" fill="none">
+                    <path d="M14 6.5L8.5 1M14 6.5L8.5 12M14 6.5H1" stroke={hovered === i ? card.hoverArrow : card.textColor} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <p className="font-['Saans:Medium',sans-serif] text-[24px] leading-[28px]" style={{ color: card.textColor }}>
+              {card.title}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function JoinSaratogaSection() {
+  const imgLeft  = "https://www.figma.com/api/mcp/asset/1304d266-09cb-4e06-8617-851913f15811";
+  const imgRight = "https://www.figma.com/api/mcp/asset/cabc1599-4037-42dc-97f7-c1f148f8a81b";
+  const imgArrow = "https://www.figma.com/api/mcp/asset/d9e28ab3-043b-4e15-976e-36f23de1ceea";
+
+  return (
+    <div className="bg-[#300067] p-[16px]">
+      <div className="bg-[#8740ff] h-[484px] overflow-clip relative rounded-[4px]">
+        <div className="absolute left-0 top-0 h-full w-[479px]">
+          <img alt="" className="absolute block size-full object-cover" src={imgLeft} />
+        </div>
+        <div className="absolute right-0 top-0 h-full w-[475px] rotate-180">
+          <img alt="" className="absolute block size-full object-cover" src={imgRight} />
+        </div>
+        <div className="absolute inset-0 flex flex-col gap-[40px] items-center justify-center">
+          <div className="flex flex-col gap-[24px] items-center w-[731px]">
+            <p className="font-['Saans:Regular',sans-serif] text-[36px] leading-[40px] text-[#f5f5f5] text-center">
+              {"Join Saratoga. \nBuild Something \nSpecial With Us"}
+            </p>
+            <p className="font-['Saans:Regular',sans-serif] text-[18px] leading-[24px] text-[#f5f5f5] text-center tracking-[0.18px]">
+              Our team is growing. Are you talented, passionate,<br />
+              detail-oriented and looking to join a high growth organization? Connect with us today.
+            </p>
+          </div>
+          <div className="bg-[#f5f5f5] flex gap-[16px] h-[40px] items-center pl-[24px] pr-[4px] rounded-[4px] cursor-pointer">
+            <span className="font-['Px_Grotesk:Regular',sans-serif] text-[14px] text-[#110846] uppercase whitespace-nowrap">view open roles</span>
+            <div className="bg-[#af63ff] flex items-center justify-center rounded-[4px] size-[32px]">
+              <img src={imgArrow} alt="" className="size-[20px] object-contain" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
@@ -2547,6 +2644,7 @@ export default function AboutUs() {
         <TeamPhotos />
         <NumberHighlights />
         <Frame58 />
+        <AboutUsCardsRow />
         <Customers />
         <Footer variant="purple" />
       </div>

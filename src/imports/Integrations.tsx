@@ -1,4 +1,5 @@
 import svgPaths from "./svg-u57s1glrb0";
+import gradientHorizontal from "../../assets/svg/Gradient_Horizontal.svg";
 import { SaratogaButton } from "../app/components/SaratogaButton";
 import { IconButton } from "../app/components/IconButton";
 import PrimaryNavbar from "../app/components/PrimaryNavbar";
@@ -45,7 +46,7 @@ function Frame1() {
 function Header() {
   return (
     <div className="bg-[#110846] h-[470px] overflow-clip relative shrink-0 w-[1440px]" data-name="Header">
-      {/* Background pattern removed */}
+      <img src={gradientHorizontal} alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" />
       <Frame1 />
       <PrimaryNavbar />
     </div>

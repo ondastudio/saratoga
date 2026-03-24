@@ -244,52 +244,41 @@ function Group1() {
 
 
 function MaskedImagery() {
-  const crossPath = "M405.335,164.999L405.335,245L240.335,245L240.335,410L164.999,410L164.999,245L0,245L0,164.999L164.999,164.999L164.999,0L240.335,0L240.335,164.999L405.335,164.999Z";
+  const heroPath = "M274.218 305.094V526.999H219.375V471.525H109.688V360.567H54.8457V305.094H274.218ZM521.004 305.114H466.161V416.072H356.465V471.546H301.622V249.641H521.004V305.114ZM277.237 281.737H243.528V247.641H277.237V281.737ZM219.372 277.388H0V221.914H54.8428V110.966H164.529V55.4922H219.372V277.388ZM301.654 55.4736H411.351V166.422H466.193V221.896H246.812V0H301.654V55.4736Z";
+  const videoRef = useRef<HTMLVideoElement>(null);
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = true;
+    v.play().catch(() => {});
+  }, []);
   return (
-    <div className="absolute right-[56px] top-[148px] w-[630px] h-[630px] pointer-events-none" data-name="Mask group">
-      {/* Background shape */}
+    <>
+      <svg width="0" height="0" className="absolute" style={{ overflow: "hidden" }}>
+        <defs>
+          <clipPath id="hero-symbol-clip" clipPathUnits="userSpaceOnUse">
+            <path d={heroPath} />
+          </clipPath>
+        </defs>
+      </svg>
       <div
-        className="absolute inset-0 bg-[#110846]"
-        style={{
-          clipPath: `path('${crossPath}')`,
-          transform: "translate(54px, 52px) scale(0.81)",
-        }}
-      />
-      {/* Video/image with luminosity blend */}
-      <div
-        className="absolute inset-0 mix-blend-luminosity"
-        style={{
-          clipPath: `path('${crossPath}')`,
-          transform: "translate(54px, 52px) scale(0.81)",
-          overflow: "hidden",
-        }}
+        className="absolute right-[80px] top-[200px] pointer-events-none"
+        style={{ width: "521px", height: "527px", clipPath: "url(#hero-symbol-clip)" }}
+        data-name="Mask group"
       >
         <video
+          ref={videoRef}
           autoPlay
           loop
-          muted
           playsInline
+          preload="auto"
           className="absolute w-full h-full object-cover"
-          style={{ filter: "grayscale(30%) contrast(1.1)" }}
         >
-          <source src="https://videos.pexels.com/video-files/3129957/3129957-uhd_2560_1440_30fps.mp4" type="video/mp4" />
+          <source src="https://onda-studio.lon1.cdn.digitaloceanspaces.com/saratoga.mp4" type="video/mp4" />
         </video>
+        <div className="absolute inset-0 bg-[#300067] opacity-50" />
       </div>
-    </div>
-  );
-}
-
-function HeroSymbol() {
-  return (
-    <div
-      className="absolute pointer-events-none right-[80px] top-[200px]"
-      style={{ width: "min(521px, 55vh)", height: "min(527px, 55.6vh)" }}
-      data-name="Mask group"
-    >
-      <svg viewBox="0 0 521.004 526.999" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-        <path d="M274.218 305.094V526.999H219.375V471.525H109.688V360.567H54.8457V305.094H274.218ZM521.004 305.114H466.161V416.072H356.465V471.546H301.622V249.641H521.004V305.114ZM277.237 281.737H243.528V247.641H277.237V281.737ZM219.372 277.388H0V221.914H54.8428V110.966H164.529V55.4922H219.372V277.388ZM301.654 55.4736H411.351V166.422H466.193V221.896H246.812V0H301.654V55.4736Z" fill="#9880B3"/>
-      </svg>
-    </div>
+    </>
   );
 }
 
@@ -297,7 +286,7 @@ export default function Header() {
   return (
     <div className="bg-[#300067] relative size-full overflow-hidden" data-name="Header">
       <Frame4 />
-      <HeroSymbol />
+      <MaskedImagery />
       <PrimaryNavbar />
     </div>
   );

@@ -159,7 +159,7 @@ const solutionsDropdown = {
     {
       heading: "By Use Case",
       items: [
-        { label: "Launch an Agency", href: "/solutions/launch-agency", icon: "rocket" },
+        { label: "Launch an Agency", href: "/solutions/launch-an-agency", icon: "rocket" },
         { label: "Mitigate Risk", href: "/solutions/mitigate-risk", icon: "security" },
         { label: "Boost Profitability", href: "/solutions/boost-profitability", icon: "growth" },
         { label: "Improve Distribution", href: "/solutions/improve-distribution", icon: "network-3" },
@@ -185,8 +185,8 @@ const partnersDropdown = {
   items: [
     { label: "Integrations", href: "/partners/integrations" },
     { label: "Developer Portal", href: "/partners/developer-portal" },
-    { label: "Alliances", href: "/partners/alliances" },
     { label: "Ecosystem Partners", href: "/partners/ecosystem-partners" },
+    { label: "Legal & Regulatory Alliances", href: "/partners/legal-regulatory-alliances" },
   ],
 };
 
@@ -450,7 +450,7 @@ function Actions({ variant = "default" as NavVariant }) {
 
 export default function PrimaryNavbar({ variant = "default" }: { variant?: NavVariant }) {
   return (
-    <div className="-translate-x-1/2 absolute content-stretch flex flex-col items-end left-1/2 pt-[16px] px-[80px] top-0 w-[1440px]" data-name="Navigation">
+    <div className="-translate-x-1/2 absolute content-stretch flex flex-col items-end left-1/2 pt-[16px] px-[80px] top-0 w-[1440px] z-50" data-name="Navigation">
       <UtilityNav variant={variant} />
       <MainNav variant={variant} />
     </div>

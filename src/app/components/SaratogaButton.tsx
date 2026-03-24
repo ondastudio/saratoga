@@ -20,7 +20,7 @@ if (typeof document !== "undefined" && !document.getElementById("saratoga-gradie
 interface SaratogaButtonProps {
   children: React.ReactNode;
   variant?: "primary" | "outline" | "ghost";
-  color?: "purple" | "white" | "lilac" | "gradient";
+  color?: "purple" | "white" | "lilac" | "gradient" | "dark";
   showArrow?: boolean;
   onClick?: () => void;
   className?: string;
@@ -114,9 +114,9 @@ export function SaratogaButton({
         <button
           onClick={onClick}
           disabled={disabled}
-          className={`group content-stretch flex h-[40px] items-center justify-center ${showArrow ? "gap-[16px] pl-[24px] pr-[4px]" : "px-[24px]"} relative rounded-[4px] shrink-0 cursor-pointer transition-all duration-200 bg-[#f5f5f5] hover:bg-[#ededed] disabled:opacity-50 disabled:cursor-not-allowed ${className ?? ""}`}
+          className={`group content-stretch flex h-[40px] items-center justify-center ${showArrow ? "gap-[16px] pl-[24px] pr-[4px]" : "px-[24px]"} relative rounded-[4px] shrink-0 cursor-pointer transition-all duration-200 bg-[#f5f5f5] hover:bg-[#af63ff] disabled:opacity-50 disabled:cursor-not-allowed ${className ?? ""}`}
         >
-          <span className="font-['Px_Grotesk:Regular',sans-serif] leading-[16px] not-italic text-[#110846] text-[14px] uppercase whitespace-nowrap">
+          <span className="font-['Px_Grotesk:Regular',sans-serif] leading-[16px] not-italic text-[#110846] group-hover:text-[#f5f5f5] text-[14px] uppercase whitespace-nowrap transition-colors duration-200">
             {children}
           </span>
           {showArrow && (
@@ -124,8 +124,8 @@ export function SaratogaButton({
               size={32}
               variant="lilac"
               arrowColor="#F5F5F5"
-              hoverArrowColor="#F5F5F5"
-              className="group-hover:bg-[#110846] transition-colors duration-200"
+              hoverArrowColor="#110846"
+              className="group-hover:bg-[#f5f5f5] transition-colors duration-200"
             />
           )}
         </button>
