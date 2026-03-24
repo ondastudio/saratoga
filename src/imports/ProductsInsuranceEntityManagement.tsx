@@ -11,6 +11,7 @@ import { IconButton } from "../app/components/IconButton";
 import { ArrowIcon } from "../app/components/ArrowIcon";
 import StickyNav from "./Navigation";
 import { NumberHighlights as NumberHighlightsComponent } from "../app/components/NumberHighlights";
+import PrimaryNavbar from "../app/components/PrimaryNavbar";
 
 function Group() {
   return (
@@ -146,208 +147,6 @@ function Frame1() {
   );
 }
 
-function Link1() {
-  return (
-    <div className="h-[40px] relative rounded-[4px] shrink-0" data-name="Link">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex h-full items-center justify-center px-[16px] relative">
-        <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[14px] uppercase whitespace-nowrap">{`About `}</p>
-      </div>
-    </div>
-  );
-}
-
-function Link2() {
-  return (
-    <div className="h-[40px] relative shrink-0" data-name="Link">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex h-full items-center px-[16px] relative">
-        <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[14px] uppercase whitespace-nowrap">Carrers</p>
-      </div>
-    </div>
-  );
-}
-
-function Link3() {
-  return (
-    <div className="h-[40px] relative shrink-0" data-name="Link">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex h-full items-center px-[16px] relative">
-        <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[14px] uppercase whitespace-nowrap">Events</p>
-      </div>
-    </div>
-  );
-}
-
-function Link4() {
-  return (
-    <div className="h-[40px] relative shrink-0" data-name="Link">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex h-full items-center px-[16px] relative">
-        <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[14px] uppercase whitespace-nowrap">cONTACT</p>
-      </div>
-    </div>
-  );
-}
-
-function Link5() {
-  return (
-    <div className="h-[40px] relative shrink-0" data-name="Link">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex h-full items-center px-[16px] relative">
-        <p className="font-['Px_Grotesk:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[#f5f5f5] text-[14px] uppercase whitespace-nowrap">sUPPORT</p>
-      </div>
-    </div>
-  );
-}
-
-function Link6() {
-  return (
-    <div className="h-[40px] relative shrink-0" data-name="Link" onClick={() => window.dispatchEvent(new Event("open-search"))}>
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex h-full items-center px-[16px] relative">
-        <div className="overflow-clip relative shrink-0 size-[20px]" data-name="Search">
-          <div className="absolute inset-[6.14%_9.37%_9.37%_6.14%]" data-name="Vector">
-            <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16.8971 16.8971">
-              <path d={svgPaths.p21a38480} fill="var(--fill-0, #F5F5F5)" id="Vector" />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Container() {
-  return (
-    <div className="relative shrink-0" data-name="Container">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[4px] items-start pb-[4px] relative">
-        <Link1 />
-        <Link2 />
-        <Link3 />
-        <Link4 />
-        <Link5 />
-        <Link6 />
-      </div>
-    </div>
-  );
-}
-
-function Group2() {
-  return (
-    <RouterLink to="/" aria-label="Go to homepage" style={{ display: "block" }}>
-    <div className="h-[40px] relative shrink-0 w-[150.346px]">
-      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 150.346 39.9989">
-        <g clipPath="url(#clip0_95_997)" id="Group 15439">
-          <path d={logoSvgPaths.pfdd2400} fill="var(--fill-0, white)" id="Vector" />
-          <path d={logoSvgPaths.p264cbcf0} fill="var(--fill-0, #AF63FF)" id="Vector_2" />
-          <path d={logoSvgPaths.p33f8b580} fill="var(--fill-0, #AF63FF)" id="Vector_3" />
-          <path d={logoSvgPaths.p6d8ab70} fill="var(--fill-0, #AF63FF)" id="Vector_4" />
-          <path d={logoSvgPaths.p1911cd00} fill="var(--fill-0, #AF63FF)" id="Vector_5" />
-          <path d={logoSvgPaths.p24380180} fill="var(--fill-0, #AF63FF)" id="Vector_6" />
-          <path d={logoSvgPaths.p17e56580} fill="var(--fill-0, #AF63FF)" id="Vector_7" />
-          <path d={logoSvgPaths.p247c72f0} fill="var(--fill-0, white)" id="Vector_8" />
-          <path d={logoSvgPaths.p53f3b00} fill="var(--fill-0, white)" id="Vector_9" />
-          <path d={logoSvgPaths.p107d9a40} fill="var(--fill-0, white)" id="Vector_10" />
-          <path d={logoSvgPaths.p10172000} fill="var(--fill-0, white)" id="Vector_11" />
-          <path d={logoSvgPaths.p2364b500} fill="var(--fill-0, white)" id="Vector_12" />
-          <path d={logoSvgPaths.pcd07200} fill="var(--fill-0, white)" id="Vector_13" />
-          <path d={logoSvgPaths.p2264e820} fill="var(--fill-0, white)" id="Vector_14" />
-          <path d={logoSvgPaths.p33e64cc0} fill="var(--fill-0, white)" id="Vector_15" />
-          <path d={logoSvgPaths.p1fcad300} fill="var(--fill-0, white)" id="Vector_16" />
-          <path d={logoSvgPaths.p1934b800} fill="var(--fill-0, white)" id="Vector_17" />
-          <path d={logoSvgPaths.p33c80500} fill="var(--fill-0, white)" id="Vector_18" />
-          <path d={logoSvgPaths.p2f44fa80} fill="var(--fill-0, #AF63FF)" id="Vector_19" />
-          <path d={logoSvgPaths.p52cbc00} fill="var(--fill-0, #AF63FF)" id="Vector_20" />
-          <path d={logoSvgPaths.p1cf9ed00} fill="var(--fill-0, #AF63FF)" id="Vector_21" />
-          <path d={logoSvgPaths.p15175680} fill="var(--fill-0, #AF63FF)" id="Vector_22" />
-          <path d={logoSvgPaths.p2d5e6900} fill="var(--fill-0, #AF63FF)" id="Vector_23" />
-          <path d={logoSvgPaths.p5d26700} fill="var(--fill-0, #AF63FF)" id="Vector_24" />
-          <path d={logoSvgPaths.p15dd8500} fill="var(--fill-0, white)" id="Vector_25" />
-        </g>
-        <defs>
-          <clipPath id="clip0_95_997">
-            <rect fill="white" height="39.9989" width="150.346" />
-          </clipPath>
-        </defs>
-      </svg>
-    </div>
-    </RouterLink>
-  );
-}
-
-function Frame15() {
-  return <NavLink variant="chevron">Products</NavLink>;
-}
-
-function Link9() {
-  return <NavLink>Why Saratoga?</NavLink>;
-}
-
-function Link10() {
-  return <NavLink variant="chevron">Solutions</NavLink>;
-}
-
-function Link12() {
-  return <NavLink variant="chevron">Resources</NavLink>;
-}
-
-function Link14() {
-  return <NavLink variant="chevron">Partners</NavLink>;
-}
-
-function Link16() {
-  return <NavLink variant="chevron">Company</NavLink>;
-}
-
-function Container1() {
-  return (
-    <div className="content-stretch flex gap-[4px] items-start relative shrink-0" data-name="Container">
-      <Frame15 />
-      <Link9 />
-      <Link10 />
-      <Link12 />
-      <Link14 />
-      <Link16 />
-    </div>
-  );
-}
-
-function Link18() {
-  return <SaratogaButton variant="ghost" color="white">Login</SaratogaButton>;
-}
-
-function Link19() {
-  return <SaratogaButton variant="primary" color="gradient">Request a Demo</SaratogaButton>;
-}
-
-function Action() {
-  return (
-    <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-name="Action">
-      <Link18 />
-      <Link19 />
-    </div>
-  );
-}
-
-function Frame3() {
-  return (
-    <div className="relative shrink-0 w-full">
-      <div aria-hidden="true" className="absolute border-[#8740ff] border-solid border-t inset-0 pointer-events-none" />
-      <div className="flex flex-row items-center size-full">
-        <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-between px-[8px] py-[16px] relative w-full">
-          <Group2 />
-          <Container1 />
-          <Action />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Navigation() {
-  return (
-    <div className="absolute content-stretch flex flex-col items-end left-0 pt-[16px] px-[80px] top-0 w-[1440px]" data-name="Navigation">
-      <Container />
-      <Frame3 />
-    </div>
-  );
-}
-
 function Header() {
   return (
     <div className="h-[645px] overflow-clip relative shrink-0 w-[1440px]" data-name="Header">
@@ -357,7 +156,7 @@ function Header() {
         </div>
       </div>
       <Frame1 />
-      <Navigation />
+      <PrimaryNavbar />
     </div>
   );
 }

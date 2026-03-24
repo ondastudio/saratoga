@@ -32,11 +32,13 @@ export function NavLink({
             {children}
           </p>
           {variant === "chevron" && (
-            <ArrowIcon
-              type={isSelected ? "chevron-down" : "chevron-down"}
-              color={isSelected ? "#110846" : chevronColor}
-              className="group-hover:[&_path]:fill-[#110846] transition-colors duration-200"
-            />
+            <div className={`transition-transform duration-200 ${isSelected ? "rotate-180" : ""}`}>
+              <ArrowIcon
+                type="chevron-down"
+                color={isSelected ? "#110846" : chevronColor}
+                className="group-hover:[&_path]:fill-[#110846] transition-colors duration-200"
+              />
+            </div>
           )}
         </div>
       </div>
